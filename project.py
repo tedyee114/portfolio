@@ -127,23 +127,20 @@ def timpelot():
         rows = cursor.fetchall()
         cursor.close()
         conn.close()
-        
+             
         athlete_id = []
         time = []
-
-        for row in rows:
-            athlete_id.append(row[0])
-            time.append(row[1])
+        
+        for i in rows:
+            athlete_id.append(i[0])
+            time.append(float(i[1]))
         x = list(range(len(athlete_id)))     # Create an array of indices for the x-axis
 
-        plt.scatter(x, time, color='red', s=100)
+        plt.scatter(x, time, color='red')
 
         plt.xlabel('Athlete_ID')                                      # Adding labels and title
         plt.ylabel('Time')
         plt.title('Race 1001 Time Distribution')
-
-        plt.ax1.set_xlim(0,3)
-        plt.ax1.set_ylim(0,3)
 
         plt.xticks(x, athlete_id)                                  # Set the x-axis tick positions and labels
         plt.tick_params(axis='x', colors='blue')
