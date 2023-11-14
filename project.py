@@ -14,9 +14,9 @@ app = Flask(__name__)
 
 
 #region 1: homepage##############################################################################################
-@app.route('/home_page')
-def home_page():
-    return render_template('home_page.html')
+@app.route('/index')
+def index():
+    return render_template('index.html')
 #endregion
 
 
