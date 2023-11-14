@@ -102,8 +102,7 @@ def rankings():
         print ('ath',athlete_id)
         conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
         cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
-        cursor.execute("select * from athlete")
-        # cursor.execute("SELECT * from (select athlete.athlete_id, athlete_fname, athlete_lname, time from athlete left join results2 on athlete.athlete_id=results2.athlete_id where athlete_id=?", (athlete_id,))
+        cursor.execute("SELECT * from (select athlete.athlete_id, athlete_fname, athlete_lname, time from athlete left join results2 on athlete.athlete_id=results2.athlete_id) where athlete_id=?", (athlete_id,))
         output = cursor.fetchall()
         cursor.close()
         conn.close()
