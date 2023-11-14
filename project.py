@@ -221,7 +221,8 @@ def athletes():
 def upload():
     if request.method == 'POST':
         tochange=request.form ['tochange']
-        if tochange=='1002' or tochange=='1001':
+        print(tochange)
+        if tochange=='1001' or tochange=='1002':
             category=request.form ['category']
             time=request.form ['time']
             athlete_id=request.form ['athlete_id']
@@ -243,10 +244,16 @@ def upload():
             team_id=request.form ['team_id']
             conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
             cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
-            cursor.execute("insert into athlete values (?, ?, ?, ?)", (11,), (athlete_fname,), (athlete_lname,), (team_id,))
-            # output = cursor.fetchall()
+            cursor.execute("insert into athlete values (?, '?', '?', ?)", (11,athlete_fname,athlete_lname,team_id,))
+            output = cursor.fetchall()
             cursor.close()
             conn.close()
+            print (output)
+            if not output:
+                message = 'No Races found'
+                return render_template('upload.html', message=message)
+            else:
+                return render_template('upload.html', output=output)
             
     else:
         return render_template('upload.html')
