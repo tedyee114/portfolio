@@ -1,0 +1,45 @@
+.a {padding-top: 100px;                     /*body whitespace*/
+    padding-left: 250px;
+    background-repeat:no-repeat;
+    font-family:arial;}
+
+.topbar {                                    /*Top Navigation Bar */
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 #999999;
+    position: fixed;                        /* Set the navbar to fixed position */
+    top: 0;                                 /* Position the navbar at the top of the page */
+    width: 100%;
+    font-family:verdana;
+    text-align: center;}                           /* Full width */
+
+.topbar a {                                 /* Style the links inside the navigation bar */
+    color: #000000;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 15px;}
+
+.topbar a:hover {                           /* Change the color of links on hover */
+    background-color: #ebebeb;
+    color: black;}
+
+.topbar a.active {                           /* Add a color to the active/current link */
+    background-color: #04AA6D;
+    color: white;}
+
+.bottom {                                    /*Top Navigation Bar */
+    background-color: #000062;
+    padding: 50px 50px;
+    color:#ffffff;
+    text-align:center;
+    bottom: 0;                                 /* Position the navbar at the top of the page */
+    width: 100%;
+    font-family: arial;}                             /* Full width */
+
+.search {                                     /* formatting for search bars*/
+    background-color: #d9dae0;
+    padding: 50px 50px;
+    text-align: center;
+    font-family:'Trebuchet MS';
+    }
