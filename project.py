@@ -142,6 +142,9 @@ def timpelot():
         plt.ylabel('Time')
         plt.title('Race 1001 Time Distribution')
 
+        plt.ax1.set_xlim(0,3)
+        plt.ax1.set_ylim(0,3)
+
         plt.xticks(x, athlete_id)                                  # Set the x-axis tick positions and labels
         plt.tick_params(axis='x', colors='blue')
 
