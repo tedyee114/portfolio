@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Employee Information</title>
+  </head>
+  <body>
+    <h1>Employee Information</h1>
+    <form method="POST" action='get_employee'>
+      <label>Employee ID#:</label>
+      <input type="text" name="employee_id">
+      <input type="submit" value="Get Employee">
+    </form>
+
+      <h2>Employee Details</h2>
+	  {{ employee_info | safe }}
+  </body>
+</html>

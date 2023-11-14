@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <style>
+        .a {
+            padding-top: 40px;
+            padding-right: 30px;
+            padding-left: 60px;
+            background-repeat:no-repeat;
+            font-family:arial;
+          }
+        .b {
+        padding-top: 180px;
+        padding-left: 60px;
+        }
+    </style>
+    <head> <title>db_lab_09</title>
+        <div class="a">                                                                 <!--This div uses style a to adds outer padding to everything-->
+            <body width="3200" height="1600" background="images/googleforms.png" style="background-repeat: no-repeat">     
+            <h1 style="font-family:arial; color:#ffffff; text-align:center">Ted's Form for db_lab_09_formatted</h1>
+            <div class="b">                                                             <!--This div uses style b to add another layer of inner padding to the fields only-->
+                <table>                                                                 <!--The outer table has 2 columns: form fields and Log In/Reset buttons-->
+                    <tr>
+                        <td>                                                            <!--This is the left column -->
+                            <form name="survey" method="post">
+                            <table>                                                     <!-- The textbox table-->
+                                <tr>
+                                    <td>First Name:</td>
+                                    <td><input type="text" name="firstname"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Last Name:</td>
+                                    <td><input type="text" name="lastname"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Password:</td>
+                                    <td><input type="text" name="password"/></td>
+                            </table>
+                            <br>
+                            Select Gender:<br>
+                            <input type="radio" name="gender" value='male'/>         Male
+                            <input type="radio" name="gender" value='female'/>       Female
+                            <input type="radio" name="gender" value='nonbinary'/>    Nonbinary<br>
+
+                            <br>Select Favorite Sport<br>
+                            <input type="checkbox" name="sport" value='basketball'/> Basketball
+                            <input type="checkbox" name="sport" value='football'/>   Football
+                            <input type="checkbox" name="sport" value='golf'/>       Golf
+                            <input type="checkbox" name="sport" value='tennis'/>     Tennis
+                            </form>
+                            <br>
+                            Select Favorite Junk Food<br>
+                            <select name="junkfood" size='2' multiple>
+                                <option value='kitkat'>KitKat</option>
+                                <option value='Twix'>Twix</option>
+                                <option value='Snickers'>Snickers</option>
+                                <option value='M&M'>M&M</option>
+                            </select>
+                            <br>
+                            We reallllllllly (not really) value your feedback. Please leave us some:<br>
+                            <textarea name='feedback' rows=2 cols=50>
+                            Type here...
+                            </textarea>
+                        </td>
+                        <td>                                                         <!--This is the right column for the buttons-->
+                            <br>
+                            <input type='submit' name="submit" value='Log In'>
+                            <br>
+                            <input type='reset' name='reset' value='Reset'>
+                            <br>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            </body>
+        </div>
+    </head> 
+</html>
