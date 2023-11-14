@@ -7,6 +7,12 @@ import matplotlib.pyplot as plt
 import io
 import base64
 import pandas as pd
+import pathlib
+web=True
+
+a=pathlib.Path(__file__).parent.resolve()
+if a=='C:\Users\tedye\Desktop\db_course\milesplit':
+    web=False
 
 app = Flask(__name__)
 @app.route('/')
