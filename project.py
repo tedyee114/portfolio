@@ -11,15 +11,15 @@ import pathlib
 web=True
 
 a=pathlib.Path(__file__).parent.resolve()
-if a=='C:\Users\tedye\Desktop\db_course\milesplit':
+if a==r"C:\Users\tedye\Desktop\db_course\milesplit":
     web=False
 
 app = Flask(__name__)
-@app.route('/')
 #endregion
 
 
 #region 1: homepage##############################################################################################
+@app.route('/')
 @app.route('/index')
 def index():
     return render_template('index.html')
