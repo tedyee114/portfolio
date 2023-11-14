@@ -65,7 +65,9 @@ def distplot():
             
             distances = []
             counts = []
-
+            
+            plt.clf()
+            
             for row in rows:
                 distances.append(row[0])
                 counts.append(row[1])
@@ -130,6 +132,8 @@ def timpelot():
              
         athlete_id = []
         time = []
+
+        plt.clf()
         
         for i in rows:
             athlete_id.append(i[0])
