@@ -17,7 +17,7 @@
             <a href="https://airworks.io/product/" title="site2"> I work here. I code in LISP for them, lol </a>
             
             <!--Question 4: image--><br><br><br><br>
-            <img src="images/paws.jpg" title="paws" align="right" width="200" height="300"/>
+            <img src="![Book logo](/milesplit/assets/paws.jpg)" title="paws" align="right" width="200" height="300"/>
             
             <!--Question 5: table-->
             <table border="2" style="background-color:#ffff00">
