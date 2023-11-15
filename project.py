@@ -29,33 +29,22 @@ def index():
 #region 2: results##############################################################################################
 @app.route('/results', methods=['GET', 'POST'])
 def results():
-    if request.method == 'POST' and request.form ['race_id'] is not None:
-        race_id = request.form ['race_id']
-        if race_id=="1001":
+    if request.method == 'POST':
+        if request.form ['race_id']:
+            race_id=request.form ['race_id']
             conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
             cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
-            cursor.execute("SELECT * from results1")
-            output = cursor.fetchall()
-            cursor.close()
-            conn.close()
-            if not output:
-                message = 'No Results found'
-                return render_template('results.html', message=message)
-            else:
-                return render_template('results.html', output=output)
+            if race_id=="1001":
+                cursor.execute("SELECT * from results1")
+            elif race_id=="1002":
+                cursor.execute("SELECT * from results2")  
             
-        if race_id=="1002":
-            conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
-            cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
-            cursor.execute("SELECT * from results2")
             output = cursor.fetchall()
             cursor.close()
             conn.close()
-            if not output:
-                message = 'No Results found'
-                return render_template('results.html', message=message)
-            else:
-                return render_template('results.html', output=output)
+            return render_template('results.html', output=output)
+        else:
+            return render_template('results.html', message='Please select a race')
     else:
         return render_template('results.html')
     
