@@ -27,7 +27,7 @@
             <form method="POST" action='athletes'>
                 <label>Athlete ID#:</label>
                 <input type="text" name="athlete_id">
-                <input type="submit" value="Get Athlete">
+                <input type="submit" name="submit" value="Submit Application" class="submit" />
             </form>
         
         {% if output %}     
@@ -133,6 +133,11 @@
                 {% endfor %}
                 </ul>
             </table>
+        {% endif %}
+        
+        {% if message %}     
+            <br>    
+            <h2>{{message}}<h2>
         {% endif %}
         </body>
     </div>
