@@ -13,6 +13,7 @@ web=True
 a=pathlib.Path(__file__).parent.resolve()
 if a==r"C:\Users\tedye\Desktop\db_course\milesplit":
     web=False
+    p="/static/"
 
 app = Flask(__name__)
 #endregion
