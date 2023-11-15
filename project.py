@@ -198,10 +198,9 @@ def calendar():
 @app.route('/athletes', methods=['GET', 'POST'])
 def athletes():
     if request.method == 'POST':
-        needall = request.form ['athlete_id']
         athlete_id = request.form ['athlete_id']
                 
-        if needall or athlete_id:
+        if athlete_id:
         # Establish a connection to the SQLite database
             conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
             cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
@@ -211,12 +210,9 @@ def athletes():
             output = cursor.fetchall()
             cursor.close()
             conn.close()
-            if not needall:
-                message = 'No Races found'
-                return render_template('athletes.html', message=message)
-            else:
-                return render_template('athletes.html', output=output)
-
+            return render_template('athletes.html', output=output)
+        else:
+            return render_template('athletes.html', message='No Athlete ID Enetered. Please enter one.')
     else:
         return render_template('athletes.html')
 #endregion
