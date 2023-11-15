@@ -228,13 +228,34 @@ def upload():
     if request.method == 'POST':
         tochange=request.form ['tochange']
         print(tochange)
-        if tochange=='1001' or tochange=='1002':
+        if tochange=='1001':
             category=request.form ['category']
             time=request.form ['time']
             athlete_id=request.form ['athlete_id']
             conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
             cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
-            cursor.execute("select * from athlete")
+            cursor.execute("SELECT * from results1")
+            cursor.execute("insert into results1 (participant_id, category, time, athlete_id, race_id) values(?, ?, ?, ?, ?)", (13,category,time,athlete_id,1001))
+            cursor.execute("SELECT * from results1")
+            output = cursor.fetchall()
+            cursor.close()
+            conn.close()
+            
+            if not output:
+                message = 'No Races found'
+                return render_template('upload.html', message=message)
+            else:
+                return render_template('upload.html', output=output)
+        
+        elif tochange=='1002':
+            category=request.form ['category']
+            time=request.form ['time']
+            athlete_id=request.form ['athlete_id']
+            conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
+            cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
+            cursor.execute("SELECT * from results2")
+            cursor.execute("insert into results2 (participant_id, category, time, athlete_id, race_id) values(?, ?, ?, ?, ?)", (13,category,time,athlete_id,1002))
+            cursor.execute("SELECT * from results2")
             output = cursor.fetchall()
             cursor.close()
             conn.close()
@@ -244,13 +265,16 @@ def upload():
                 return render_template('upload.html', message=message)
             else:
                 return render_template('upload.html', output=output)
+            
         elif tochange=='athlete':
             athlete_fname=request.form ['athlete_fname']
             athlete_lname=request.form ['athlete_lname']
             team_id=request.form ['team_id']
             conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
             cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
-            cursor.execute("insert into athlete values (?, '?', '?', ?)", (11,athlete_fname,athlete_lname,team_id,))
+            cursor.execute("SELECT * from athlete")
+            cursor.execute("insert into athlete (athlete_id, athlete_fname, athlete_lname, team_id) values(?, ?, ?, ?)", (13,athlete_fname,athlete_lname,team_id,))
+            cursor.execute("SELECT * from athlete")
             output = cursor.fetchall()
             cursor.close()
             conn.close()
