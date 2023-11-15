@@ -81,7 +81,7 @@ def distplot():
 
             plt.scatter(x, counts, color='red', s=100)
 
-            plt.xlabel('Distances in Kilometers')                                      # Adding labels and title
+            plt.xlabel('Distances in Kilometers')                         # Adding labels and title
             plt.ylabel('Count')
             plt.title('Course Length Distribution')
 
@@ -92,9 +92,9 @@ def distplot():
             plt.savefig(buffer, format='png')
             buffer.seek(0)
 
-            image_base64 = base64.b64encode(buffer.getvalue()).decode()      # Convert the image buffer to base64 string
+            image_base64 = base64.b64encode(buffer.getvalue()).decode()  # Convert the image buffer to base64 string
 
-            chart_image = f"data:image/png;base64,{image_base64}"           # Generate the chart image URL
+            chart_image = f"data:image/png;base64,{image_base64}"        # Generate the chart image URL
 
             return render_template('results.html', chart_image=chart_image)
         else:
