@@ -234,8 +234,16 @@ def upload():
             athlete_id=request.form ['athlete_id']
             conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
             cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
+            cursor.execute("SELECT MAX(participant_id) FROM results1")
+            max_participant_id = cursor.fetchone() # returns one-element tuple (id,)
+            max_participant_id = max_participant_id[0] # extract id as digits
+            if max_participant_id is None:
+                participant_id = 1
+            else:
+                participant_id = max_participant_id + 1
+            
             cursor.execute("SELECT * from results1")
-            cursor.execute("insert into results1 (participant_id, category, time, athlete_id, race_id) values(?, ?, ?, ?, ?)", (13,category,time,athlete_id,1001))
+            cursor.execute("insert into results1 (participant_id, category, time, athlete_id, race_id) values(?, ?, ?, ?, ?)", (participant_id,category,time,athlete_id,1001))
             cursor.execute("SELECT * from results1")
             output = cursor.fetchall()
             cursor.close()
@@ -253,8 +261,16 @@ def upload():
             athlete_id=request.form ['athlete_id']
             conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
             cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
+            cursor.execute("SELECT MAX(participant_id) FROM results2")
+            max_participant_id = cursor.fetchone() # returns one-element tuple (id,)
+            max_participant_id = max_participant_id[0] # extract id as digits
+            if max_participant_id is None:
+                participant_id = 1
+            else:
+                participant_id = max_participant_id + 1
+            
             cursor.execute("SELECT * from results2")
-            cursor.execute("insert into results2 (participant_id, category, time, athlete_id, race_id) values(?, ?, ?, ?, ?)", (13,category,time,athlete_id,1002))
+            cursor.execute("insert into results2 (participant_id, category, time, athlete_id, race_id) values(?, ?, ?, ?, ?)", (participant_id,category,time,athlete_id,1001))
             cursor.execute("SELECT * from results2")
             output = cursor.fetchall()
             cursor.close()
@@ -272,8 +288,16 @@ def upload():
             team_id=request.form ['team_id']
             conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
             cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
+            cursor.execute("SELECT MAX(athlete_id) FROM athlete")
+            max_athlete_id = cursor.fetchone() # returns one-element tuple (id,)
+            max_athlete_id = max_athlete_id[0] # extract id as digits
+            if max_athlete_id is None:
+                athlete_id = 1
+            else:
+                athlete_id = max_athlete_id + 1
+            
             cursor.execute("SELECT * from athlete")
-            cursor.execute("insert into athlete (athlete_id, athlete_fname, athlete_lname, team_id) values(?, ?, ?, ?)", (13,athlete_fname,athlete_lname,team_id,))
+            cursor.execute("insert into athlete (athlete_id, athlete_fname, athlete_lname, team_id) values(?, ?, ?, ?)", (athlete_id,athlete_fname,athlete_lname,team_id,))
             cursor.execute("SELECT * from athlete")
             output = cursor.fetchall()
             cursor.close()
