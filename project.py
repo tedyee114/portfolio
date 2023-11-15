@@ -9,14 +9,12 @@ import base64
 import pandas as pd
 import pathlib
 web=True
-
 a=pathlib.Path(__file__).parent.resolve()
-if a==r"C:\Users\tedye\Desktop\db_course\milesplit":
+if a==r"C:\\Users\\tedye\\Desktop\\db_course\\milesplit":
     web=False
-    a="/static/"
-    p=str(a)
 
 app = Flask(__name__)
+
 #endregion
 
 
