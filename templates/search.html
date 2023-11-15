@@ -2,7 +2,7 @@
 <html>
 {% if web==FALSE %}
     <head>
-        <title>MileSplit.Snow|Rankings</title>
+        <title>MileSplit.Snow|Search</title>
         <link rel="stylesheet" type="text/css" href="static/project_main.css">
         <link rel="icon" type="image/x-icon" href="static/favicon.PNG">
     </head>
@@ -21,42 +21,33 @@
     
     <div class="a">                                                                 <!--This div uses style a to adds outer padding to everything-->
         <body style="background-color:#ebebeb">
-            <h1>RANKINGS</h1>
-        
-            <form method='POST' action='rankings'>
-                <label>Athlete ID#:</label>
-                <input type="text" name="athlete_id">
-                <input type="submit" value="Get Athlete">
+            <h1>GENERAL SEARCH</h1>
+            <br>
+            <h2>Please click to view any results</h2>
+            <form method='POST' action='search'>
+                <input type="submit" value='Click to Query'/>
             </form>
-
-            <form method='POST' action='timeplot'>
-                <br> OR, generate a plot of times for results1 <br>
-                <input type="submit" name=timeplot value="Generate Plot">
-            </form>
-            
-            
             {% if output %}     
-                <table>
-                    <tr> 
-                        <td colspan="1" rowspan="1" align='center'><b>Athlete ID<b></td>
-                        <td colspan="1" rowspan="1" align='center'><b>Athlete First Name<b></td>
-                        <td colspan="1" rowspan="1" align='center'><b>Athlete Last Name<b></td>
-                        <td colspan="1" rowspan="1" align='center'><b>Time in Race 1002<b></td>
-                        <td colspan="1" rowspan="1" align='center'><b>Overall Rank in Race 1002<b></td>
-                    </tr>
-                    <ul>
-                    {% for i in output %}
-                    <tr>
-                        <td colspan="1" rowspan="1" align='center'>{{i[0]}}</td>
-                        <td colspan="1" rowspan="1" align='center'>{{i[1]}}</td>
-                        <td colspan="1" rowspan="1" align='center'>{{i[2]}}</td>
-                        <td colspan="1" rowspan="1" align='center'>{{i[3]}}</td>
-                        <td colspan="1" rowspan="1" align='center'>{{i[4]}}</td>
-                        </tr>
-                    {% endfor %}
-                    </ul>
-                </table>
-            {% endif %}
+        <table>
+            <ul>
+            {% for i in output %}
+              <tr>
+                  <td colspan="1" rowspan="1" align='center'>{{i[0]}}</td>
+                  <td colspan="1" rowspan="1" align='center'>{{i[1]}}</td>
+                  <td colspan="1" rowspan="1" align='center'>{{i[2]}}</td>
+                  <td colspan="1" rowspan="1" align='center'>{{i[3]}} {{i[4]}}</td>
+              </tr>
+            {% endfor %}
+            </ul>
+        </table>
+      {% endif %}
+
+      {% if message %}
+        <h2>{{message}}</h2>
+      {% endif %}
+            <br><br><br><br>
+            <h2>Upcoming Events</h2>
+            <img src="static/upcomingevents.png" title="paws" align="center"/>
 
             {% if chart_image %}
                 <img src="{{ chart_image }}"/>
@@ -65,11 +56,11 @@
             {% endif %}
         </body>
     </div>
-
+    
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <div class="bottom">                                                                    <!--Top Navigation Bar-->
-        <img src="static/snow.png" title="Logo" align="left" width="250" height="38"/>
+        <img src="static/snow.png"title="Logo" align="left" width="250" height="38"/>
         <a style="font-family:arial">
         ©2023 Ted Yee    &nbsp&nbsp&nbsp&nbsp
         Don't Contact Us &nbsp&nbsp&nbsp&nbsp
@@ -79,9 +70,9 @@
         </a>
     </div>
 
-{%else%}
+{% else %}
     <head>
-        <title>MileSplit.Snow|Rankings</title>
+        <title>MileSplit.Snow|Search</title>
         <link rel="stylesheet" type="text/css" href="project_main.css">
         <link rel="icon" type="image/x-icon" href="favicon.PNG">
     </head>
@@ -97,45 +88,36 @@
         <a href="notyet"><img src="login.png" title="Login Icon" align="right" width="50" height="50"/></a>
         <a href="notyet"><img src="search.png" title="Search Icon" align="right" width="50" height="50"/></a>
     </div>
-    
+
     <div class="a">                                                                 <!--This div uses style a to adds outer padding to everything-->
         <body style="background-color:#ebebeb">
-            <h1>RANKINGS</h1>
-        
-            <form method='POST' action='rankings'>
-                <label>Athlete ID#:</label>
-                <input type="text" name="athlete_id">
-                <input type="submit" value="Get Athlete">
+            <h1>GENERAL SEARCH</h1>
+            <br>
+            <h2>Please click to view any results</h2>
+            <form method='POST' action='search'>
+                <input type="submit" value='Click to Query'/>
             </form>
-
-            <form method='POST' action='timeplot'>
-                <br> OR, generate a plot of times for results1 <br>
-                <input type="submit" name=timeplot value="Generate Plot">
-            </form>
-            
-            
             {% if output %}     
-                <table>
-                    <tr> 
-                        <td colspan="1" rowspan="1" align='center'><b>Athlete ID<b></td>
-                        <td colspan="1" rowspan="1" align='center'><b>Athlete First Name<b></td>
-                        <td colspan="1" rowspan="1" align='center'><b>Athlete Last Name<b></td>
-                        <td colspan="1" rowspan="1" align='center'><b>Time in Race 1002<b></td>
-                        <td colspan="1" rowspan="1" align='center'><b>Overall Rank in Race 1002<b></td>
-                    </tr>
-                    <ul>
-                    {% for i in output %}
-                    <tr>
-                        <td colspan="1" rowspan="1" align='center'>{{i[0]}}</td>
-                        <td colspan="1" rowspan="1" align='center'>{{i[1]}}</td>
-                        <td colspan="1" rowspan="1" align='center'>{{i[2]}}</td>
-                        <td colspan="1" rowspan="1" align='center'>{{i[3]}}</td>
-                        <td colspan="1" rowspan="1" align='center'>{{i[4]}}</td>
-                        </tr>
-                    {% endfor %}
-                    </ul>
-                </table>
-            {% endif %}
+        <table>
+            <ul>
+            {% for i in output %}
+            <tr>
+                <td colspan="1" rowspan="1" align='center'>{{i[0]}}</td>
+                <td colspan="1" rowspan="1" align='center'>{{i[1]}}</td>
+                <td colspan="1" rowspan="1" align='center'>{{i[2]}}</td>
+                <td colspan="1" rowspan="1" align='center'>{{i[3]}} {{i[4]}}</td>
+            </tr>
+            {% endfor %}
+            </ul>
+        </table>
+    {% endif %}
+
+    {% if message %}
+        <h2>{{message}}</h2>
+    {% endif %}
+            <br><br><br><br>
+            <h2>Upcoming Events</h2>
+            <img src="upcomingevents.png" title="paws" align="center"/>
 
             {% if chart_image %}
                 <img src="{{ chart_image }}"/>
@@ -148,7 +130,7 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <div class="bottom">                                                                    <!--Top Navigation Bar-->
-        <img src="snow.png" title="Logo" align="left" width="250" height="38"/>
+        <img src="snow.png"title="Logo" align="left" width="250" height="38"/>
         <a style="font-family:arial">
         ©2023 Ted Yee    &nbsp&nbsp&nbsp&nbsp
         Don't Contact Us &nbsp&nbsp&nbsp&nbsp
@@ -157,5 +139,5 @@
         Your Personal Information Will be Sold Anyways
         </a>
     </div>
-{%endif%}
+{% endif%}
 </html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 {% if web==FALSE %}
     <head>
         <title>MileSplit.Snow|Calendar</title>
@@ -30,10 +31,10 @@
             {% if output %}     
         <table>
             <tr> 
-                <td colspan="1" rowspan="1" align='center' style=color:#ffffff><b>Race ID<b></td>
-                <td colspan="1" rowspan="1" align='center'><b>Course ID<b></td>
-                <td colspan="1" rowspan="1" align='center'><b>Race Date<b></td>
-                <td colspan="1" rowspan="1" align='center'><b>Race League<b></td>
+                <td colspan="1" rowspan="2" align='center' style="background-color:#555555; color:#ffffff; font-family:arial"><b>Race ID<b></td>
+                <td colspan="1" rowspan="2" align='center' style="background-color:#555555; color:#ffffff; font-family:arial"><b>Course ID<b></td>
+                <td colspan="1" rowspan="2" align='center' style="background-color:#555555; color:#ffffff; font-family:arial"><b>Race Date<b></td>
+                <td colspan="1" rowspan="2" align='center' style="background-color:#555555; color:#ffffff; font-family:arial"><b>Race League<b></td>
             </tr>
             <ul>
             {% for i in output %}
