@@ -1,5 +1,5 @@
 #region 0: import libraries and prepare environment
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request
 import sqlite3
 import matplotlib
 matplotlib.use('Agg')
@@ -100,7 +100,8 @@ def rankings():
         conn = sqlite3.connect('C:/Users/tedye/Desktop/db_course/project_1.db')
         cursor = conn.cursor()                    # Create a cursor object to execute SQL queries
         cursor.execute("SELECT * from (select athlete.athlete_id, athlete_fname, athlete_lname, time,\
-                       rank () over (order by time) from athlete left join results2 on athlete.athlete_id=results2.athlete_id) where athlete_id=?", (athlete_id,))
+                        rank () over (order by time) from athlete left join\
+                        results2 on athlete.athlete_id=results2.athlete_id) where athlete_id=?", (athlete_id,))
         output = cursor.fetchall()
         cursor.close()
         conn.close()
@@ -227,8 +228,10 @@ def upload():
             else:
                 participant_id = max_participant_id + 1
             
-            cursor.execute("insert into results1 (participant_id, category, time, athlete_id, race_id) values(?, ?, ?, ?, ?)", (participant_id,category,time,athlete_id,1001))
+            cursor.execute("insert into results1 (participant_id, category, time, athlete_id,\
+                race_id) values(?, ?, ?, ?, ?)", (participant_id,category,time,athlete_id,1001))
             cursor.execute("SELECT * from results1")
+            conn.commit()
             output = cursor.fetchall()
             cursor.close()
             conn.close()
@@ -253,8 +256,10 @@ def upload():
             else:
                 participant_id = max_participant_id + 1
             
-            cursor.execute("insert into results2 (participant_id, category, time, athlete_id, race_id) values(?, ?, ?, ?, ?)", (participant_id,category,time,athlete_id,1001))
+            cursor.execute("insert into results2 (participant_id, category, time, athlete_id,\
+                race_id) values(?, ?, ?, ?, ?)", (participant_id,category,time,athlete_id,1002))
             cursor.execute("SELECT * from results2")
+            conn.commit()
             output = cursor.fetchall()
             cursor.close()
             conn.close()
@@ -279,7 +284,8 @@ def upload():
             else:
                 athlete_id = max_athlete_id + 1
             
-            cursor.execute("insert into athlete (athlete_id, athlete_fname, athlete_lname, team_id) values(?, ?, ?, ?)", (athlete_id,athlete_fname,athlete_lname,team_id,))
+            cursor.execute("insert into athlete (athlete_id, athlete_fname, athlete_lname,\
+                team_id) values(?, ?, ?, ?)", (athlete_id,athlete_fname,athlete_lname,team_id,))
             cursor.execute("SELECT * from athlete")
             conn.commit()
             output = cursor.fetchall()
@@ -300,16 +306,6 @@ def upload():
 #region 7: notyet -for nonexistent pages#######################################################################
 @app.route('/notyet', methods=['GET', 'POST'])
 def notyet():
-    if request.method == 'POST':
-        # Establish a connection to the SQLite database
-
-        # Generate the chart image URL
-        husky_image = "static/husky.png"
-
-        # Render the template with the chart image URL
-        return render_template('notyet.html', husky_image=husky_image)
-
-    # Render the template with the initial form
     return render_template('notyet.html')
 #endregion
 
