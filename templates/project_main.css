@@ -1,3 +1,9 @@
+:root {                                      /*defines theme colors*/
+    --color1: #00ffff;
+    --color2: #8000ff;
+    --color3: #562738;
+    }
+
 .a {padding-top: 100px;                     /*body whitespace*/
     padding-left: 250px;
     background-repeat:no-repeat;
@@ -42,11 +48,7 @@
     font-family:'Trebuchet MS';
     }
 
-:root {                                      /*defines theme colors*/
-    --color1: #00ffff;
-    --color2: #8000ff;
-    --color3: #562738;
-    }
+/*everything below here used for the tilty card in the bottom right*/
     
 pre {                                      /*defines the card and rotation itself*/
     --selector: var(--color1);
@@ -61,9 +63,9 @@ pre {                                      /*defines the card and rotation itsel
     padding: .25rem;                  /*topbottom padding around text in card*/
     border-radius: 1rem;              /*how round to make the back card corners*/
     
-    position: relative;               /*position of card on page*/
-    left: 50px;
-    bottom: 50px;
+    position: fixed;               /*position of card on page*/
+    left: 2rem;
+    bottom: 5rem;
     
     transform-style: preserve-3d;
     transform: 
