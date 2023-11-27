@@ -41,3 +41,68 @@
     text-align: center;
     font-family:'Trebuchet MS';
     }
+
+:root {                                      /*defines theme colors*/
+    --color1: #00ffff;
+    --color2: #8000ff;
+    --color3: #562738;
+    }
+    
+pre {                                      /*defines the card and rotation itself*/
+    --selector: var(--color1);
+    --property: var(--color2);
+    --punctuation: var(--color3);
+    --undefined: var(--color3);
+    
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--undefined);
+    background: #555555;
+    padding: .25rem;                  /*topbottom padding around text in card*/
+    border-radius: 1rem;              /*how round to make the back card corners*/
+    
+    position: relative;               /*position of card on page*/
+    left: 50px;
+    bottom: 50px;
+    
+    transform-style: preserve-3d;
+    transform: 
+        perspective(50000px)                     /*how much it rotates, i.e., sensitivity*/
+        rotateY(var(--rotateX)) rotateX(var(--rotateY));  /*uses javascript to follow mouse*/
+    }
+    
+pre > * {                                      /*creates the bloom as if it's a lightbulb*/
+    text-shadow: 0 0 1rem currentColor;          /*shadow x,y,z location*/
+    }
+    
+pre::before,                                      /*background card*/
+    pre::after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    }
+    
+pre::before {                                      /*top card's shadow on back card setup*/
+    inset: 0.75rem;
+    border-radius: inherit;
+    background: black;
+    z-index: -1;
+    transform: translateZ(-50px);                   
+    filter: blur(15px);
+    opacity: 0.5;
+    }
+    
+pre::after {                                      /*back card setup*/
+    z-index: -2;                                    /*idk*/
+    inset: -1rem;                                   /*how much bigger to make it*/
+    background: linear-gradient(-45deg, red, blue); /*card texture*/
+    transform: translateZ(-50px);                     /*how far back*/
+    }
+    
+.style1 {                                      /*color of red text*/
+    color: var(--selector);
+    }
+    
+.style2 {                                      /*color of blue text*/
+    color: var(--property);
+    }
