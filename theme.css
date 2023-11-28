@@ -1,16 +1,19 @@
 :root {                                      /*defines theme colors*/
-    --color1: #00ffff;
-    --color2: #8000ff;
-    --color3: #10ca2f;
+    --color1: #00ffff;  /*teal*/
+    --color2: #8000ff;  /*purple*/
+    --color3: #10ca2f;  /*green*/
+    --color4: #152540;  /*blue gray*/
+    --color5: #000000;  /*black*/
     }
 
 .a {padding-top: 100px;                     /*body whitespace*/
     padding-left: 250px;
+    background: linear-gradient(-30deg, var(--color5), var(--color4));
     background-repeat:no-repeat;
     font-family:arial;}
 
 .topbar {                                    /*Top Navigation Bar */
-    background-color: #ffffff;
+    background-color: #d5cdcd;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 #999999;
     position: fixed;                        /* Set the navbar to fixed position */
