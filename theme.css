@@ -7,15 +7,16 @@
     }
 
 .a {padding-top: 100px;                     /*body whitespace*/
-    padding-left: 250px;
+    padding-left: 5rem;
     background: linear-gradient(-30deg, var(--color5), var(--color4));
     background-repeat:no-repeat;
-    font-family:arial;}
+    font-family:arial;
+    color: var(--color4)}
 
 .topbar {                                    /*Top Navigation Bar */
     background-color: #d5cdcd;
     overflow: hidden;
-    box-shadow: 0 4px 8px 0 #999999;
+    box-shadow: 0 4px 8px 0 #151515;
     position: fixed;                        /* Set the navbar to fixed position */
     top: 0;                                 /* Position the navbar at the top of the page */
     width: 100%;
