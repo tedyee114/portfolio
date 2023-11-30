@@ -11,7 +11,7 @@
     background: linear-gradient(-30deg, var(--color5), var(--color4));
     background-repeat:no-repeat;
     font-family:arial;
-    color: var(--color4)}
+    color: var(--color3)}
 
 .topbar {                                    /*Top Navigation Bar */
     background-color: #d5cdcd;
@@ -101,7 +101,7 @@ pre::before {                                      /*top card's shadow on back c
 pre::after {                                      /*back card setup*/
     z-index: -2;                                    /*idk*/
     inset: -1rem;                                   /*how much bigger to make it*/
-    background: linear-gradient(-45deg, red, blue); /*card texture*/
+    background: linear-gradient(-45deg, var(--color3), blue); /*card texture*/
     transform: translateZ(-50px);                     /*how far back*/
     }
     
