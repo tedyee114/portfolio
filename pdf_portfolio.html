@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PDF Version of Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="theme.css">
-        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/tedyee114/websites/main/milesplit/static/favicon.png">
-    </head>
-
-    <div class="topbar">                                                                    <!--Top Navigation Bar-->
-        <h1>Ted Yee's Site, PDF Portfolio Page</h1>
-    </div>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+           $(function() {
+              $("#includeHtml").load("header.html");
+           });
+        </script>
+        <div id="includeHtml"></div>
+     </head>
+        
 
     <div class="a">                                                      <!--This div uses style a to adds outer padding to everything-->
         <body style="background-color:#ebebeb">
         <a href="https://tedyee114.github.io/websites/">Back to Homepage</a><br><br> 
-        <embed
-            src="https://raw.githubusercontent.com/tedyee114/websites/main/milesplit/static/portfolio.pdf"
+        <object
             type="application/pdf"
+            data="portfolio.pdf"
             width=816
             height=1000rem
-        />  
+        ></object>  
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br>
         </body>
