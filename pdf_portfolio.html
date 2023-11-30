@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-           $(function() {
-              $("#includeHtml").load("header.html");
-           });
-        </script>
-        <div id="includeHtml"></div>
-     </head>
-        
 
-    <div class="a">                                                      <!--This div uses style a to adds outer padding to everything-->
-        <body style="background-color:#ebebeb">
-        <a href="https://tedyee114.github.io/websites/">Back to Homepage</a><br><br> 
-        <object
-            type="application/pdf"
-            data="portfolio.pdf"
-            width=816
-            height=1000rem
-        ></object>  
+    <head>
+        <title>Ted Yee Homepage</title>
+        <link rel="stylesheet" type="text/css" href="theme.css">
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/tedyee114/websites/main/milesplit/static/favicon.png">
+    </head>
+
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /* Make an HTTP request using the attribute value as the file name: */
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /* Exit the function: */
+                return;
+            }
+            }
+          }
+    </script>
+    <div w3-include-html="header.html"></div>
+    <script> includeHTML();</script>
+
+    <body style="background-color:#ebebeb">
+        <div class="a">                                                      <!--This div uses style a to adds outer padding to everything-->
+            <a href="https://tedyee114.github.io/websites/">Back to Homepage</a><br><br> 
+            <object
+                type="application/pdf"
+                data="portfolio.pdf"
+                width=816
+                height=1000rem
+            ></object>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br>
-        </body>
-    </div>
-  
-<!--Lil box in the corner-->
-        <!--Card Content, <pre> tag follows typed formatting, i.e., indents and new lines in html printout the same-->
-        <div style=width:fit-content>
-            <pre><span class="token style1">Ted's box</span><span class="token style2">:)</span>
-<span class="token style3">Pretend it's here to help, but its pretty incompetent tbh</span></pre>
         </div>
-        
-        <!--JavaScript Reference-->
-        <script src="till.js"></script>
 
-    <div class="bottom">                                                                    <!--Footer-->
-        <a style="font-family:arial">
-        ©2023 Ted Yee</a>
-    </div>
+            <!--Lil box in the corner-->
+            <!--Card Content, <pre> tag follows typed formatting, i.e., indents and new lines in html printout the same-->
+                <div style=width:fit-content>
+                    <pre><span class="token style1">Ted's box</span><span class="token style2">:)</span>
+        <span class="token style3">Pretend it's here to help, but its pretty incompetent tbh</span></pre>
+                </div>
+                <script src="till.js"></script>
+    </body>
 </html>
