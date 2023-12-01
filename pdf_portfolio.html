@@ -7,6 +7,7 @@
         <link rel="icon" type="image/x-icon" href="tyicon-transparent.png">
     </head>
 
+    <!--This imports another HTML file that controls the header-->
     <script>
         function includeHTML() {
             var z, i, elmnt, file, xhttp;
@@ -36,10 +37,9 @@
             }
           }
     </script>
-    <div w3-include-html="header.html"></div>
-    <script> includeHTML();</script>
+    <div w3-include-html="header.html"></div><script> includeHTML();</script>
 
-    <body style="background-color:#ebebeb">
+    <body>
         <div class="a">                                                      <!--This div uses style a to adds outer padding to everything-->
             <a href="https://tedyee114.github.io/websites/">Back to Homepage</a><br><br> 
             <object
@@ -51,13 +51,14 @@
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
-
-            <!--Lil box in the corner-->
-            <!--Card Content, <pre> tag follows typed formatting, i.e., indents and new lines in html printout the same-->
-                <div style=width:fit-content>
-                    <pre><span class="token style1">Ted's box</span><span class="token style2">:)</span>
-        <span class="token style3">Pretend it's here to help, but its pretty incompetent tbh</span></pre>
-                </div>
-                <script src="till.js"></script>
     </body>
-</html>
+  
+<!--Lil box in the corner-->
+        <!--Card Content, <pre> tag follows typed formatting, i.e., indents and new lines in html printout the same-->
+            <div style=width:fit-content>
+                <pre><a href="https://tedyee114.github.io/websites/">Back to Homepage</a>
+      <img src="tyicon-transparent.png" style="width:2rem"></pre>
+            </div><script src="till.js"></script>
+    
+        <div w3-include-html="footer.html"></div><script> includeHTML();</script>
+    </html>

@@ -17,8 +17,8 @@ function rotateElement(event, element) {
 
   // get offset from middle as a percentage
   // and tone it down a little
-  const offsetX = x/4-25;
-  const offsetY = y/4-130;
+  const offsetX = x/20-10;
+  const offsetY = y/8-65;
   // console.log(offsetX, offsetY);
 
   // set rotation

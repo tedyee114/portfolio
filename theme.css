@@ -10,15 +10,16 @@
     padding-left: 5rem;
     background: linear-gradient(-30deg, var(--color5), var(--color4));
     background-repeat:no-repeat;
-    font-family:arial;
-    color: var(--color3)}
+    font-family:'Arial Narrow Bold', sans-serif;
+    color: #7f7f7f}
 
 .topbar {                                    /*Top Navigation Bar */
-    background-color: #d5cdcd;
+    background: linear-gradient(-45deg, var(--color4), var(--color3));
     overflow: hidden;
     box-shadow: 0 4px 8px 0 #151515;
     position: fixed;                        /* Set the navbar to fixed position */
     top: 0;                                 /* Position the navbar at the top of the page */
+    left: 0;
     width: 100%;
     font-family:arial;}                           /* Full width */
 
@@ -43,6 +44,7 @@
     color:#ffffff;
     text-align:center;
     bottom: 0;                                 /* Position the navbar at the top of the page */
+    left:0;
     width: 100%;}                             /* Full width */
 
 .search {                                     /* formatting for search bars*/
