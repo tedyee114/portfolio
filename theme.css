@@ -1,6 +1,6 @@
 :root {                                      /*defines theme colors*/
     --color1: #00ffff;  /*teal*/
-    --color2: #8000ff;  /*purple*/
+    --color2: rgb(242, 82, 159);  /*purple*/
     --color3: #10ca2f;  /*green*/
     --color4: #152540;  /*blue gray*/
     --color5: #000000;  /*black*/
