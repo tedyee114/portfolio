@@ -1,7 +1,7 @@
 :root {                                      /*defines theme colors*/
     --color1: #00ffff;  /*teal*/
-    --color2: rgb(242, 82, 159);  /*purple*/
-    --color3: #10ca2f;  /*green*/
+    --color2: rgb(242, 82, 159);  /*pink*/
+    --color3: #139b48;  /*green*/
     --color4: #152540;  /*blue gray*/
     --color5: #000000;  /*black*/
     }
