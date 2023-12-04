@@ -12,7 +12,7 @@
     background-repeat:no-repeat;
     font-family:'Arial Narrow Bold', sans-serif;
     color: #7f7f7f;
-    text-align:right;}
+    text-align:center;}
 
 .topbar {                                    /*Top Navigation Bar */
     background: linear-gradient(-45deg, var(--color4), var(--color3));
