@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Research Assignment Homepage</title>
+        <link rel="stylesheet" type="text/css" href="research.css">
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/tedyee114/websites/main/tyicon-transparent.png">
+    </head>
+
+    <div class="topbar">                                                                    <!--Top Navigation Bar-->
+      <a href="homepage"><img src="https://raw.githubusercontent.com/tedyee114/websites/main/tyicon-transparent.png" title="Logo" align="center" width="60" height="60"/></a>
+      <a href="add_customer" align="center">Customers </a>
+      <a href="get_product" align="center">Products</a>
+  </div>
+
+  <body style=font-family:arial>
+    <br><br><br>
+    <h1>Product Information</h1>
+    <img  src="https://raw.githubusercontent.com/tedyee114/websites/main/research_assignment/static/storefront.jpg" title="a real photo" align="left" width="25%"/>
+    <img  src="https://raw.githubusercontent.com/tedyee114/websites/main/research_assignment/static/cartoon.jpg" title="straight facts" align="right" width="50%"/>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <form method="POST" action='get_product'>
+      <label>Product ID#:</label>
+      <input type="text" name="product_id">
+      <input type="submit" value="Get Product">
+      
+    </form>
+
+    {% if output %}     
+    <h2>Product Details</h2>
+    <table>
+        <tr> 
+            <td colspan="1" rowspan="1" align='center'><b>Product ID<b></td>
+            <td colspan="1" rowspan="1" align='center'><b>Product Name<b></td>
+            <td colspan="1" rowspan="1" align='center'><b>Product Description<b></td>
+            <td colspan="1" rowspan="1" align='center'><b>Product Price<b></td>
+            <td colspan="1" rowspan="1" align='center'><b>Product Inventory Count<b></td>
+            <td colspan="1" rowspan="1" align='center'><b>Product Vendor<b></td>
+        </tr>
+        <ul>
+        {% for i in output %}
+        <tr>
+            <td colspan="1" rowspan="1" align='center'>{{i[0]}}</td>
+            <td colspan="1" rowspan="1" align='center'>{{i[1]}}</td>
+            <td colspan="1" rowspan="1" align='center'>{{i[2]}}</td>
+            <td colspan="1" rowspan="1" align='center'>{{i[3]}}</td>
+            <td colspan="1" rowspan="1" align='center'>{{i[4]}}</td>
+            <td colspan="1" rowspan="1" align='center'>{{i[5]}}</td>
+            </tr>
+        {% endfor %}
+        </ul>
+    </table>
+{% endif %}
+
+{% if message %}     
+    <br>    
+    <h2>{{message}}<h2>
+{% endif %}
+  </body>
+  <br><br><br>
+
+  <div class="bottom">                                                                    <!--Footer-->
+    <img src="https://raw.githubusercontent.com/tedyee114/websites/main/tyicon-transparent.png" title="Logo" align="center" width="100" height="100"/>
+    <a style="font-family:arial">
+    ©2023 Ted Yee    &nbsp&nbsp&nbsp&nbsp
+    Don't Contact Us &nbsp&nbsp&nbsp&nbsp
+    Privacy is fake  &nbsp&nbsp&nbsp&nbsp
+    Terms of Misuse  &nbsp&nbsp&nbsp&nbsp
+    Your Personal Information Will be Sold Anyways
+    </a>
+</div>
+</html>
