@@ -4,6 +4,7 @@
     --color3: #139b48;  /*green*/
     --color4: #152540;  /*blue gray*/
     --color5: #000000;  /*black*/
+    --eggshell: #ebebeb;    /*eggshell*/
     }
 
 .a {padding-top: 100px;                     /*body whitespace*/
@@ -12,7 +13,37 @@
     background-repeat:no-repeat;
     font-family:'Arial Narrow Bold', sans-serif;
     color: #7f7f7f;
-    text-align:center;}
+    text-align:center;
+    text-shadow: 0 4px 8px 0 #ffffff;
+    border: 5px solid #555}
+
+a:link {
+    color: var(--color1);
+    background-color: transparent;
+    text-decoration: none;
+    }
+
+a:visited {
+    color: var(--color1);
+    background-color: transparent;
+    text-decoration: none;
+    }
+    
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+    
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+
+a:hover {                           /* Change the color of links on hover */
+    background-color: var(--color2);
+    color: black;}
 
 .topbar {                                    /*Top Navigation Bar */
     background: linear-gradient(-45deg, var(--color3), var(--color4));
@@ -21,8 +52,9 @@
     position: fixed;                        /* Set the navbar to fixed position */
     top: 0;                                 /* Position the navbar at the top of the page */
     left: 0;
-    width: 100%;
-    font-family:arial;}                           /* Full width */
+    width: 100%;                           /* Full width */
+    font-family:arial;
+    color: var(--eggshell);}
 
 .topbar a {                                 /* Style the links inside the navigation bar */
     color: #000000;
