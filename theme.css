@@ -15,7 +15,7 @@
     text-align:center;}
 
 .topbar {                                    /*Top Navigation Bar */
-    background: linear-gradient(-45deg, var(--color4), var(--color3));
+    background: linear-gradient(-45deg, var(--color3), var(--color4));
     overflow: hidden;
     box-shadow: 0 4px 8px 0 #151515;
     position: fixed;                        /* Set the navbar to fixed position */
