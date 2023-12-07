@@ -7,8 +7,8 @@
     --eggshell: #ebebeb;    /*eggshell*/
     }
 
-.a {padding-top: 100px;                     /*body whitespace*/
-    padding-left: 5rem;
+.a {padding-top: 100px;                     /*distance from top of div to first contents*/
+    padding-left: 5rem;                     /*distance from edge of div to first contents*/
     background: linear-gradient(-30deg, var(--color5), var(--color4));
     background-repeat:no-repeat;
     font-family:'Arial Narrow Bold', sans-serif;
