@@ -7,78 +7,10 @@
     --eggshell: #ebebeb;    /*eggshell*/
     }
 
-.a {padding-top: 100px;                     /*distance from top of div to first contents*/
-    padding-left: 5rem;                     /*distance from edge of div to first contents*/
-    background: linear-gradient(-30deg, var(--color5), var(--color4));
-    background-repeat:no-repeat;
-    font-family:'Arial Narrow Bold', sans-serif;
-    color: #7f7f7f;
-    text-align:center;
-    text-shadow: 0 4px 8px 0 #ffffff;
-    border: 5px solid #555}
-
-a:link {
-    color: var(--color1);
-    background-color: transparent;
-    text-decoration: none;
+img {
+    border: 5px solid #139b48;
+    border-radius: 1rem;
     }
-
-a:visited {
-    color: var(--color1);
-    background-color: transparent;
-    text-decoration: none;
-    }
-    
-a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-    }
-    
-a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-    }
-
-a:hover {                           /* Change the color of links on hover */
-    background-color: var(--color2);
-    color: black;}
-
-.topbar {                                    /*Top Navigation Bar */
-    background: linear-gradient(-45deg, var(--color3), var(--color4));
-    overflow: hidden;
-    box-shadow: 0 4px 8px 0 #151515;
-    position: fixed;                        /* Set the navbar to fixed position */
-    top: 0;                                 /* Position the navbar at the top of the page */
-    left: 0;
-    width: 100%;                           /* Full width */
-    font-family:arial;
-    color: var(--eggshell);}
-
-.topbar a {                                 /* Style the links inside the navigation bar */
-    color: #000000;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-    font-size: 15px;}
-
-.topbar a:hover {                           /* Change the color of links on hover */
-    background-color: #ebebeb;
-    color: black;}
-
-.topbar a.active {                           /* Add a color to the active/current link */
-    background-color: #04AA6D;
-    color: white;}
-
-.bottom {                                    /*Top Navigation Bar */
-    background-color: #000062;
-    padding: 50px 50px;
-    color:#ffffff;
-    text-align:center;
-    bottom: 0;                                 /* Position the navbar at the top of the page */
-    left:0;
-    width: 100%;}                             /* Full width */
 
 .search {                                     /* formatting for search bars*/
     background-color: #d9dae0;
@@ -87,63 +19,160 @@ a:hover {                           /* Change the color of links on hover */
     font-family:'Trebuchet MS';
     }
 
-/*everything below here used for the tilty card in the bottom right*/
-    
-pre {                                      /*defines the card and rotation itself*/
-    --selector: var(--color1);
-    --property: var(--color2);
-    --punctuation: var(--color3);
-    --undefined: var(--color3);
-    
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--undefined);
-    background: #555555;
-    padding: .25rem;                  /*topbottom padding around text in card*/
-    border-radius: 1rem;              /*how round to make the back card corners*/
-    
-    position: fixed;               /*position of card on page*/
-    left: 2rem;
-    bottom: 5rem;
-    
-    transform-style: preserve-3d;
-    transform: 
-        perspective(50000px)                     /*how much it rotates, i.e., sensitivity*/
-        rotateY(var(--rotateX)) rotateX(var(--rotateY));  /*uses javascript to follow mouse*/
-    }
-    
-pre > * {                                      /*creates the bloom as if it's a lightbulb*/
-    text-shadow: 0 0 1rem currentColor;          /*shadow x,y,z location*/
-    }
-    
-pre::before,                                      /*background card*/
-    pre::after {
-    content: "";
-    position: absolute;
-    border-radius: inherit;
-    }
-    
-pre::before {                                      /*top card's shadow on back card setup*/
-    inset: 0.75rem;
-    border-radius: inherit;
-    background: black;
-    z-index: -1;
-    transform: translateZ(-50px);                   
-    filter: blur(15px);
-    opacity: 0.5;
-    }
-    
-pre::after {                                      /*back card setup*/
-    z-index: -2;                                    /*idk*/
-    inset: -1rem;                                   /*how much bigger to make it*/
-    background: linear-gradient(-45deg, var(--color3), blue); /*card texture*/
-    transform: translateZ(-50px);                     /*how far back*/
-    }
-    
-.style1 {                                      /*color of red text*/
-    color: var(--selector);
-    }
-    
-.style2 {                                      /*color of blue text*/
-    color: var(--property);
-    }
+
+/*main body theme*/
+        .a {padding-top: 100px;                     /*distance from top of div to first contents*/
+            padding-left: 5rem;                     /*distance from edge of div to first contents*/
+            background: linear-gradient(-30deg, var(--color5), var(--color4));
+            background-repeat:no-repeat;
+            font-family:'Arial Narrow Bold', sans-serif;
+            color: #7f7f7f;
+            text-align:center;
+            text-shadow: 0 4px 8px 0 #ffffff;
+            border: 5px solid #555}
+
+        a:link {
+            color: var(--color1);
+            background-color: transparent;
+            text-decoration: none;
+            }
+
+        a:visited {
+            color: var(--color1);
+            background-color: transparent;
+            text-decoration: none;
+            }
+            
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+            }
+            
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+            }
+
+        a:hover {                           /* Change the color of links on hover */
+            background-color: var(--color2);
+            color: black;}
+
+
+/*header and footer*/
+        .topbar {                                    /*Top Navigation Bar */
+            background: linear-gradient(-45deg, var(--color3), var(--color4));
+            overflow: hidden;
+            box-shadow: 0 4px 8px 0 #151515;
+            position: fixed;                        /* Set the navbar to fixed position */
+            top: 0;                                 /* Position the navbar at the top of the page */
+            left: 0;
+            width: 100%;                           /* Full width */
+            font-family:arial;
+            color: var(--eggshell);}
+
+        .topbar a {                                 /* Style the links inside the navigation bar */
+            color: #000000;
+            text-align: center;
+            padding: 15px 15px;
+            text-decoration: none;
+            font-size: 15px;}
+
+        .topbar a:hover {                           /* Change the color of links on hover */
+            background-color: #ebebeb;
+            color: black;}
+
+        .topbar a.active {                           /* Add a color to the active/current link */
+            background-color: #04AA6D;
+            color: white;}
+
+        .bottom {                                    /*Top Navigation Bar */
+            background-color: #000062;
+            padding: 50px 50px;
+            color:#ffffff;
+            text-align:center;
+            bottom: 0;                                 /* Position the navbar at the top of the page */
+            left:0;
+            width: 100%;}                             /* Full width */
+
+
+/*landing animation*/
+        #showcase{
+            height: 300px;
+            }
+            
+        #showcase h1{
+            font-size: 50px;
+            line-height: 1.3;
+            position: relative;
+            animation: heading;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            }
+
+        @keyframes heading{
+            0% {top: -50px;}
+            100% {top: 200px;}
+            }
+
+
+/*tilty card*/
+        pre {                                      /*defines the card and rotation itself*/
+            --selector: var(--color1);
+            --property: var(--color2);
+            --punctuation: var(--color3);
+            --undefined: var(--color3);
+            
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--undefined);
+            background: #555555;
+            padding: .25rem;                  /*topbottom padding around text in card*/
+            border-radius: 1rem;              /*how round to make the back card corners*/
+            
+            position: fixed;               /*position of card on page*/
+            left: 2rem;
+            bottom: 5rem;
+            
+            transform-style: preserve-3d;
+            transform: 
+                perspective(50000px)                     /*how much it rotates, i.e., sensitivity*/
+                rotateY(var(--rotateX)) rotateX(var(--rotateY));  /*uses javascript to follow mouse*/
+            }
+            
+        pre > * {                                      /*creates the bloom as if it's a lightbulb*/
+            text-shadow: 0 0 1rem currentColor;          /*shadow x,y,z location*/
+            }
+            
+        pre::before,                                      /*background card*/
+            pre::after {
+            content: "";
+            position: absolute;
+            border-radius: inherit;
+            }
+            
+        pre::before {                                      /*top card's shadow on back card setup*/
+            inset: 0.75rem;
+            border-radius: inherit;
+            background: black;
+            z-index: -1;
+            transform: translateZ(-50px);                   
+            filter: blur(15px);
+            opacity: 0.5;
+            }
+            
+        pre::after {                                      /*back card setup*/
+            z-index: -2;                                    /*idk*/
+            inset: -1rem;                                   /*how much bigger to make it*/
+            background: linear-gradient(-45deg, var(--color3), blue); /*card texture*/
+            transform: translateZ(-50px);                     /*how far back*/
+            }
+            
+        .style1 {                                      /*color of red text*/
+            color: var(--selector);
+            }
+            
+        .style2 {                                      /*color of blue text*/
+            color: var(--property);
+            }

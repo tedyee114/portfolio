@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        img {
-            border: 5px solid #139b48;
-            border-radius: 1rem;
-            }
-    </style>
     <head>
         <title>Ted Yee Homepage</title>
         <link rel="stylesheet" type="text/css" href="theme.css">
@@ -45,8 +39,16 @@
     <div w3-include-html="header.html"></div><script> includeHTML();</script>
 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <body background="static/bavaria_still.png">
+    <div id="showcase">                                                     <!--landing animation-->
+        <h1 style="text-align: center; font-family:arial; color:#139b48">Hi, I'm Ted Yee, Welcome To My Site</h1>
+        <video autoplay muted loop id="myVideo" width=100%>
+            <source src="static/fadeinout.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+
+    <body>                                                                  <!--content & stuff-->
         <div class="a">                                                      <!--This div uses style a to adds outer padding to everything-->
             <h1 style=text-align:center>Please pardon my main site's appearance, it's a work in progress</h1>
             <br><br>
@@ -93,13 +95,14 @@
             </div>
     </body>
   
-<!--Lil box in the corner-->
+    <div>                                                                   <!--Lil box in the corner-->
         <!--Card Content, <pre> tag follows typed formatting, i.e., indents and new lines in html printout the same-->
-        <div style=width:fit-content>
-            <pre><span class="token style1">I always feel like</span>
-<span class="token style2">somebody's watching meee</span>
-<span class="token style3">do do do 👀</span></pre>
-        </div><script src="https://tedyee114.github.io/websites/till.js"></script>
-
+            <div style=width:fit-content>
+                <pre><span class="token style1">I always feel like</span>
+    <span class="token style2">somebody's watching meee</span>
+    <span class="token style3">do do do 👀</span></pre>
+            </div><script src="https://tedyee114.github.io/websites/till.js"></script>    
+    </div>
+    
     <div w3-include-html="footer.html"></div><script> includeHTML();</script>
 </html>
