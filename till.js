@@ -27,6 +27,7 @@ function rotateElement(event, element) {
   element.style.setProperty("--rotateY", -1 * offsetY + "deg");
 }
 
+
 /*imports another HTML script*/
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
@@ -55,3 +56,13 @@ function includeHTML() {
   }
   }
 }
+
+$(window).scroll(function(){
+  var wScroll = $(this).scrollTop();
+
+  if (wScroll>=50)
+  { 
+      $('.navbar').css("background: #ffffff;");
+  }
+  console.log(wScroll);
+});
