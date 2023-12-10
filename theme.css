@@ -7,11 +7,6 @@
     --eggshell: #ebebeb;    /*eggshell*/
     }
 
-img {
-    border: 5px solid #139b48;
-    border-radius: 1rem;
-    }
-
 .search {                                     /* formatting for search bars*/
     background-color: #d9dae0;
     padding: 50px 50px;
@@ -28,8 +23,7 @@ img {
             font-family:'Arial Narrow Bold', sans-serif;
             color: #7f7f7f;
             text-align:center;
-            text-shadow: 0 4px 8px 0 #ffffff;
-            border: 5px solid #555}
+            text-shadow: 0 4px 8px 0 #ffffff;}
 
         a:link {
             color: var(--color1);
@@ -62,10 +56,13 @@ img {
 
 /*header and footer*/
         .topbar {                                    /*Top Navigation Bar */
-            background: linear-gradient(-45deg, var(--color3), var(--color4));
+            /* background: linear-gradient(-45deg, var(--color3), var(--color4)); */
             overflow: hidden;
             box-shadow: 0 4px 8px 0 #151515;
             position: fixed;                        /* Set the navbar to fixed position */
+            padding-top: 1.5rem;                     /*distance from top of div to first contents*/
+            padding-left: 1.5rem;                     /*distance from edge of div to first contents*/
+            padding-bottom: 1.5rem;                     /*distance from edge of div to first contents*/
             top: 0;                                 /* Position the navbar at the top of the page */
             left: 0;
             width: 100%;                           /* Full width */

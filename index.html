@@ -4,39 +4,8 @@
         <title>Ted Yee Homepage</title>
         <link rel="stylesheet" type="text/css" href="theme.css">
         <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/tedyee114/websites/main/tyicon-transparent.png">
+        <div w3-include-html="header.html"></div><script> includeHTML();</script>
     </head>
-
-    <!--This imports another HTML file that controls the header-->
-    <script>
-        function includeHTML() {
-            var z, i, elmnt, file, xhttp;
-            /* Loop through a collection of all HTML elements: */
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-                /* Make an HTTP request using the attribute value as the file name: */
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                    /* Remove the attribute, and call this function once more: */
-                    elmnt.removeAttribute("w3-include-html");
-                    includeHTML();
-                }
-                }
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                /* Exit the function: */
-                return;
-            }
-            }
-          }
-    </script>
-    <div w3-include-html="header.html"></div><script> includeHTML();</script>
 
 
     <div id="showcase">                                                     <!--landing animation-->
@@ -45,10 +14,10 @@
             <source src="static/fadeinout.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
-    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     
 
-    <body>                                                                  <!--content & stuff-->
+    <body style="background:#16171A">                                                                  <!--content & stuff-->
         <div class="a">                                                      <!--This div uses style a to adds outer padding to everything-->
             <h1 style=text-align:center>Please pardon my main site's appearance, it's a work in progress</h1>
             <br><br>
@@ -68,20 +37,20 @@
             <table>
                 <tr>
                     <td>
-                        <a href="https://tedyee114.github.io/websites/milesplit/templates/index"><img src="https://tedyee114.github.io/websites/static/milesplit_thumbnail.png" width=25%, height=25%><br>Milesplit Website Recreation</a><br>
+                        <a href="https://tedyee114.github.io/websites/milesplit/templates/index"><img src="https://tedyee114.github.io/websites/static/milesplit_thumbnail.png" style="border: 5px solid #139b48; border-radius: 1rem" width=25%, height=25%><br>Milesplit Website Recreation</a><br>
                         This was a project for IE3425 Engineering Databases at Northeastern University<br>
                         I independently learned how to host live sites on the web for this<br>
                         To see the project rubric, description, and written report, click either the Search or Login icons in the top right
                     </td>
                     <td>
-                        <a href="https://tedyee114.github.io/websites/research_assignment/templates/homepage"><img src="https://tedyee114.github.io/websites/static/research_assignment_thumbnail.png" width=40%, height=40%><br>Research Assignment</a><br>
+                        <a href="https://tedyee114.github.io/websites/research_assignment/templates/homepage"><img src="https://tedyee114.github.io/websites/static/research_assignment_thumbnail.png"  style="border: 5px solid #139b48; border-radius: 1rem"width=30%, height=30%><br>Research Assignment</a><br>
                         Another bonus project for IE3425 Engineering Databases at Northeastern University<br>
                         Turns out learning how to host sites was useful. I was able to make this site from scratch and deploy in under 2hrs.
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="https://sites.google.com/view/huskinordic/home"><img src="https://tedyee114.github.io/websites/static/huskinordic_thumbnail.png" width=25%, height=25%><br>Nordic Ski Team Website</a><br>
+                        <a href="https://sites.google.com/view/huskinordic/home"><img src="https://tedyee114.github.io/websites/static/huskinordic_thumbnail.png"  style="border: 5px solid #139b48; border-radius: 1rem"width=25%, height=25%><br>Nordic Ski Team Website</a><br>
                         I founded the Nordic Ski Team at Northeastern and created all the documents for it, including the website. <br>This was done with Google Sites
                         for wider viewing, though we're having trouble with SEO (search engine optimization)
                     </td>

@@ -4,6 +4,7 @@ document.addEventListener("mousemove", (e) => {
   rotateElement(e, pre);
 });
 
+/*rotates lil box to follow mouse cursor*/
 function rotateElement(event, element) {
   // get mouse position
   const x = event.clientX;
@@ -26,7 +27,7 @@ function rotateElement(event, element) {
   element.style.setProperty("--rotateY", -1 * offsetY + "deg");
 }
 
-//This script defined the function "includeHTML to import other html files
+/*imports another HTML script*/
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /* Loop through a collection of all HTML elements: */
