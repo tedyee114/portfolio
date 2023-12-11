@@ -56,13 +56,3 @@ function includeHTML() {
   }
   }
 }
-
-$(window).scroll(function(){
-  var wScroll = $(this).scrollTop();
-
-  if (wScroll>=50)
-  { 
-      $('.navbar').css("background: #ffffff;");
-  }
-  console.log(wScroll);
-});

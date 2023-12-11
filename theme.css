@@ -56,9 +56,7 @@
 
 /*header and footer*/
         .navbar {                                    /*Top Navigation Bar */
-            /* background: linear-gradient(-45deg, var(--color3), var(--color4)); */
             overflow: hidden;
-            box-shadow: 0 4px 8px 0 #151515;
             position: fixed;                        /* Set the navbar to fixed position */
             padding-top: 1.5rem;                     /*distance from top of div to first contents*/
             padding-left: 1.5rem;                     /*distance from edge of div to first contents*/
@@ -69,7 +67,8 @@
             font-family:arial;
             color: var(--eggshell);
             transition: ease .5s;
-            -webkit-transition: ease .5s;}
+            -webkit-transition: ease .5s;
+            color:blue}
 
         .navbar a {                                 /* Style the links inside the navigation bar */
             color: #000000;
@@ -95,6 +94,22 @@
             left:0;
             width: 100%;}                             /* Full width */
 
+        .navbar_light {
+            background: linear-gradient(-45deg, var(--color3), blue);
+            overflow: hidden;
+            box-shadow: 0 4px 8px 0 #151515;
+            position: fixed;                        /* Set the navbar to fixed position */
+            padding-top: 1.5rem;                     /*distance from top of div to first contents*/
+            padding-left: 1.5rem;                     /*distance from edge of div to first contents*/
+            padding-bottom: 1.5rem;                     /*distance from edge of div to first contents*/
+            top: 0;                                 /* Position the navbar at the top of the page */
+            left: 0;
+            width: 100%;                           /* Full width */
+            font-family:arial;
+            color: var(----color4);
+            transition: ease .5s;
+            -webkit-transition: ease 1s;}
+        
 
 /*landing animation*/
         #showcase{
