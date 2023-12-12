@@ -5,6 +5,7 @@
     --color4: #152540;  /*blue gray*/
     --color5: #000000;  /*black*/
     --eggshell: #ebebeb;    /*eggshell*/
+    --gray: #333333;
     }
 
 .search {                                     /* formatting for search bars*/
@@ -59,16 +60,14 @@
             overflow: hidden;
             position: fixed;                        /* Set the navbar to fixed position */
             padding-top: 1.5rem;                     /*distance from top of div to first contents*/
-            padding-left: 1.5rem;                     /*distance from edge of div to first contents*/
+            padding-left: 2%;                     /*distance from edge of div to first contents*/
             padding-bottom: 1.5rem;                     /*distance from edge of div to first contents*/
             top: 0;                                 /* Position the navbar at the top of the page */
             left: 0;
             width: 100%;                           /* Full width */
-            font-family:arial;
-            color: var(--eggshell);
             transition: ease .5s;
-            -webkit-transition: ease .5s;
-            color:blue}
+            -webkit-transition: ease .1s;
+            box-shadow: 0 1px 0 0 #333333;}
 
         .navbar a {                                 /* Style the links inside the navigation bar */
             color: #000000;
@@ -78,7 +77,7 @@
             font-size: 15px;}
 
         .navbar a:hover {                           /* Change the color of links on hover */
-            background-color: #ebebeb;
+            background-color: var(--color2);
             color: black;}
 
         .navbar a.active {                           /* Add a color to the active/current link */
@@ -86,7 +85,7 @@
             color: white;}
 
         .bottom {                                    /*Top Navigation Bar */
-            background-color: #000062;
+            background: linear-gradient(-45deg, var(--color3), var(--color4));;
             padding: 50px 50px;
             color:#ffffff;
             text-align:center;
@@ -95,20 +94,22 @@
             width: 100%;}                             /* Full width */
 
         .navbar_light {
-            background: linear-gradient(-45deg, var(--color3), blue);
+            background: linear-gradient(-45deg, var(--color3), var(--color4));
             overflow: hidden;
-            box-shadow: 0 4px 8px 0 #151515;
+            box-shadow: 0 4px 8px 0 #00ffff;
+            text-shadow: #00ffff;
             position: fixed;                        /* Set the navbar to fixed position */
             padding-top: 1.5rem;                     /*distance from top of div to first contents*/
-            padding-left: 1.5rem;                     /*distance from edge of div to first contents*/
+            padding-left: 3%;                     /*distance from edge of div to first contents*/
             padding-bottom: 1.5rem;                     /*distance from edge of div to first contents*/
             top: 0;                                 /* Position the navbar at the top of the page */
             left: 0;
             width: 100%;                           /* Full width */
             font-family:arial;
             color: var(----color4);
-            transition: ease .5s;
-            -webkit-transition: ease 1s;}
+            transition: ease .5s;                   /*transition between regular and navbar_light*/
+            -webkit-transition: ease .5s;
+            text-align: left;}
         
 
 /*landing animation*/
@@ -127,7 +128,7 @@
 
         @keyframes heading{
             0% {top: -50px;}
-            100% {top: 150px;}
+            100% {top: 75px;}
             }
 
 
