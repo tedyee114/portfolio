@@ -191,6 +191,13 @@
         .style2 {                                      /*color of blue text*/
             color: var(--property);
             }
+
+        pre::backdrop {                                     /*defines the card and rotation itself*/
+            transform-style: preserve-3d;
+            transform: 
+                perspective(50000px)                     /*how much it rotates, i.e., sensitivity*/
+                rotateY(var(--rotateX)) rotateX(var(--rotateY));  /*uses javascript to follow mouse*/
+        }
 /*hologram*/
         #spinner {
             text-align: center;
