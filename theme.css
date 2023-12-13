@@ -1,5 +1,5 @@
 :root {                                      /*defines theme colors*/
-    --color1: #00ffff;  /*teal*/
+    --color1: #00ffff;  /*cyan*/
     --color2: rgb(242, 82, 159);  /*pink*/
     --color3: #139b48;  /*green*/
     --color4: #152540;  /*blue gray*/
@@ -190,4 +190,27 @@
             
         .style2 {                                      /*color of blue text*/
             color: var(--property);
+            }
+/*hologram*/
+        #spinner {
+            text-align: center;
+            animation-name: spin, depth;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            background-color: rgba(100,100,100,.15);
+            padding: .25rem;                  /*topbottom padding around text in card*/    
+            /* text-shadow: 0 0 1rem currentColor; */
+        }
+
+            @keyframes spin {
+            from { transform: rotateY(-90deg); }
+            to { transform: rotateY(90deg); }
+            }
+            @keyframes depth {
+            0% { text-shadow: 0 0 currentColor; }
+            25% { text-shadow: 1px 0 currentColor, 2px 0 currentColor, 3px 0 currentColor, 4px 0 currentColor, 5px 0 currentColor; }
+            50% { text-shadow: 0 0 currentColor; }
+            75% { text-shadow: -1px 0 currentColor, -2px 0 currentColor, -3px 0 currentColor, -4px 0 currentColor, -5px 0 currentColor; }
+            100% { text-shadow: 0 0 currentColor; }
             }

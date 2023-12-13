@@ -16,8 +16,7 @@ function rotateElement(event, element) {
   const middleY = window.innerHeight / 2;
   // console.log(middleX, middleY)
 
-  // get offset from middle as a percentage
-  // and tone it down a little
+  // get offset from middle as a percentage and tone it down a little
   const offsetX = x/20-10;
   const offsetY = y/8-65;
   // console.log(offsetX, offsetY);
@@ -26,7 +25,6 @@ function rotateElement(event, element) {
   element.style.setProperty("--rotateX", offsetX + "deg");
   element.style.setProperty("--rotateY", -1 * offsetY + "deg");
 }
-
 
 /*imports another HTML script*/
 function includeHTML() {
