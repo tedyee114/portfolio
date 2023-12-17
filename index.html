@@ -9,7 +9,7 @@
         <script>
             $(document).ready(function() {
             $(window).scroll(function() {
-                if ($(document).scrollTop() > 250) {
+                if ($(document).scrollTop() > 520) {
                 $("b").addClass("navbar_light");
                 } else {
                 $("b").removeClass("navbar_light");
@@ -18,15 +18,30 @@
             });
         </script>
     </head>
+    <link rel="preload" href="/home-compost-capsule/assets/fonts/MessinaSans-Regular-7f8505d976621822a9985b8728d5dbdc.otf" as="font" crossorigin="anonymous">
+    <table>
+        <tr>
+            <td width="550px">
+                <div id="showcase" style="padding-left:10%">                                                     <!--landing animation-->
+                    <h1>Ted&nbsp;&nbsp;&nbsp;</h1>
+                    <h2>&nbsp;&nbsp;&nbsp;Yee</h2>
+                </div>
+            </td>
+            <td>
+                <br>
+                <div class="bear">
+                    <img src="static/bear.png" style="width:75%;">
+                </div>
+                <div class="shadow"></div>
+                <div class="a"> Here's a bear I made. What a good boy^</div>
+            </td>
+        </tr>
+    </table>
     
-    <div id="showcase">                                                     <!--landing animation-->
-        <h1 style="text-align: center; font-family:arial; color:#139b48">Hi, I'm Ted Yee, Welcome To My Site</h1>
-    </div>
-    
+
+
 
     <body style="background: linear-gradient(60deg, #000000, #152540);">
-
-
         <div class="a">                                                      <!--This div uses style a to adds outer padding to everything-->
             <h1 style=text-align:center>Please pardon my main site's appearance, it's a work in progress</h1>
             <br><br>
@@ -66,22 +81,10 @@
                 </tr>
             </table>
             </div>
-
-            <div style=width:fit-content>
-                <div id="spinner", style="color:#00ffff; font-family:arial;border: 5px ridge;border-radius: 1rem">
-                    <p>Hologram spinner</p>
-                    <p>This will look cool once I add the 3D wallpaper</p>
-                </div>
-            </div>
             
             <marquee  behavior="scroll" direction="left"> 
                 <img src="https://raw.githubusercontent.com/tedyee114/websites/main/tyicon-transparent.png" alt="Ted Yee logo">  
             </marquee><br><br>
-
-            <div id="wallpaper">
-                <img src="/static/hdri_indoor.jpeg" width="50%">
-            </div>
-            
     </body>
   
     <div>                                                                   <!--Lil box in the corner-->
@@ -93,10 +96,6 @@
             </div><script src="https://tedyee114.github.io/websites/till.js"></script>    
     </div>
     
-    <div>                                                                   <!--hologram-->
-        <!--Card Content, <pre> tag follows typed formatting, i.e., indents and new lines in html printout the same-->
-            <div id="memo">hologram</div>
-    </div>
     
     <div w3-include-html="footer.html"></div><script> includeHTML();</script>
 </html>
