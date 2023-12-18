@@ -62,6 +62,10 @@
             position: relative;
           }
 
+        .sites {
+            background-color: var(--color2);
+        }
+
 
 
 /*header and footer*/
@@ -168,7 +172,7 @@
             animation-fill-mode: forwards;
 
             /* background: linear-gradient(-30deg, var(--color3), blue); card texture */
-            background-image: url(static/sea.jpg);
+            background-image: url(https://github.com/tedyee114/static/blob/main/portfolio/sea.jpg?raw=true);
             background-size:2000px;
             background-position-y:-500px;
             background-repeat:repeat-x; 
@@ -192,7 +196,7 @@
             animation-fill-mode: forwards;
 
             /* background: linear-gradient(-30deg, var(--color3), blue); card texture */
-            background-image: url(static/sea.jpg);
+            background-image: url(https://github.com/tedyee114/static/blob/main/portfolio/sea.jpg?raw=true);
             background-size:2000px;
             background-position-y:-625px;
             background-repeat:space; 
