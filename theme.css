@@ -1,12 +1,28 @@
 :root {                                      /*defines theme colors*/
     --color1: #70ebeb;  /*cyan*/
-    --color2: #f2529f;  /*pink*/
-    --green: #139b48;  /*green*/
+    --color2: hsl(331, 86%, 64%);  /*pink*/
+    --green: #0a8338;  /*green*/
     --color4: #152540;  /*blue gray*/
     --color5: #000000;  /*black*/
     --eggshell: #ebebeb;    /*eggshell*/
-    --salmon: #d87171;
+    --salmon: #cf8686;
     --gray: #7f7f7f;
+    }
+
+a:link {
+    color: var(--color2);
+    background-color: transparent;
+    text-decoration: none;
+    }
+a:visited {
+    color: var(--green);
+    background-color: transparent;
+    text-decoration: none;
+    }
+a:hover {                           /* Change the color of links on hover */
+    color: black;
+    background-color: var(green);
+    text-decoration: underline;
     }
 
 
@@ -161,48 +177,27 @@
             position: relative;
         }
 
-        .a {background: var(--color1);
-            color: var(--gray);
+        .a {
             padding: 5%;
             font-family:'Arial Narrow Bold', sans-serif;
-            text-align:center;}
-        a:link {
-            color: var(--color2);
-            background-color: transparent;
-            text-decoration: none;}
-        a:hover {                           /* Change the color of links on hover */
-            background-color: var(--color2);
-            color: black;
-            background-color: transparent;
-            text-decoration: underline;}
-        a:visited {
-            color: var(--color2);
-            background-color: transparent;
-            text-decoration: none;
+            text-align:center;
+        }
+  
+        .alpha{
+            background: var(--color1);
+                color: var(--gray);
+                padding: 5%;
+            font-family:'Arial Narrow Bold', sans-serif;
+            text-align:center;
             }
-            
-        .b {
+        
+        .beta {
             background: var(--salmon);
             padding: 5%;
             font-family:'Arial Narrow Bold', sans-serif;
             color: var(--eggshell);
             font-weight: bold;
             text-align:center;}
-        b:link {
-            color: var(--green);
-            background-color: transparent;
-            text-decoration: none;
-            }
-        b:hover {                           /* Change the color of links on hover */
-            background-color: var(--green);
-            color: black;
-            background-color: transparent;
-            text-decoration: underline;}
-        b:visited {
-            color: var(--green);
-            background-color: transparent;
-            text-decoration: none;
-            }      
 
 
 /*tilty card*/
