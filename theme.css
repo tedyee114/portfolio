@@ -1,71 +1,13 @@
 :root {                                      /*defines theme colors*/
-    --color1: #00ffff;  /*cyan*/
-    --color2: rgb(242, 82, 159);  /*pink*/
-    --color3: #139b48;  /*green*/
+    --color1: #70ebeb;  /*cyan*/
+    --color2: #f2529f;  /*pink*/
+    --green: #139b48;  /*green*/
     --color4: #152540;  /*blue gray*/
     --color5: #000000;  /*black*/
     --eggshell: #ebebeb;    /*eggshell*/
-    --gray: #333333;
+    --salmon: #d87171;
+    --gray: #7f7f7f;
     }
-
-.search {                                     /* formatting for search bars*/
-    background-color: #d9dae0;
-    padding: 50px 50px;
-    text-align: center;
-    font-family:'Trebuchet MS';
-    }
-
-/*main body theme*/
-        .a {padding-top: 100px;                     /*distance from top of div to first contents*/
-            padding-left: 5rem;                     /*distance from edge of div to first contents*/
-            /* background: linear-gradient(-30deg, var(#000000), var(#152540)); */
-            background-repeat:no-repeat;
-            font-family:'Arial Narrow Bold', sans-serif;
-            color: #7f7f7f;
-            text-align:center;
-            text-shadow: 0 4px 8px 0 #ffffff;}
-
-        a:link {
-            color: var(--color1);
-            background-color: transparent;
-            text-decoration: none;
-            }
-
-        a:visited {
-            color: var(--color1);
-            background-color: transparent;
-            text-decoration: none;
-            }
-            
-        a:hover {
-            color: red;
-            background-color: transparent;
-            text-decoration: underline;
-            }
-            
-        a:active {
-            color: yellow;
-            background-color: transparent;
-            text-decoration: underline;
-            }
-
-        a:hover {                           /* Change the color of links on hover */
-            background-color: var(--color2);
-            color: black;}
-
-
-        .bear {
-            text-align: right;
-            padding-top: 7rem;
-            padding-right: 3%;
-            margin-bottom: -12%;
-            position: relative;
-          }
-
-        .sites {
-            background-color: var(--color2);
-        }
-
 
 
 /*header and footer*/
@@ -94,11 +36,11 @@
             color: black;} */
 
         .navbar a.active {                           /* Add a color to the active/current link */
-            background-color: #04AA6D;
+            background-color: var(--green);
             color: white;}
 
         .bottom {                                    /*Top Navigation Bar */
-            background: linear-gradient(-45deg, var(--color3), var(--color4));;
+            background: linear-gradient(-45deg, var(--green), var(--color4));;
             padding: 50px 50px;
             color:#ffffff;
             text-align:center;
@@ -107,7 +49,7 @@
             width: 100%;}                             /* Full width */
 
         .navbar_light {
-            background: linear-gradient(-45deg, var(--color3), var(--color4));
+            background: linear-gradient(-45deg, var(--green), var(--color4));
             overflow: hidden;
             box-shadow: 0 4px 8px 0 #00ffff;
             text-shadow: #00ffff;
@@ -171,7 +113,7 @@
             animation-duration: 2s;
             animation-fill-mode: forwards;
 
-            /* background: linear-gradient(-30deg, var(--color3), blue); card texture */
+            /* background: linear-gradient(-30deg, var(--green), blue); card texture */
             background-image: url(https://github.com/tedyee114/static/blob/main/portfolio/sea.jpg?raw=true);
             background-size:2000px;
             background-position-y:-500px;
@@ -195,7 +137,7 @@
             animation-duration: 2s;
             animation-fill-mode: forwards;
 
-            /* background: linear-gradient(-30deg, var(--color3), blue); card texture */
+            /* background: linear-gradient(-30deg, var(--green), blue); card texture */
             background-image: url(https://github.com/tedyee114/static/blob/main/portfolio/sea.jpg?raw=true);
             background-size:2000px;
             background-position-y:-625px;
@@ -210,12 +152,65 @@
             }
 
 
+/*main body themes*/
+        .bear {
+            text-align: right;
+            padding-top: 7rem;
+            padding-right: 3%;
+            margin-bottom: -12%;
+            position: relative;
+        }
+
+        .a {background: var(--color1);
+            color: var(--gray);
+            padding: 5%;
+            font-family:'Arial Narrow Bold', sans-serif;
+            text-align:center;}
+        a:link {
+            color: var(--color2);
+            background-color: transparent;
+            text-decoration: none;}
+        a:hover {                           /* Change the color of links on hover */
+            background-color: var(--color2);
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;}
+        a:visited {
+            color: var(--color2);
+            background-color: transparent;
+            text-decoration: none;
+            }
+            
+        .b {
+            background: var(--salmon);
+            padding: 5%;
+            font-family:'Arial Narrow Bold', sans-serif;
+            color: var(--eggshell);
+            font-weight: bold;
+            text-align:center;}
+        b:link {
+            color: var(--green);
+            background-color: transparent;
+            text-decoration: none;
+            }
+        b:hover {                           /* Change the color of links on hover */
+            background-color: var(--green);
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;}
+        b:visited {
+            color: var(--green);
+            background-color: transparent;
+            text-decoration: none;
+            }      
+
+
 /*tilty card*/
         pre {                                      /*defines the card and rotation itself*/
             --selector: var(--color1);
             --property: var(--color2);
-            --punctuation: var(--color3);
-            --undefined: var(--color3);
+            --punctuation: var(--green);
+            --undefined: var(--green);
             
             font-size: 1rem;
             font-weight: bold;
@@ -258,7 +253,7 @@
         pre::after {                                      /*back card setup*/
             z-index: -2;                                    /*idk*/
             inset: -1rem;                                   /*how much bigger to make it*/
-            background: linear-gradient(-45deg, var(--color3), blue); /*card texture*/
+            background: linear-gradient(-45deg, var(--green), blue); /*card texture*/
             transform: translateZ(-50px);                     /*how far back*/
             }
             
@@ -276,6 +271,8 @@
                 perspective(50000px)                     /*how much it rotates, i.e., sensitivity*/
                 rotateY(var(--rotateX)) rotateX(var(--rotateY));  /*uses javascript to follow mouse*/
         }
+
+
 /*hologram*/
         #spinner {
             text-align: center;
