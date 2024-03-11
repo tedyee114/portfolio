@@ -263,7 +263,7 @@ a:hover {                           /* Change the color of links on hover */
             }
             
         pre::after {                                      /*back card setup*/
-            z-index: -2;                                    /*idk*/
+            z-index: -2;                                    /*size difference between front and back card*/
             inset: -1rem;                                   /*how much bigger to make it*/
             background: linear-gradient(-45deg, var(--green), blue); /*card texture*/
             transform: translateZ(-50px);                     /*how far back*/
@@ -308,3 +308,39 @@ a:hover {                           /* Change the color of links on hover */
             75% { text-shadow: -1px 0 currentColor, -2px 0 currentColor, -3px 0 currentColor, -4px 0 currentColor, -5px 0 currentColor; }
             100% { text-shadow: 0 0 currentColor; }
             }
+
+/*portfolio book*/
+    .gildedbook {
+        padding-top: -222px;
+        color: #7B6D3F;
+        text-align: center;
+        font-size:xx-large;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        z-index: 2;
+        width: 312px;
+        height: 445px;
+    }
+
+    .gildedbook:hover {
+        color: #7B6D3F;
+        text-align: center;
+        font-size:xx-large;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        width: 312px;
+        height: 445px;
+        transform-origin: 0%;
+        transform:rotateY(60deg);
+        -webkit-transition: ease .5s;
+        z-index: 2;
+        top: 100px;
+        right: 200px;
+        }
+
+    .gildedbook a {
+        color: #7B6D3F;
+    }
+
+    .gildedbook a:hover {                           /*Change the color of links on hover*/
+        color: #7B6D3F;
+        box-shadow: 0 4px 8px 0 transparent;
+        }

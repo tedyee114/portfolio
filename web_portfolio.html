@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Ted Yee Web Portfolio</title>
+        <title>Ted Yee Portfolio</title>
         <link rel="stylesheet" type="text/css" href="theme.css">
         <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/tedyee114/websites/main/tyicon-transparent.png">
         <div w3-include-html="header.html"></div><script> includeHTML();</script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function() {
-            $(window).scroll(function() {
-                if ($(document).scrollTop() > 50) {
-                $("b").addClass("navbar_light");
-                } else {
-                $("b").removeClass("navbar_light");
-                }
-            });
+        
+<!--MAKES HEADER OPAQUE ON SCROLL --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script>
+            $(function() {
+                $(window).on("scroll", function() {
+                    if($(window).scrollTop() > 70) {
+                        $(".navbar").addClass("navbar_light");
+                    } else {
+                        //remove the background property so it comes transparent again (defined in your css)
+                       $(".navbar").removeClass("navbar_light");
+                    }
+                });
             });
         </script>
     </head>
@@ -29,6 +30,10 @@
             <br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
     </body>
+
+    <div class="gildedbook">
+        howdy
+    </div>
   
     <div>                                                                   <!--Lil box in the corner-->
         <!--Lil box in the corner-->
