@@ -1,30 +1,145 @@
 <!DOCTYPE html>
 <html>
-   
     <head>
+        <title>Ted Yee Homepage</title>
         <link rel="stylesheet" type="text/css" href="theme.css">
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/tedyee114/websites/main/tyicon-transparent.png">
+        <div w3-include-html="header.html"></div><script> includeHTML();</script>
+        
+<!--MAKES HEADER OPAQUE ON SCROLL --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script>
+            $(function() {
+                $(window).on("scroll", function() {
+                    if($(window).scrollTop() > 70) {
+                        $(".navbar").addClass("navbar_light");
+                    } else {
+                        //remove the background property so it comes transparent again (defined in your css)
+                       $(".navbar").removeClass("navbar_light");
+                    }
+                });
+            });
+        </script>
     </head>
 
-    <body style="background: linear-gradient(60deg, #000000, #152540);">
-        <div style="margin-top: 100px; margin-left:100px; color: white;">
-            <img src="bookcover.PNG" style="width: 312px; height: 445px;">
+
+    <body style="background: #222222; margin:-10px; padding:-10px">
+
+        <div class="bear">
+            <img src="https://github.com/tedyee114/static/blob/main/portfolio/bear-cropped.png?raw=true" style="width:25%;">
+        </div> <div style="font-family:'Arial Narrow Bold', sans-serif; color: #7f7f7f; text-align:right;">Check out some models like these! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        
+        
+        <div id="showcase" style="padding-left:10%; width:fit-content;">                                                     <!--landing animation-->
+            <h1>Ted&nbsp;&nbsp;&nbsp;</h1>
+            <h2>&nbsp;&nbsp;&nbsp;Yee</h2>
         </div>
-        <div style="margin-top:-440px; margin-left:110px;">
-            <img src="Capture.PNG" style="width: 290px; height: 425px;">
+
+        <!-- <img src="https://raw.githubusercontent.com/tedyee114/static/main/portfolio/b-3DV-on.PNG"> -->
+
+        <div class="bubblebucket">
+            <div class="bubbles"></div>
+            <div class="bubbles" style="top:-5px;"></div>
+            <div class="bubbles"style="left: 55px;"></div>
+            <div class="bubbles"style="top:-35px;"></div>
         </div>
-        <div class="gildedbook" style="margin-top: -440px; margin-left: 100px;">
+        <!DOCTYPE html>
+
+  <body>
+    <span id="datetime"></span>
+
+    <script>
+      // create a function to update the date and time
+      function updateDateTime() {
+        // create a new `Date` object
+        const now = new Date();
+
+        // get the current date and time as a string
+        const currentDateTime = now.toLocaleString();
+
+        // update the `textContent` property of the `span` element with the `id` of `datetime`
+        document.querySelector('#datetime').textContent = currentDateTime;
+      }
+
+      // call the `updateDateTime` function every second
+      setInterval(updateDateTime, 1000);
+      
+      
+    </script>
+
+
+        <div class="alpha">                                                      <!--This div uses style a to adds outer padding to everything-->
+            <h1 style=text-align:center>Welcome to my site!</h1>
+            <h1 style="background:yellow; border-radius:25px">  WE APOLOGIZE FOR ANY INCONVENIENCE CAUSED BY THE ONGOING DESIGN CHOICES.</h1>
+            <br><br>
+            <a href="https://www.linkedin.com/in/ted-yee">My LinkedIn</a>
+            <br><br>
+            <a href="https://tedyee114.github.io/websites/resume">My Resume</a>
+            <br><br>
             <div>
-                <a href="https://www.expedia.com/login">
-                    <img src=bookcover.PNG>
-                </a>
-                
+                <div style="color: white;text-align: center;">
+                    <img src="bookcover.PNG" style="width: 312px; height: 445px;">
+                    <div style="margin-top:-440px;">
+                        <img src="Capture.PNG" style="width: 290px; height: 425px;">
+                    </div>
+                    <div class="gildedbook" style="margin-top: -440px;">
+                        <div>
+                            <a href="https://tedyee114.github.io/websites/web_portfolio
+">
+                                <img src=bookcover.PNG>
+                            </a> 
+                        </div>
+                        <div style="margin-top: -300px; z-index:3">
+                            <a href="https://tedyee114.github.io/websites/web_portfolio
+">
+                                My Portfolio 
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div style="margin-top: -300px; z-index:3">
-                <a href="https://www.expedia.com/login">
-                    My Portfolio 
-                </a>
-            </div>
+            <a href="https://tedyee114.github.io/websites/pdf_portfolio">PDF version of Portfolio</a>
+            <br><br>
+            <a href="https://github.com/tedyee114">GitHub Codebase for all these websites</a><br>
+            Note: all code for these is stored in one mega repository called websites with subfolder for each project
+            <br><br><br><br>
         </div>
+            
+
+        <div class="beta">
+        <h1 style=text-align:center></h1>
+        <table>
+            <tr>
+                <td>
+                    <a href="https://tedyee114.github.io/websites/milesplit/templates/index"><img src="https://github.com/tedyee114/static/blob/main/portfolio/milesplit_thumbnail.png?raw=true" style="border: 5px solid #139b48; border-radius: 1rem" width=25%, height=25%><br>Milesplit Website Recreation</a><br>
+                    This was a project for IE3425 Engineering Databases at Northeastern University<br>
+                    I independently learned how to host live sites on the web for this<br>
+                    To see the project rubric, description, and written report, click either the Search or Login icons in the top right
+                </td>
+                <td>
+                    <a href="https://tedyee114.github.io/websites/research_assignment/templates/homepage"><img src="https://github.com/tedyee114/static/blob/main/portfolio/research_assignment_thumbnail.png?raw=true"  style="border: 5px solid #139b48; border-radius: 1rem"width=30%, height=30%><br>Timed Website Creation</a><br>
+                    A bonus project for IE3425 Engineering Databases at Northeastern University<br>
+                    I was able to make this site from scratch and deploy in under 2hrs. Turns out learning how to host sites by myself was useful.
+                </td><br>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://sites.google.com/view/huskinordic/home"><img src="https://github.com/tedyee114/static/blob/main/portfolio/huskinordic_thumbnail.png?raw=true"  style="border: 5px solid #139b48; border-radius: 1rem"width=25%, height=25%><br>Nordic Ski Team Website</a><br>
+                    I founded the Nordic Ski Team at Northeastern and created all the documents for it, including the website. <br>This was done with Google Sites
+                    for wider viewing, though we're having trouble with SEO (search engine optimization)
+                </td>
+            </tr>
+        </table>
+        </div>
+            
+
+        <marquee  behavior="scroll" direction="left"> 
+            Welcome
+            <!-- <img src="https://github.com/tedyee114/static/blob/main/portfolio/tyicon-transparent.png?raw=true" alt="Ted Yee logo">   -->
+        </marquee><br><br>
+
+
+    
+        
+        
+        <div w3-include-html="footer.html"></div><script> includeHTML();</script>
     </body>
 </html>

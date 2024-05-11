@@ -344,3 +344,38 @@ a:hover {                           /* Change the color of links on hover */
         color: #7B6D3F;
         box-shadow: 0 4px 8px 0 transparent;
         }
+
+/*portfolio book*/
+.bubblebucket {
+    margin: 100px;
+    color: #7B6D3F;
+    background: radial-gradient(#00ffff,#ebebeb);
+    opacity: .5;
+    text-align: left;
+    border: #00ffff;
+    border-style: solid;
+    font-size:xx-large;
+    font-family:Cambria;
+    z-index: 2;
+    }        
+    
+    .bubbles {
+        color: #7B6D3F;
+        background: radial-gradient(#00ffff,#7B6D3F);
+        opacity: .5;
+        text-align: left;
+        height:25px;
+        width: 25px;
+        border: #00ffff;
+        border-style: solid;
+        border-radius: 50%;
+        font-size:xx-large;
+        font-family:Cambria;
+        z-index: 2;
+        }        
+        
+.bubbles:hover {
+            transform:scale(75%);
+            transform-origin: 105%;
+            -webkit-transition: ease .5s;
+            }
