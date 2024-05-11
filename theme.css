@@ -147,7 +147,7 @@ a:hover {                           /* Change the color of links on hover */
             background-size:2000px;
             background-position-y:-500px;
             background-repeat:repeat-x; 
-            -webkit-background-clip: text; 
+            background-clip: text; 
             -webkit-text-fill-color: transparent; 
             margin-bottom:-258px; 
             font-size: 1150%; 
@@ -172,7 +172,7 @@ a:hover {                           /* Change the color of links on hover */
             background-size:2000px;
             background-position-y:-625px;
             background-repeat:space; 
-            -webkit-background-clip: text; 
+            background-clip: text; 
             -webkit-text-fill-color: transparent;
             margin-bottom:-400px; 
             font-size: 1150%;             text-align: laft; 
@@ -340,7 +340,7 @@ a:hover {                           /* Change the color of links on hover */
         height: 445px;
         transform-origin: 0%;
         transform:rotateY(60deg);
-        -webkit-transition: ease .5s;
+        transition: ease .5s;
         z-index: 2;
         top: 100px;
         right: 200px;
@@ -387,5 +387,5 @@ a:hover {                           /* Change the color of links on hover */
 .bubbles:hover {
             transform:scale(75%);
             transform-origin: 105%;
-            -webkit-transition: ease .5s;
+            transition: ease .5s;
             }
