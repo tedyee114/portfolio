@@ -2,11 +2,16 @@
     --color1: #e2d2c4;  /*cyan*/
     --color2: hsl(331, 86%, 64%);  /*pink*/
     --green: #0a8338;  /*green*/
-    --color4: #152540;  /*blue gray*/
+    --color4: #161963;  /*blue gray*/
     --color5: #000000;  /*black*/
-    --eggshell: #ebebeb;    /*eggshell*/
-    --salmon: #7d4848;
+    --eggshell: #F6EFCB;    /*eggshell*/
+    --salmon: #4A3155;
     --gray: #7f7f7f;
+    --st1: #0E90ED;
+    --st2: #EDAD0D;
+    --st3: #F6EFCB;
+    --st4: #DC521F;
+    --st5: #122076;
     }
 
 a:link {
@@ -40,7 +45,7 @@ a:hover {                           /* Change the color of links on hover */
             width: 100%;                           /* Full width */
             transition: ease .5s;
             -webkit-transition: ease .1s;
-            box-shadow: 0 1px 0 0 #333333;}
+            box-shadow: 0 1px 0 0 var(--salmon);}
 
         .navbar a {                                 /* Style the links inside the navigation bar */
             color: #000000;
@@ -60,7 +65,7 @@ a:hover {                           /* Change the color of links on hover */
             color: white;}
 
         .bottom {                                    /*Underglow*/
-            background: linear-gradient(-45deg, var(--green), var(--color4));;
+            background: linear-gradient(-45deg, var(--st1), var(--st5));;
             padding: 50px 50px;
             color:#ffffff;
             text-align:center;
@@ -69,10 +74,10 @@ a:hover {                           /* Change the color of links on hover */
             width: 100%;}                             /* Full width */
 
         .navbar_light {
-            background: linear-gradient(-45deg, var(--green), var(--color4));
+            background: linear-gradient(-45deg, var(--st1), var(--st5));
             overflow: hidden;
-            box-shadow: 0 4px 8px 0 #00ffff;
-            text-shadow: #00ffff;
+            box-shadow: 0 4px 8px 0 var(--salmon);
+            text-shadow: var(--salmon);
             position: fixed;                        /* Set the navbar to fixed position */
             padding-top: 1.5rem;                     /*distance from top of div to first contents*/
             padding-left: 3%;                     /*distance from edge of div to first contents*/
@@ -193,36 +198,41 @@ a:hover {                           /* Change the color of links on hover */
         }
   
         .alpha{
-            background: linear-gradient(-30deg, var(--color4), #112b40);
+            background: #161963;
             color: var(--gray);
-            padding: 5%;
-            margin: 5%;
-            border: #2A323E;
-            border-style:dashed;
-            border-width: 0.REM;
+            padding: 1%;
+            margin-left: 3%;
+            margin-right: 30%;            border: #222222;
+            border-style:solid;
+            border-radius: 5%;
+            /* border-width: 0.REM; */
             font-family:'Arial Narrow Bold', sans-serif;
             text-align:center;
             }
         
         .beta {
-            background: linear-gradient(30deg, var(--salmon), #112b40);
-            padding: 5%;
-            margin: 5%;
-            border: #2A323E;
-            border-style:dashed;
-            border-width: 0.1REM;
+            background: var(--st3);
+            /* background: linear-gradient(30deg, var(--salmon), #161963); */
+            padding: 1%;
+            margin-left: 30%;
+            margin-right: 3%;
+            margin-bottom: 5%;
+            border: #222222;
+            border-style:solid;
+            border-radius: 5%;
+            border-width: 0.REM;
             font-family:'Arial Narrow Bold', sans-serif;
             color: var(--eggshell);
-            font-weight: bold;
+            /* font-weight: bold; */
             text-align:center;}
 
 
 /*tilty card*/
         pre {                                      /*defines the card and rotation itself*/
-            --selector: var(--color1);
-            --property: var(--color2);
+            --selector: var(--st1);
+            --property: var(--st2);
             --punctuation: var(--green);
-            --undefined: var(--green);
+            --undefined: var(--st4);
             
             font-size: 1rem;
             font-weight: bold;
@@ -265,7 +275,7 @@ a:hover {                           /* Change the color of links on hover */
         pre::after {                                      /*back card setup*/
             z-index: -2;                                    /*size difference between front and back card*/
             inset: -1rem;                                   /*how much bigger to make it*/
-            background: linear-gradient(-45deg, var(--green), blue); /*card texture*/
+            background: linear-gradient(-45deg, var(--st1), var(--st5)); /*card texture*/
             transform: translateZ(-50px);                     /*how far back*/
             }
             
