@@ -1,4 +1,4 @@
-:root {                                      /*defines theme colors*/
+:root {                                      /*default theme colors*/
     --color1: #e2d2c4;  /*cyan*/
     --color2: hsl(331, 86%, 64%);  /*pink*/
     --green: #0a8338;  /*green*/
@@ -12,6 +12,22 @@
     --st3: #F6EFCB;
     --st4: #DC521F;
     --st5: #122076;
+    }
+
+.theme1 {
+        --color1: #ffefd5;
+        --color2: #ff69b4;
+        --green: #228b22;
+        --color4: #4682b4;
+        --color5: #2f4f4f;
+    }
+    
+.theme2 {
+        --color1: #1e1e1e;
+        --color2: #ff4500;
+        --green: #32cd32;
+        --color4: #6a5acd;
+        --color5: #ffffff;
     }
 
 a:link {

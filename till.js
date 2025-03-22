@@ -54,3 +54,17 @@ function includeHTML() {
   }
   }
 }
+
+
+/*changes the theme colors*/
+const themes = ["theme1", "theme2"];
+let currentThemeIndex = 0;
+
+document.getElementById("themeToggle").addEventListener("click", () => {
+    // Remove all themes
+    document.documentElement.classList.remove(...themes);
+    
+    // Apply the next theme
+    currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+    document.documentElement.classList.add(themes[currentThemeIndex]);
+});
