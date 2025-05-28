@@ -12,23 +12,64 @@
     --st3: #F6EFCB;
     --st4: #DC521F;
     --st5: #122076;
+    --page_background: #222222;
     }
 
-.theme1 {
-        --color1: #ffefd5;
-        --color2: #ff69b4;
-        --green: #228b22;
-        --color4: #4682b4;
-        --color5: #2f4f4f;
-    }
+.theme1 {                   /*darkmode*/
+    --color1: #0095ff;
+    --color2: #000203;
+    --contrast1: #00caa6;
+    --contrast2: #d008d4;
+    --green: #07d0ad;
+    --salmon: #6a5acd;
+    --color5: #ffffff;
+    --page_background: #122076;}
     
 .theme2 {
-        --color1: #1e1e1e;
-        --color2: #ff4500;
-        --green: #32cd32;
-        --color4: #6a5acd;
-        --color5: #ffffff;
-    }
+
+    --color1: #ffefd5;
+    --color2: #ff69b4;
+    --contrast1: #321414;
+    --contrast2: #217c41;
+    --green: #ff69b4;
+    --salmon: #4682b4;
+    --color5: #2f4f4f;
+    --page_background: #ff69b4;
+}
+
+
+body {
+    margin: 8%;
+    background: var(--color2); /* Solid black background */
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 120px 120px, 120px 120px, 100% 100%;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 2px, transparent 1px),   /*gridline*/    
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 2px, transparent 1px),  /*gridline*/
+        linear-gradient(to bottom, var(--color1), var(--color2));                      /*gradient*/
+    
+    z-index: -1;
+}
+
+.changetheme {
+    font-family: Arial, sans-serif;
+    margin-left: 15%;
+    background-color:  var(--contrast1);
+    color: var(--contrast2); 
+    position: absolute;
+    z-index: 11;  /* Rest of the navbar is 10 */
+}
 
 a:link {
     color: var(--color2);
@@ -73,21 +114,23 @@ a:hover {                           /* Change the color of links on hover */
         .navbar a:hover {                           /*Change the color of links on hover*/
             /* background-color: var(--color2);
             color: black; */
-            box-shadow: 0 4px 8px 0 #00ffff;
-            }
+            box-shadow: 0 4px 8px 0 #00ffff;            }
 
         .navbar a.active {                           /* Add a color to the active/current link */
             background-color: var(--green);
             color: white;}
 
-        .bottom {                                    /*Underglow*/
-            background: linear-gradient(-45deg, var(--st1), var(--st5));;
-            padding: 50px 50px;
-            color:#ffffff;
-            text-align:center;
-            bottom: 0;                                 /* Position the navbar at the top of the page */
-            left:0;
-            width: 100%;}                             /* Full width */
+            .bottom {
+                background: linear-gradient(-45deg, var(--st1), var(--st5));
+                padding: 50px 50px;
+                color: #ffffff;
+                text-align: center;
+                position: absolute;
+                left: 0;
+                right: 0;
+                width: 100%;
+                z-index: -3;
+            }
 
         .navbar_light {
             background: linear-gradient(-45deg, var(--st1), var(--st5));
@@ -150,13 +193,15 @@ a:hover {                           /* Change the color of links on hover */
             100% {top: -300px;}
             }
 
-        #showcase h1{
+        #landing h1{
             line-height: 1.3;
             position: relative;
             z-index: 9;
             animation: heading;
             animation-duration: 2s;
             animation-fill-mode: forwards;
+            max-width: 100%;
+            overflow: hidden;
 
             /* background: linear-gradient(-30deg, var(--green), blue); card texture */
             background-image: url(https://github.com/tedyee114/static/blob/main/portfolio/sea.jpg?raw=true);
@@ -175,7 +220,7 @@ a:hover {                           /* Change the color of links on hover */
             -webkit-font-smoothing: antialiased;
             }
 
-        #showcase h2{
+        #landing h2{
             line-height: 1.3;
             position: relative;
             z-index: 9;
@@ -205,6 +250,8 @@ a:hover {                           /* Change the color of links on hover */
             padding-right: 3%;
             margin-bottom: -12%;
             position: relative;
+            max-width: 100%;
+            height: auto;
         }
 
         .a {
@@ -241,6 +288,23 @@ a:hover {                           /* Change the color of links on hover */
             color: var(--eggshell);
             /* font-weight: bold; */
             text-align:center;}
+
+ 
+        #gamma h1{
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 3.5rem;
+            margin: 0;
+            }
+        #gradient-text{
+            background: linear-gradient(to right,var(--contrast1), var(--color1));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 3.5rem;
+            }
 
 
 /*tilty card*/
@@ -344,8 +408,7 @@ a:hover {                           /* Change the color of links on hover */
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         z-index: 2;
         width: 312px;
-        height: 445px;
-    }
+        height: 445px;    }
 
     .gildedbook:hover {
         color: #7B6D3F;
@@ -359,17 +422,14 @@ a:hover {                           /* Change the color of links on hover */
         transition: ease .5s;
         z-index: 2;
         top: 100px;
-        right: 200px;
-        }
+        right: 200px;        }
 
     .gildedbook a {
-        color: #7B6D3F;
-    }
+        color: #7B6D3F;    }
 
     .gildedbook a:hover {                           /*Change the color of links on hover*/
         color: #7B6D3F;
-        box-shadow: 0 4px 8px 0 transparent;
-        }
+        box-shadow: 0 4px 8px 0 transparent;        }
 
 /*portfolio book*/
 .bubblebucket {
@@ -382,10 +442,9 @@ a:hover {                           /* Change the color of links on hover */
     border-style: solid;
     font-size:xx-large;
     font-family:Cambria;
-    z-index: 2;
-    }        
+    z-index: 2;    }        
     
-    .bubbles {
+.bubbles {
         color: #7B6D3F;
         background: radial-gradient(#00ffff,#7B6D3F);
         opacity: .5;
@@ -397,11 +456,9 @@ a:hover {                           /* Change the color of links on hover */
         border-radius: 50%;
         font-size:xx-large;
         font-family:Cambria;
-        z-index: 2;
-        }        
+        z-index: 2;        }        
         
 .bubbles:hover {
             transform:scale(75%);
             transform-origin: 105%;
-            transition: ease .5s;
-            }
+            transition: ease .5s;            }

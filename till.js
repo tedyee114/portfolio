@@ -56,6 +56,11 @@ function includeHTML() {
 }
 
 
+// To this:
+document.addEventListener('DOMContentLoaded', function() {
+  document.documentElement.classList.add('theme1'); // Match the toggle button
+});
+
 /*changes the theme colors*/
 const themes = ["theme1", "theme2"];
 let currentThemeIndex = 0;
