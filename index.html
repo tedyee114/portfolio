@@ -18,114 +18,165 @@
                 });
             });
         </script>
+        <button class="changetheme" id="themeToggle">Change Theme</button><script src="till.js"></script>   
     </head>
 
+  
+    <body>
+        <div class="grid-overlay"></div>
+        <div class="page-grid">
+            <!-- Hero Section -->
+            <section class="hero-area">
+                <div class="bear">
+                    <img src="https://github.com/tedyee114/static/blob/main/portfolio/bear-cropped.png?raw=true" style="width:25%;">
+                    <img src="https://github.com/tedyee114/static/blob/main/crustyfrog.PNG?raw=" style="width:25%;">
+                    <img src="https://github.com/tedyee114/static/blob/main/stranderrender.png?raw=true" style="width:15%;">
+                </div> 
+                <div style="font-family:'Arial Narrow Bold', sans-serif; color: #7f7f7f; text-align:right;">
+                    Check out some models like these! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                
+                <div id="landing" style="padding-left:10%; width:fit-content;">
+                    <h1>Ted&nbsp;&nbsp;&nbsp;</h1>
+                    <h2>&nbsp;&nbsp;&nbsp;Yee</h2>
+                </div>
 
-    <body style="background: #222222; margin:-10px; padding:-10px">
-        <div class="bear">
-            <img src="https://github.com/tedyee114/static/blob/main/portfolio/bear-cropped.png?raw=true" style="width:25%;">
-            <img src="crustyfrog.PNG" style="width:25%;">
-        </div> <div style="font-family:'Arial Narrow Bold', sans-serif; color: #7f7f7f; text-align:right;">Check out some models like these! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        
-        
-        <div id="showcase" style="padding-left:10%; width:fit-content;">                                                     <!--landing animation-->
-            <h1>Ted&nbsp;&nbsp;&nbsp;</h1>
-            <h2>&nbsp;&nbsp;&nbsp;Yee</h2>
-        </div>
-
-        <!-- <img src="https://raw.githubusercontent.com/tedyee114/static/main/portfolio/b-3DV-on.PNG"> -->
-
-        
-        <div class="alpha">                                                      <!--This div uses style a to adds outer padding to everything-->
-            <h1 style=text-align:center>Welcome to my site!</h1>
-            <div style="background:#E1A40E; border-radius:25px; color:#222222"><h2>⚠ WE APOLOGIZE FOR ANY INCONVENIENCE CAUSED BY THE ONGOING DESIGN CHOICES ⚠</h2> </div>
-            <br><br>
-            <a href="https://www.linkedin.com/in/ted-yee">My LinkedIn</a>
-            <br><br>
-            <a href="https://tedyee114.github.io/websites/resume">My Resume</a>
-            <br><br>
-            <div>
-                <div style="color: white;text-align: center;">
-                    <img src="bookcover.PNG" style="width: 312px; height: 445px;">
-                    <div style="margin-top:-440px;">
-                        <img src="donutprogress.PNG" style="width: 290px; height: 425px;">
+                <div id="gamma">
+                    <h1>Engineering because</h1>    
+                    <h1>I <span id="gradient-text">believe</span></h1>
+                    <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="13699224386" data-style="standard" data-from-embed="false"></div><script src="https://strava-embeds.com/embed.js"></script>
+                    <div class="bubblebucket">
+                        <div class="bubbles"></div>
+                        <div class="bubbles" style="top:-5px;"></div>
+                        <div class="bubbles"style="left: 55px;"></div>
+                        <div class="bubbles"style="top:-35px;"></div>
                     </div>
-                    <div class="gildedbook" style="margin-top: -440px;">
+                    <span id="datetime"></span>
+                    <script>
+                        // create a function to update the date and time
+                        function updateDateTime() {
+                          // create a new `Date` object
+                          const now = new Date();
+                  
+                          // get the current date and time as a string
+                          const currentDateTime = now.toLocaleString();
+                  
+                          // update the `textContent` property of the `span` element with the `id` of `datetime`
+                          document.querySelector('#datetime').textContent = currentDateTime;
+                        }
+                  
+                        // call the `updateDateTime` function every second
+                        setInterval(updateDateTime, 1000);
+                        
+                        
+                      </script>
+                </div>
+            </section>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div style="background:#E1A40E; border-radius:25px; color:#222222">
+                    <h2>⚠ WE APOLOGIZE FOR ANY INCONVENIENCE CAUSED BY THE ONGOING DESIGN CHOICES ⚠</h2> 
+                </div>
+                <div class="alpha">
+                    <h1 style=text-align:center>Welcome to my site!</h1>
+                    
+                    <br><br>
+                    <a href="https://www.linkedin.com/in/ted-yee">My LinkedIn</a>
+                    <br><br>
+                    <a href="https://tedyee114.github.io/websites/resume">My Resume</a>
+                    <br><br>
+                    <div>
+                          <!-- <div style="color: white;text-align: center;">
+                    <img src="bookcover.PNG" style="width: 312px; height: 445px;"> -->
+                    <!-- <div style="margin-top:-440px;">
+                        <img src="donutprogress.PNG" style="width: 290px; height: 425px;">
+                    </div> -->
+
+                    <!-- <div class="gildedbook" style="margin-top: -440px;">
                         <div>
-                            <a href="https://tedyee114.github.io/websites/web_portfolio
-">
+                            <a href="https://tedyee114.github.io/websites/web_portfolio">
                                 <img src=bookcover.PNG>
                             </a> 
                         </div>
                         <div style="margin-top: -300px; z-index:3">
                             <a href="https://tedyee114.github.io/websites/web_portfolio">My Portfolio</a>
                         </div>
+                    </div> -->
+                        <iframe src="http://flowpaper.com/flipbook/https://tedyee114.github.io/websites/portfolio.pdf#page=1" width="70%" height="800" style="border: none;" allowFullScreen></iframe>
                     </div>
+                    <a href="https://tedyee114.github.io/websites/pdf_portfolio">PDF version of Portfolio</a>
+                    <br><br>
+                    <a href="https://github.com/tedyee114">GitHub Codebase for all these websites</a><br>
+                    Note: all code for these is stored in one mega repository called websites with subfolder for each project
+                    <br><br><br><br>
                 </div>
-            </div>
-            <a href="https://tedyee114.github.io/websites/pdf_portfolio">PDF version of Portfolio</a>
-            <br><br>
-            <a href="https://github.com/tedyee114">GitHub Codebase for all these websites</a><br>
-            Note: all code for these is stored in one mega repository called websites with subfolder for each project
-            <br><br><br><br>
-        </div>
-            
+            </main>
 
-        <div class="beta">
-            <!--
+            <!-- Projects Section -->
+            <section class="projects-area">
+                <div class="beta">
+                                <!--
                 --st1: #0E90ED;
                 --st2: #EDAD0D;
                 --st3: #F6EFCB;
                 --st4: #DC521F;
                 --st5: #122076;
             -->
-        <h1 style=text-align:center></h1>
-        <table>
-            <tr>
-                <td>
-                    <div style="background: #0E90ED; border-radius: 2rem">
-                        <a href="https://tedyee114.github.io/websites/milesplit/templates/index"><img src="https://github.com/tedyee114/static/blob/main/portfolio/milesplit_thumbnail.png?raw=true" style="border: 5px solid var(--gray); border-radius: 1rem" width=25%, height=25%><br>Milesplit Website Recreation</a><br>
-                    This was a project for IE3425 Engineering Databases at Northeastern University<br>
-                    I independently learned how to host live sites on the web for this<br>
-                    To see the project rubric, description, and written report, click either the Search or Login icons in the top right<br><br>
-                    </div>
-                </td>
-                <td>
-                    <div style="background: #EDAD0D; border-radius: 2rem">
-                        <a href="https://tedyee114.github.io/websites/research_assignment/templates/homepage"><img src="https://github.com/tedyee114/static/blob/main/portfolio/research_assignment_thumbnail.png?raw=true"  style="border: 5px solid #139b48; border-radius: 1rem"width=30%, height=30%><br>Timed Website Creation</a><br>
-                        A bonus project for IE3425 Engineering Databases at Northeastern University<br>
-                        I was able to make this site from scratch and deploy in under 2hrs. Turns out learning how to host sites by myself was useful<br><br><br>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div style="background: #DC521F; border-radius: 2rem">
-                        <a href="https://sites.google.com/view/huskinordic/home"><img src="https://github.com/tedyee114/static/blob/main/portfolio/huskinordic_thumbnail.png?raw=true"  style="border: 5px solid #139b48; border-radius: 1rem"width=25%, height=25%><br>Nordic Ski Team Website</a><br>
-                        I founded the Nordic Ski Team at Northeastern and created all the documents for it, including the website. <br>This was done with Google Sites
-                        for wider viewing, though we're having trouble with SEO (search engine optimization)<br><br>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        </div>
-            
-
-        <!-- <marquee  behavior="scroll" direction="left"> 
+                    <h1 style=text-align:center></h1>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="background: #0E90ED; border-radius: 2rem">
+                                    <a href="https://tedyee114.github.io/websites/milesplit/templates/index">
+                                        <img src="https://github.com/tedyee114/static/blob/main/portfolio/milesplit_thumbnail.png?raw=true" style="border: 5px solid var(--gray); border-radius: 1rem" width=25%, height=25%><br>Milesplit Website Recreation
+                                    </a><br>
+                                    This was a project for IE3425 Engineering Databases at Northeastern University<br>
+                                    I independently learned how to host live sites on the web for this<br>
+                                    To see the project rubric, description, and written report, click either the Search or Login icons in the top right<br><br>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="background: #EDAD0D; border-radius: 2rem">
+                                    <a href="https://tedyee114.github.io/websites/research_assignment/templates/homepage">
+                                        <img src="https://github.com/tedyee114/static/blob/main/portfolio/research_assignment_thumbnail.png?raw=true"  style="border: 5px solid #139b48; border-radius: 1rem"width=30%, height=30%><br>Timed Website Creation
+                                    </a><br>
+                                    A bonus project for IE3425 Engineering Databases at Northeastern University<br>
+                                    I was able to make this site from scratch and deploy in under 2hrs. Turns out learning how to host sites by myself was useful<br><br><br>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="background: #DC521F; border-radius: 2rem">
+                                    <a href="https://sites.google.com/view/huskinordic/home">
+                                        <img src="https://github.com/tedyee114/static/blob/main/portfolio/huskinordic_thumbnail.png?raw=true"  style="border: 5px solid #139b48; border-radius: 1rem"width=25%, height=25%><br>Nordic Ski Team Website
+                                    </a><br>
+                                    I founded the Nordic Ski Team at Northeastern and created all the documents for it, including the website. <br>This was done with Google Sites
+                                    for wider viewing, though we're having trouble with SEO (search engine optimization)<br><br>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+  <!-- <marquee  behavior="scroll" direction="left"> 
             <img src="https://github.com/tedyee114/static/blob/main/portfolio/tyicon-transparent.png?raw=true" alt="Ted Yee logo">  
         </marquee><br><br> -->
 
-
-        <div>                                                                   <!--Lil box in the corner-->
-            <!--Card Content, <pre> tag follows typed formatting, i.e., indents and new lines in html printout the same-->
+            <!-- Sidebar -->
+            <aside class="sidebar">
                 <div style=width:fit-content>
                     <pre><span class="token style1">I always feel like</span>
         <span class="token style2">somebody's watching meee</span>
         <span class="token style3">do do do 👀</span></pre>
-                </div><script src="https://tedyee114.github.io/websites/till.js"></script>    
+                </div><script src="till.js"></script>    
+            </aside>
+
+            <!-- Footer -->
+            <footer class="footer-area">
+                <div w3-include-html="footer.html"></div><script> includeHTML();</script>
+            </footer>
         </div>
-        
-        
-        <div w3-include-html="footer.html"></div><script> includeHTML();</script>
     </body>
 </html>
