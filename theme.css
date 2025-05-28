@@ -27,9 +27,9 @@
     
 .theme2 {
 
-    --color1: #ffefd5;
-    --color2: #ff69b4;
-    --contrast1: #321414;
+    --color1: #7200ab;
+    --color2: #f6f2d3;
+    --contrast1: #fa0cdf;
     --contrast2: #217c41;
     --green: #ff69b4;
     --salmon: #4682b4;
@@ -64,12 +64,14 @@ body::before {
 
 .changetheme {
     font-family: Arial, sans-serif;
-    margin-left: 15%;
     background-color:  var(--contrast1);
     color: var(--contrast2); 
-    position: absolute;
-    z-index: 11;  /* Rest of the navbar is 10 */
-}
+    position: fixed;
+    top: clamp(10px, 2vw, 20px);
+    right: clamp(10px, 2vw, 20px);
+    font-size: clamp(12px, 1.5vw, 16px);
+    padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px);
+    z-index: 11;  /* Rest of the navbar is 10 */}
 
 a:link {
     color: var(--color2);
@@ -261,29 +263,33 @@ a:hover {                           /* Change the color of links on hover */
         }
   
         .alpha{
-            background: #161963;
+            background: #161963;            background: radial-gradient(rgba(70, 72, 73, 0), color-mix(in srgb, var(--contrast1) 30%, transparent));
+            backdrop-filter: blur(121px);
+            border-radius: 30px;
+            border-width: 1px;
+            border-color: var(--contrast1);
+            border-style:solid;
+            
             color: var(--gray);
             padding: 1%;
             margin-left: 3%;
-            margin-right: 30%;            border: #222222;
-            border-style:solid;
-            border-radius: 5%;
-            /* border-width: 0.REM; */
+            margin-right: 30%;
             font-family:'Arial Narrow Bold', sans-serif;
             text-align:center;
             }
         
         .beta {
-            background: var(--st3);
-            /* background: linear-gradient(30deg, var(--salmon), #161963); */
+            background: radial-gradient(rgba(70, 72, 73, 0), color-mix(in srgb, var(--contrast1) 30%, transparent));
+            backdrop-filter: blur(121px);
+            border-radius: 30px;
+            border-width: 1px;
+            border-color: var(--contrast1);
+            border-style:solid;
+            
             padding: 1%;
             margin-left: 30%;
             margin-right: 3%;
             margin-bottom: 5%;
-            border: #222222;
-            border-style:solid;
-            border-radius: 5%;
-            border-width: 0.REM;
             font-family:'Arial Narrow Bold', sans-serif;
             color: var(--eggshell);
             /* font-weight: bold; */
