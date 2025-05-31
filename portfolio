@@ -1,0 +1,34 @@
+@font-face {
+    font-family: Gotham-Black;
+    src: url(Gotham-Black.woff) format("woff");
+}
+
+:root {
+    --dark1: #707070;
+    --light1: #ffffff;
+    --dark2: #000000;
+    --light2: #EFEFEF;
+    --accent1: #DE32DE;
+    --accent2: #D54773;
+}
+
+body {
+    background-color: #000000;
+}
+
+h1.ortfolio {
+    font-family: Gotham-Black;
+    font-size: xx-large;
+    color: var(--dark1); 
+}
+
+h2.ortfolio {
+    font-family: Gotham-Black;
+    font-size: xx-large;
+    color: var(--light1); 
+}
+h3.ortfolio {
+    font-family: Gotham-Black;
+    font-size: x-large;
+    color: var(--accent2); 
+}

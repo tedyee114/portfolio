@@ -1,0 +1,125 @@
+@font-face {
+    font-family: Gotham-Black;
+    src: url(Gotham-Black.woff) format("woff");
+}
+
+@font-face {
+    font-family: Gotham-Book;
+    src: url(Gotham-Book.woff) format("woff");
+}
+
+:root {
+    --dark1: #707070;
+    --light1: #ffffff;
+    --dark2: #000000;
+    --light2: #EFEFEF;
+    --accent1: #DE32DE;
+    --accent2: #D54773;
+    --color1: #0095ff;
+    --color2: #000203;
+    --contrast1: #00caa6;
+    --contrast2: #d008d4;
+}
+
+body {
+    background-color: #000000;
+    margin: 10vw;
+}
+
+h1.ortfolio {
+    font-family: Gotham-Black;
+    font-size: 10vw;    
+    line-height: 0%;
+    color: var(--dark1); 
+}
+
+h2.ortfolio {
+    font-family: Gotham-Black;
+    font-size: 4vw;
+    color: var(--light1); 
+}
+h3.ortfolio {
+    font-family: Gotham-Black;
+    font-size: 1vw;
+    line-height: 0%;
+    color: var(--dark1); 
+}
+
+hr  {
+  width:10%;
+  height: 2px;
+  text-align:left;
+  margin-left:0;
+  color: var(--accent2);
+  background-color: var(--accent2);
+}
+
+h4.ortfolio {
+    font-family: Gotham-Book;
+    font-size: regular;
+    color: var(--dark1); 
+}
+
+
+
+.changing-title h1 {
+    background: linear-gradient(to right,var(--contrast1), var(--color1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+.changing-title {
+    font-size: 8vw;
+    height: 1.2em;
+    position: relative;
+    width: 100%;
+    overflow-y: hidden;
+    margin-left: 1em;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.letter {
+    position: relative;
+    top: 1.2em;
+}
+
+.letter.in {
+    animation-name: letter-in;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.letter.out {
+    top: 0em;
+    animation-name: letter-out;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter-in {
+    0% {
+        top: 1.2em;
+    }
+    100% {
+        top: 0em;
+    }
+}
+
+@keyframes letter-out {
+    0% {
+        top: 0em;
+    }
+    100% {
+        top: -1.2em;
+    }
+}
