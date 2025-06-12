@@ -1,7 +1,7 @@
 :root {                                      /*default theme colors*/
     --color1: #e2d2c4;  /*cyan*/
     --color2: hsl(331, 86%, 64%);  /*pink*/
-    --green: #0a8338;  /*green*/
+    --links: #0a8338;  /*green*/
     --color4: #161963;  /*blue gray*/
     --color5: #000000;  /*black*/
     --eggshell: #F6EFCB;    /*eggshell*/
@@ -14,6 +14,10 @@
     --st5: #122076; */
     --page_background: #222222;
     }
+@font-face {
+  font-family: GothamBook;
+  src: url(Gotham-Book.woff);
+}
 
 .theme1 {                   /*darkmode*/
     --color1: #2147c5;
@@ -21,7 +25,7 @@
     --accent1: #00caa6;
     --accent2: #d008d4;
     --contrast: #a4a3a3;
-    --green: #07d0ad;
+    --links: #07d0ad;
     --salmon: #6a5acd;
     --color5: #ffffff;
     --st1: #22a6b9;
@@ -33,69 +37,27 @@
     
 .theme2 {
 
-    --color1: #7200ab;
-    --color2: #f6f2d3;
-    --accent1: #fa0cdf;
-    --accent2: #217c41;
-    --contrast: #131313;
-    --green: #ff69b4;
-    --salmon: #4682b4;
-    --color5: #2f4f4f;
+    --color1: #595959;
+    --color2: #262626;
+    --accent1: #E1E109;
+    --accent2: #19b333;
+    --contrast: #ffffff;
+    --links: #E1E109;
+    --left: #595959;
+    --color5: #262626;
 }
 
+.theme3 {
 
-body {
-    margin: 8%;
-    background: var(--color2); /* Solid black background */
-    color: white;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-    max-width: 100%;}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 120px 120px, 120px 120px, 100% 100%;
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 2px, transparent 1px),   /*gridline*/    
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 2px, transparent 1px),  /*gridline*/
-        linear-gradient(to bottom, var(--color1), var(--color2));                      /*gradient*/
-    
-    z-index: -1;
+    --color1: #262626;
+    --color2: #000000;
+    --accent1: #03DAC6;
+    --accent2: #BB86F3;
+    --contrast: #ffffff;
+    --links: #03DAC6;
+    --left: #595959;
+    --color5: #262626;
 }
-
-.changetheme {
-    font-family: Arial, sans-serif;
-    background-color:  var(--salmon);
-    color: wheat; 
-    position: fixed;
-    top: clamp(10px, 2vw, 20px);
-    right: clamp(10px, 2vw, 20px);
-    font-size: clamp(12px, 1.5vw, 16px);
-    padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px);
-    z-index: 11;  /* Rest of the navbar is 10 */}
-
-a:link {
-    color: var(--color2);
-    background-color: transparent;
-    text-decoration: none;
-    }
-a:visited {
-    color: var(--green);
-    background-color: transparent;
-    text-decoration: none;
-    }
-a:hover {                           /* Change the color of links on hover */
-    /* color: inherit; */
-    /* background-color: transparent; */
-    /* text-decoration: underline; */
-    box-shadow: 0 4px 8px 0 #00ffff;
-    }
-
 
 /*header and footer*/
         .navbar {                                    /*Top Navigation Bar */
@@ -125,7 +87,7 @@ a:hover {                           /* Change the color of links on hover */
             box-shadow: 0 4px 8px 0 #00ffff;            }
 
         .navbar a.active {                           /* Add a color to the active/current link */
-            background-color: var(--green);
+            background-color: var(--links);
             color: white;}
 
             .bottom {
@@ -152,7 +114,7 @@ a:hover {                           /* Change the color of links on hover */
             top: 0;                                 /* Position the navbar at the top of the page */
             left: 0;
             width: 100%;                           /* Full width */
-            font-family:'myFont';
+            font-family:'GothamBook';
             color: var(----color4);
             transition: ease .5s;                   /*transition between regular and navbar_light*/
             -webkit-transition: ease .5s;
@@ -194,7 +156,17 @@ a:hover {                           /* Change the color of links on hover */
         .dropdown:hover .dropdown-content {display: block;}
             
         /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
-        
+
+        .changetheme {
+            font-family: Arial, sans-serif;
+            background-color:  var(--salmon);
+            color: wheat; 
+            position: fixed;
+            top: clamp(10px, 2vw, 20px);
+            right: clamp(10px, 2vw, 20px);
+            font-size: clamp(12px, 1.5vw, 16px);
+            padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px);
+            z-index: 11;  /* Rest of the navbar is 10 */}
 
 /*landing animation*/    
         @keyframes heading{
@@ -212,7 +184,7 @@ a:hover {                           /* Change the color of links on hover */
             max-width: 100%;
             overflow: hidden;
 
-            /* background: linear-gradient(-30deg, var(--green), blue); card texture */
+            /* background: linear-gradient(-30deg, var(--links), blue); card texture */
             background-image: url(https://github.com/tedyee114/static/blob/main/portfolio/sea.jpg?raw=true);
             background-size:2000px;
             background-position-y:-500px;
@@ -237,7 +209,7 @@ a:hover {                           /* Change the color of links on hover */
             animation-duration: 2s;
             animation-fill-mode: forwards;
 
-            /* background: linear-gradient(-30deg, var(--green), blue); card texture */
+            /* background: linear-gradient(-30deg, var(--links), blue); card texture */
             background-image: url(https://github.com/tedyee114/static/blob/main/portfolio/sea.jpg?raw=true);
             background-size:2000px;
             background-position-y:-625px;
@@ -252,7 +224,48 @@ a:hover {                           /* Change the color of links on hover */
             }
 
 
-/*main body themes*/
+
+ /*main body themes---------------------------------------------------------------*/
+           
+        body {
+            margin: 0%;
+            background: var(--color2); /* Solid black background */
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            max-width: 100%;}
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 120px 120px, 120px 120px, 100% 100%;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 2px, transparent 1px),   /*gridline*/    
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 2px, transparent 1px),  /*gridline*/
+                linear-gradient(to bottom, var(--color1), var(--color2));                      /*gradient*/
+                z-index: -1;}
+
+        a:link {
+            color: var(--color2);
+            background-color: transparent;
+            text-decoration: none;
+            }
+        a:visited {
+            color: var(--links);
+            background-color: transparent;
+            text-decoration: none;
+            }
+        a:hover {                           /* Change the color of links on hover */
+            /* color: inherit; */
+            /* background-color: transparent; */
+            /* text-decoration: underline; */
+            box-shadow: 0 4px 8px 0 #00ffff;
+            }
+
         .bear {
             text-align: right;
             padding-top: 7rem;
@@ -307,11 +320,11 @@ a:hover {                           /* Change the color of links on hover */
             color: #ffffff;
             font-weight: 500;
             font-size: 3.5rem;
-            margin: 0;
-            transform: translateY(-10vw);
+            margin: 0;            
             }
+
         #gradient-text{
-            background: linear-gradient(to right,var(--accent1), var(--color1));
+            background: linear-gradient(to right,var(--accent1), var(--accent2));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -320,12 +333,24 @@ a:hover {                           /* Change the color of links on hover */
             font-size: 3.5rem;
             }
 
+        .resumeportfolio{
+            text-align: center;
+            color: var(--accent1);
+            font-family: 'GothamBook';
+            font-size: 3vw;
+            font-weight: 900 ;
+            }
 
 /*tilty card*/
         pre {                                      /*defines the card and rotation itself*/
+                --st1: #0E90ED;
+                --st2: #EDAD0D;
+                --st3: #F6EFCB;
+                --st4: #07d0ad;
+                --st5: #122076;
             --selector: var(--st1);
             --property: var(--st2);
-            --punctuation: var(--green);
+            --punctuation: var(--links);
             --undefined: var(--st4);
             
             font-size: 1rem;
@@ -343,7 +368,9 @@ a:hover {                           /* Change the color of links on hover */
             transform: 
                 perspective(50000px)                     /*how much it rotates, i.e., sensitivity*/
                 rotateY(var(--rotateX)) rotateX(var(--rotateY));  /*uses javascript to follow mouse*/
+            text-shadow: 0 0 1rem currentColor;          /*shadow x,y,z location*/
             }
+            
             
         pre > * {                                      /*creates the bloom as if it's a lightbulb*/
             text-shadow: 0 0 1rem currentColor;          /*shadow x,y,z location*/
@@ -369,18 +396,10 @@ a:hover {                           /* Change the color of links on hover */
         pre::after {                                      /*back card setup*/
             z-index: -2;                                    /*size difference between front and back card*/
             inset: -1rem;                                   /*how much bigger to make it*/
-            background: linear-gradient(-45deg, var(--st1), var(--st5)); /*card texture*/
+            background: linear-gradient(-45deg,  #0E90ED, #122076); /*card texture*/
             transform: translateZ(-50px);                     /*how far back*/
             }
             
-        .style1 {                                      /*color of red text*/
-            color: var(--selector);
-            }
-            
-        .style2 {                                      /*color of blue text*/
-            color: var(--property);
-            }
-
         pre::backdrop {                                     /*defines the card and rotation itself*/
             transform-style: preserve-3d;
             transform: 
@@ -477,6 +496,7 @@ a:hover {                           /* Change the color of links on hover */
             transform-origin: 105%;
             transition: ease .5s;            }
 
+/* deck of cards */
 .container {
     position: relative;
     width: 100%;
