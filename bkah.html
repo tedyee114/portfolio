@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Projects</title>
+        <link rel="stylesheet" type="text/css" href="theme.css">
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/tedyee114/static/4f8791929175e2cc230da20a85d5b99d8041e45c/portfolio/tyicon-transparent.png">
+        <style>
+            /* Horizontal scrollable panel styles */
+            .project-scroll-container {
+                background-color: rgba(51, 51, 51, 0.1);
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+                border-radius: 12px;
+                margin: 20px 0;
+                padding: 20px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+            
+            .project-panel {
+                display: inline-block;
+                width: 90vw;
+                max-width: 1000px;
+                white-space: normal;
+                vertical-align: top;
+                margin-right: 30px;
+                padding: 20px;
+                background: rgba(255,255,255,0.05);
+                border-radius: 8px;
+                border: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .project-panel:last-child {
+                margin-right: 0;
+            }
+            
+            /* Main content panel (first panel) */
+            .project-main-panel {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            
+            .project-image {
+                flex: 0 0 45%;
+            }
+            
+            .project-info {
+                flex: 1;
+            }
+            
+            /* Additional panels styling */
+            .additional-panel h3 {
+                margin-top: 0;
+                color: var(--light1, #fff);
+                border-bottom: 2px solid rgba(255,255,255,0.2);
+                padding-bottom: 10px;
+            }
+            
+            .additional-panel p {
+                line-height: 1.6;
+                color: rgba(255,255,255,0.9);
+            }
+            
+            /* Project container styling */
+            .project-container {
+                margin: 60px 0;
+            }
+            
+            .project-number {
+                margin-bottom: 10px;
+            }
+            
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .project-main-panel {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                
+                .project-image {
+                    flex: none;
+                    width: 100%;
+                }
+                
+                .project-panel {
+                    width: 85vw;
+                    margin-right: 20px;
+                }
+                
+                .project-scroll-container {
+                    padding: 15px;
+                }
+            }
+        </style>
+        <div w3-include-html="header.html"></div><script> includeHTML();</script>
+    </head>
+
+    <body class="ortfolio">        
+        <br><br><br><br><br>
+        <div class="changing-title"><h1>Hello</h1></div>
+        <script src="till.js"></script>
+        <br><br><br><br><br>
+        
+        <!-- Project 01: Wire Strander -->
+        <div class="project-container">
+            <h1 class="ortfolio project-number">01.</h1>
+            
+            <div class="project-scroll-container">
+                <!-- Main Panel (Original Content) -->
+                <div class="project-panel">
+                    <div class="project-main-panel">
+                        <div class="project-image">
+                            <img src="https://raw.githubusercontent.com/tedyee114/static/7df708df96ce2f7da129808fbf4428b41cf9f0a8/portfolio/stranderrender.png" style="width:100%; border-radius: 8px;">
+                        </div>
+                        <div class="project-info">
+                            <h2 class="ortfolio">WIRE STRANDER</h2>
+                            <h3 class="ortfolio">CAPSTONE PROJECT | 6 MONTHS</h3>
+                            <hr>
+                            <h4 class="ortfolio">Wire Arc Additive Manufacturing (WAAM) is 
+                                an experimental type of metal 3D printing that can be leveraged 
+                                in alloy creation, particularly High Entropy Alloys (HEA's). If 
+                                feedstock contains multiple metals, they will be can be melted 
+                                together into custom alloys during deposition. My primary tasks 
+                                were electrical, power, safety, and UI systems and alloy analysis 
+                                procedures
+                                <p></p><p>&nbsp;</p><span style="color: var(--light1);">"A benchtop machine that creates twisted cable feedstock for use with WAAM"</span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Panels -->
+                <div class="project-panel additional-panel">
+                    <h3>Technical Details</h3>
+                    <p>The wire strander machine operates using precision motor control to twist multiple metal wires into consistent cable feedstock. The system can handle various wire diameters and materials including stainless steel, aluminum, and copper alloys.</p>
+                    <p>Key specifications include variable twist rate control, automated tension management, and real-time quality monitoring to ensure consistent feedstock production for WAAM applications.</p>
+                </div>
+                
+                <div class="project-panel additional-panel">
+                    <h3>Electrical Systems</h3>
+                    <p>Designed and implemented the complete electrical architecture including motor controllers, safety interlocks, and power distribution systems. The control system features PLC-based automation with custom HMI interface.</p>
+                    <p>Safety systems include emergency stops, torque limiting, and wire tension monitoring to prevent equipment damage and ensure operator safety.</p>
+                </div>
+                
+                <div class="project-panel additional-panel">
+                    <h3>Alloy Analysis</h3>
+                    <p>Developed procedures for analyzing the metallurgical properties of twisted wire feedstock and resulting WAAM deposits. This included composition analysis, mechanical testing, and microstructure evaluation.</p>
+                    <p>Research focused on High Entropy Alloys (HEAs) and their potential applications in aerospace and automotive industries.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 02: Violin -->
+        <div class="project-container">
+            <h1 class="ortfolio project-number">02.</h1>
+            
+            <div class="project-scroll-container">
+                <!-- Main Panel (Original Content) -->
+                <div class="project-panel">
+                    <div class="project-main-panel">
+                        <div class="project-image">
+                            <img src="https://raw.githubusercontent.com/tedyee114/static/7df708df96ce2f7da129808fbf4428b41cf9f0a8/portfolio/violin.png" style="width:100%; border-radius: 8px;">
+                        </div>
+                        <div class="project-info">
+                            <h2 class="ortfolio">VIOLIN</h2>
+                            <h3 class="ortfolio">PERSONAL WOODWORKING PROJECT | 5 MONTHS</h3>
+                            <hr>
+                            <h4 class="ortfolio">One time I thought it would be cool to have a violin. Then I saw that violins are expensive. So, I just made one. No template because those are trade secrets, no power tools to make it a challenge.
+                                <p></p><p>&nbsp;</p><span style="color: var(--light1);">"To create a violin with only hand tools"</span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Panels -->
+                <div class="project-panel additional-panel">
+                    <h3>Construction Process</h3>
+                    <p>Built entirely with hand tools including chisels, hand planes, and scrapers. The process required careful attention to wood grain direction, thickness graduations, and precise joinery without modern conveniences.</p>
+                    <p>Each component was crafted individually: carved spruce top, flamed maple back and sides, ebony fingerboard, and hand-carved scroll - all assembled with traditional hide glue.</p>
+                </div>
+                
+                <div class="project-panel additional-panel">
+                    <h3>Wood Selection & Challenges</h3>
+                    <p>Sourced traditional tonewoods: European spruce for the soundboard, flamed maple for back and sides, and ebony for the fingerboard. Each piece was selected for grain quality and acoustic properties.</p>
+                    <p>Working without templates or power tools meant developing techniques for consistent thickness and contour. The biggest challenge was achieving the proper arch graduation for optimal sound projection.</p>
+                </div>
+                
+                <div class="project-panel additional-panel">
+                    <h3>Results & Learning</h3>
+                    <p>The finished violin produces a warm, balanced tone suitable for folk and classical music. While not professional-grade, it demonstrates the feasibility of traditional construction methods.</p>
+                    <p>This project taught patience, precision, and respect for traditional craftsmanship. Total cost was under $200 compared to $1000+ for equivalent store-bought instruments.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 03: Polaris -->
+        <div class="project-container">
+            <h1 class="ortfolio project-number">03.</h1>
+            
+            <div class="project-scroll-container">
+                <!-- Main Panel (Original Content) -->
+                <div class="project-panel">
+                    <div class="project-main-panel">
+                        <div class="project-image">
+                            <img src="https://raw.githubusercontent.com/tedyee114/static/7df708df96ce2f7da129808fbf4428b41cf9f0a8/portfolio/polariscode.png" style="width:100%; border-radius: 8px;">
+                        </div>
+                        <div class="project-info">
+                            <h2 class="ortfolio">POLARIS</h2>
+                            <h3 class="ortfolio">AUTOMATION AT WRIGHT-PIERCE | 4 MONTHS</h3>
+                            <hr>
+                            <h4 class="ortfolio">One of my main tasks while working at Wright-Pierce Environmental Engineering was to assist municipalities in meeting an EPA mandate about locating lead pipes. As an intern, I led the Polaris project that automated data entry and sorting of public records.
+                                <p></p><p>&nbsp;</p><span style="color: var(--light1);">"To automate data entry of handwritten public records"</span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Panels -->
+                <div class="project-panel additional-panel">
+                    <h3>Automation Solution</h3>
+                    <p>Developed a Python-based system that used OCR (Optical Character Recognition) and machine learning to digitize handwritten municipal records. The system could process thousands of documents per day with 95% accuracy.</p>
+                    <p>Implemented data validation algorithms and quality control measures to ensure compliance with EPA requirements for lead service line inventories.</p>
+                </div>
+                
+                <div class="project-panel additional-panel">
+                    <h3>EPA Compliance Impact</h3>
+                    <p>The EPA mandate required all municipalities to identify and catalog lead service lines by 2024. Manual processing would have taken months; Polaris reduced this to weeks.</p>
+                    <p>Helped over 15 municipalities meet federal deadlines, potentially affecting water safety for hundreds of thousands of residents across New England.</p>
+                </div>
+                
+                <div class="project-panel additional-panel">
+                    <h3>Technical Implementation</h3>
+                    <p>Built using Python with libraries including OpenCV for image processing, TensorFlow for handwriting recognition, and Pandas for data management. Created a user-friendly GUI for municipal workers.</p>
+                    <p>The system included error correction workflows, batch processing capabilities, and automated report generation compatible with EPA submission requirements.</p>
+                </div>
+            </div>
+        </div>
+
+        <aside class="tiltycard">
+            <div style="width:fit-content">
+                <pre><a href="https://tedyee114.github.io/websites/">Back to Homepage</a>
+                <img src="https://github.com/tedyee114/static/blob/main/portfolio/tyicon-transparent.png?raw=true" style="width:2rem"></pre>
+            </div><script src="till.js"></script>    
+        </aside>
+        
+        <footer class="footer-area"><div w3-include-html="footer.html"></div><script> includeHTML();</script></footer>
+    </body>
+</html>
