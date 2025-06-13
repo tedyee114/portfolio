@@ -6,20 +6,6 @@
         <link rel="stylesheet" type="text/css" href="theme.css">
         <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/tedyee114/static/4f8791929175e2cc230da20a85d5b99d8041e45c/portfolio/tyicon-transparent.png">
         <div w3-include-html="header.html"></div><script> includeHTML();</script>
-        
-<!--MAKES HEADER OPAQUE ON SCROLL --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script>
-            $(function() {
-                $(window).on("scroll", function() {
-                    if($(window).scrollTop() > 70) {
-                        $(".navbar").addClass("navbar_light");
-                    } else {
-                        //remove the background property so it comes transparent again (defined in your css)
-                       $(".navbar").removeClass("navbar_light");
-                    }
-                });
-            });
-        </script>
-        <button class="changetheme" id="themeToggle" >Change Theme</button><script src="till.js"></script>   
     </head>
 
   
@@ -78,35 +64,34 @@
                     
 <section class="linkages">
             <div style="display: flex; justify-content: space-between; width: 85%; height: 100vh; margin: 7.5%;">
-                <div style="flex: 1; color: var(--accent1); margin-right: 10px;">
+                <div style="flex: auto; color: var(--contrast); margin-right: 10px;">
                    <a href="https://www.linkedin.com/in/ted-yee">My LinkedIn</a>
                 </div>
                 
-                <div style="flex: 1; color: var(--accent2); margin-left: 10px;">
-                    <a href="https://tedyee114.github.io/websites/resume">My GitHub</a>
-                    <br><br>
-                    <iframe src="https://tedyee114.github.io" height="75vw"></iframe>
+                <div style="flex: auto; color: var(--contrast); margin-left: 10px;">
+                    <a href="https://github.com/tedyee114">My GitHub</a>
+                    <div class="github-profile-badge" data-user="tedyee114"></div><script src="https://cdn.jsdelivr.net/gh/Rapsssito/github-profile-badge@latest/src/widget.min.js"></script>
                 </div>
 
-                <div style="flex: 1; color: var(--accent2); margin-left: 10px;">
+                <div style="flex: auto; color: var(--contrast); margin-left: 10px;" height="550vw">
                     Where I’m Running and Skiing Currently
                     <br><br>
-                    <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="13699224386" data-style="standard" data-from-embed="false" height="75vw"></div><script src="https://strava-embeds.com/embed.js"></script>
+                    <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="13699224386" data-style="standard" data-from-embed="false"></div><script src="https://strava-embeds.com/embed.js"></script>
                 </div>
 
-                <div style="flex: 1; color: var(--accent2); margin-left: 10px;">
+                <div style="flex: auto; color: var(--contrast); margin-left: 10px;"  >
                     How much of the map I’ve filled in
                     <br><br>
-                    <iframe src="https://citystrides.com/users/60139/map" height="75vw">
+                    <a href="https://citystrides.com/users/60139/map#42.3365620953,-71.0202129658&11"><img src="citystrides.PNG" style="overflow: hidden; object-fit: cover;"width=300vw height="500vw"></a>
                 </div>
             </div>
-                </section>
+</section>
 
 <section class="jobscerts">
                 <div id="gamma"><h1 style="font-size: 3vw;">As seen <span id="gradient-text" style="font-size: 3vw;">working</span> with</h1></div>
                 <br>
 
-                <div style="display: flex; justify-content: space-between; width: 100%; height: 50vh;">
+                <div style="display: flex; justify-content: space-between; width: 100%; height: 50vw;">
                     <div style="flex: 1; color: var(--accent1); margin-right: 10px;">
                         Wright-Pierce
                         <br><br>
@@ -131,8 +116,7 @@
                         <a href="https://www.credly.com/badges/b84bb28d-d68e-4424-9b57-06cd23826e91/embedded"><img src="NCEESlogo.png" width="60%"></a>
                     </section>
         </div>
-    </body>
-    
+
     <div id="gamma" style="text-align: center;"> <span style="font-size: 4vw; color: var(--accent1);">REACH ME</span>
         <br><br>
         <span style="font-size: 2vw;">tedyee114@gmail.com
@@ -146,66 +130,7 @@
         </div>
         <script src="till.js"></script>    
     </aside>
+    <footer class="footer-area"><div w3-include-html="footer.html">hi</div><script> includeHTML();</script></footer>
+        </body>
 
-    <footer class="footer-area">
-        <div w3-include-html="footer.html"></div><script> includeHTML();</script>
-    </footer>
 </html>
-
-
-
-                    <!-- <div style="color: white;text-align: center;">
-                    <img src="bookcover.PNG" style="width: 312px; height: 445px;"> -->
-
-
-                    <!-- <div style="margin-top:-440px;">
-                        <img src="donutprogress.PNG" style="width: 290px; height: 425px;">
-                    </div> -->
-
-
-                    <!-- <div class="gildedbook" style="margin-top: -440px;">
-                        <div>
-                            <a href="https://tedyee114.github.io/websites/web_portfolio">
-                                <img src=bookcover.PNG>
-                            </a> 
-                        </div>
-                        <div style="margin-top: -300px; z-index:3">
-                            <a href="https://tedyee114.github.io/websites/web_portfolio">My Portfolio</a>
-                        </div>
-                    </div> -->
-
-
-                    <!-- <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="13699224386" data-style="standard" data-from-embed="false"></div><script src="https://strava-embeds.com/embed.js"></script> -->
-
-
-                    <!-- <iframe src="https://citystrides.com/users/60139/map" title="W3Schools Free Online Web Tutorials"> -->
-
-
-                    <!-- <div class="bubblebucket">
-                        <div class="bubbles"></div>
-                        <div class="bubbles" style="top:-5px;"></div>
-                        <div class="bubbles"style="left: 55px;"></div>
-                        <div class="bubbles"style="top:-35px;"></div>
-                    </div> -->
-
-
-                    <!-- <span id="datetime"></span>
-                    <script>
-                        // create a function to update the date and time
-                        function updateDateTime() {
-                          // create a new `Date` object
-                          const now = new Date();
-                  
-                          // get the current date and time as a string
-                          const currentDateTime = now.toLocaleString();
-                  
-                          // update the `textContent` property of the `span` element with the `id` of `datetime`
-                          document.querySelector('#datetime').textContent = currentDateTime;
-                        }
-                  
-                        // call the `updateDateTime` function every second
-                        setInterval(updateDateTime, 1000);                  
-                    </script> -->
-
-
-                    <!-- <div style="background:#f2ee20; border-radius:5px; color:#222222"><h2>⚠ WE APOLOGIZE FOR ANY INCONVENIENCE CAUSED BY THE ONGOING DESIGN CHOICES ⚠</h2></div> -->

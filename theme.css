@@ -13,10 +13,26 @@
     --st4: #DC521F;
     --st5: #122076; */
     --page_background: #222222;
-    }
+    --dark1: #707070;
+    --light1: #ffffff;
+    --dark2: #000000;
+    --light2: #EFEFEF;
+    --accent1: #DE32DE;
+    --accent2: #D54773;
+    --color1: #0095ff;
+    --color2: #000203;
+    --contrast1: #00caa6;
+    --contrast2: #d008d4;
+}
+
 @font-face {
-  font-family: GothamBook;
-  src: url(Gotham-Book.woff);
+    font-family: GothamBlack;
+    src: url(Gotham-Black.woff) format("woff");
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url(Gotham-Book.woff) format("woff");
 }
 
 .theme1 {                   /*darkmode*/
@@ -60,19 +76,50 @@
 }
 
 /*header and footer*/
-        .navbar {                                    /*Top Navigation Bar */
+        /* Override the changetheme positioning when it's in the header */
+        .header-container .changetheme {
+            position: relative !important;
+            top: auto !important;
+            right: auto !important;
+            font-family: Arial, sans-serif;
+            background-color: var(--salmon);
+            color: wheat; 
+            font-size: clamp(12px, 1.5vw, 16px);
+            padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px);
+            z-index: 11;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Override dropdown positioning when it's in the header */
+        .header-container .dropdown {
+            position: relative !important;
+            transform: none !important;
+            display: inline-block;
+            z-index: 10;
+        }
+
+        .navbar {
+            /* Update your existing .navbar class to remove conflicting positioning */
             overflow: hidden;
-            position: fixed;                        /* Set the navbar to fixed position */
-            padding-top: 1.5rem;                     /*distance from top of div to first contents*/
-            padding-left: 2%;                     /*distance from edge of div to first contents*/
-            padding-bottom: 1.5rem;                     /*distance from edge of div to first contents*/
-            top: 0;                                 /* Position the navbar at the top of the page */
+            position: fixed;                        
+            padding-top: 1.5rem;                     
+            padding-left: 2%;                     
+            padding-bottom: 1.5rem;                     
+            top: 0;                                 
             left: 0;
             z-index: 10;
-            width: 100%;                           /* Full width */
+            width: 100%;                           
             transition: ease .5s;
             -webkit-transition: ease .1s;
-            box-shadow: 0 1px 0 0 var(--salmon);}
+            box-shadow: 0 1px 0 0 var(--salmon);
+            
+            /* Add these for consistent header layout */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
         .navbar a {                                 /* Style the links inside the navigation bar */
             color: #000000;
@@ -130,7 +177,7 @@
             position: fixed;
             display: inline-block;
             z-index: 10;
-            transform: translateY(-8.2vw);
+            transform: translateX(-20%);
             }
             
         .dropdown-content {
@@ -161,6 +208,7 @@
             font-family: Arial, sans-serif;
             background-color:  var(--salmon);
             color: wheat; 
+            width: 10vw;
             position: fixed;
             top: clamp(10px, 2vw, 20px);
             right: clamp(10px, 2vw, 20px);
@@ -531,4 +579,106 @@
 
 .container .card:active {
     translate: calc(var(--i)*20px)-50px;
+}
+
+/* portfolio page---------------------------------------------------------------------------------------------------------------- */
+.ortfolio {
+    margin: 8%;
+}
+h1.ortfolio {
+    font-family: GothamBlack;
+    font-size: 10vw;    
+    line-height: 0%;
+    color: var(--dark1); 
+}
+
+h2.ortfolio {
+    font-family: GothamBlack;
+    font-size: 4vw;
+    color: var(--light1); 
+}
+h3.ortfolio {
+    font-family: GothamBlack;
+    font-size: 1vw;
+    line-height: 0%;
+    color: var(--dark1); 
+}
+
+hr  {
+  width:10%;
+  height: 2px;
+  text-align:left;
+  margin-left:0;
+  color: var(--accent2);
+  background-color: var(--accent2);
+}
+
+h4.ortfolio {
+    font-family: GothamBook;
+    font-size: regular;
+    color: var(--dark1); 
+}
+
+
+
+.changing-title h1 {
+    background: linear-gradient(to right,var(--contrast1), var(--color1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+.changing-title {
+    font-size: 8vw;
+    height: 1.2em;
+    position: relative;
+    width: 100%;
+    overflow-y: hidden;
+    margin-left: 1em;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.letter {
+    position: relative;
+    top: 1.2em;
+}
+
+.letter.in {
+    animation-name: letter-in;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.letter.out {
+    top: 0em;
+    animation-name: letter-out;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter-in {
+    0% {
+        top: 1.2em;
+    }
+    100% {
+        top: 0em;
+    }
+}
+
+@keyframes letter-out {
+    0% {
+        top: 0em;
+    }
+    100% {
+        top: -1.2em;
+    }
 }

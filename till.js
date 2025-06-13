@@ -40,7 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                            // Initialize theme button after HTML is loaded
+                            setTimeout(initializeThemeButton, 100);
+                            // Initialize scroll effect for new header
+                            setTimeout(initializeScrollEffect, 100);
+                        }
                         if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
                         /* Remove the attribute, and call this function once more: */
                         elmnt.removeAttribute("w3-include-html");
@@ -55,23 +61,64 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Initialize scroll effect for header
+    function initializeScrollEffect() {
+        // Make sure jQuery is available before using it
+        if (typeof $ !== 'undefined') {
+            $(window).off('scroll.headerEffect'); // Remove any existing scroll handlers
+            $(window).on('scroll.headerEffect', function() {
+                const headerContainer = document.querySelector('.header-container');
+                if (headerContainer) {
+                    if($(window).scrollTop() > 70) {
+                        headerContainer.classList.add("navbar_light");
+                    } else {
+                        headerContainer.classList.remove("navbar_light");
+                    }
+                }
+            });
+        } else {
+            // Fallback to vanilla JavaScript if jQuery isn't loaded yet
+            window.addEventListener('scroll', function() {
+                const headerContainer = document.querySelector('.header-container');
+                if (headerContainer) {
+                    if(window.scrollY > 70) {
+                        headerContainer.classList.add("navbar_light");
+                    } else {
+                        headerContainer.classList.remove("navbar_light");
+                    }
+                }
+            });
+        }
+    }
+
     // Initialize theme
     document.documentElement.classList.add('theme1'); // Match the toggle button
 
     /*changes the theme colors*/
     const themes = ["theme1", "theme2", "theme3"];
     let currentThemeIndex = 0;
-    const themeToggleButton = document.getElementById("themeToggle");
-    if (themeToggleButton) {
-        themeToggleButton.addEventListener("click", () => {
-            // Remove all themes
-            document.documentElement.classList.remove(...themes);
-           
-            // Apply the next theme
-            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-            document.documentElement.classList.add(themes[currentThemeIndex]);
-        });
+    
+    function initializeThemeButton() {
+        const themeToggleButton = document.getElementById("themeToggle");
+        console.log("Looking for theme button:", themeToggleButton); // Debug line
+        if (themeToggleButton && !themeToggleButton.hasAttribute('data-initialized')) {
+            console.log("Initializing theme button"); // Debug line
+            themeToggleButton.setAttribute('data-initialized', 'true');
+            themeToggleButton.addEventListener("click", () => {
+                console.log("Theme button clicked!"); // Debug line
+                // Remove all themes
+                document.documentElement.classList.remove(...themes);
+               
+                // Apply the next theme
+                currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+                document.documentElement.classList.add(themes[currentThemeIndex]);
+                console.log("Applied theme:", themes[currentThemeIndex]); // Debug line
+            });
+        }
     }
+
+    // Initialize theme button on initial load
+    initializeThemeButton();
 
     // Changing Header
     class ChangingTitle {
