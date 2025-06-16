@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.documentElement.classList.add('theme1'); // Match the toggle button
 
     /*changes the theme colors*/
-    const themes = ["theme1", "theme2", "theme3"];
+    const themes = ["theme1", "theme2"];
     let currentThemeIndex = 0;
     
     function initializeThemeButton() {
