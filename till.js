@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const changingTitleElement = document.querySelector('.changing-title');
     if (changingTitleElement) {
         let ct = new ChangingTitle(changingTitleElement);
-        const texts = ['Engineer', 'Runner', 'Skier'];
+        const texts = ['Hola', 'Για σασ', 'こんにちは', 'Bonjour', 'Kia Ora', 'Hallo'];
         let count = 0;
         setInterval(()=> {
             ct.changeText(texts[++count % texts.length]);
