@@ -147,7 +147,18 @@
                 display: none;
                 background-color: #555555;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                margin-top: 5px; /* Small gap between button and dropdown */
+                margin-top: 5px; /* Keep the visual gap */
+            }
+
+            /* Add invisible bridge to cover the gap */
+            .dropdown-container .dropdown-content::before {
+                content: '';
+                position: absolute;
+                top: -5px; /* Cover the gap */
+                left: 0;
+                right: 0;
+                height: 5px; /* Same as margin-top */
+                background: transparent; /* Invisible */
             }
             
             .dropdown-container .dropdown-content a {
