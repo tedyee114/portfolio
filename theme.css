@@ -292,13 +292,23 @@
            
         body {
             margin: 0%;
-            background: var(--page_background); /* Solid black background */
+            /* background: 
+                var(--page_background); Solid black background
+            background:
+                linear-gradient(red, transparent),
+                linear-gradient(to top left, lime, transparent),
+                linear-gradient(to top right, blue, transparent),
+                url(https://grainy-gradients.vercel.app/noise.svg); */
+            background:
+                radial-gradient(var(--color1) 45%, var(--contrast1)),
+                url(https://grainy-gradients.vercel.app/noise.svg);
+                background-blend-mode: screen;
             color: white;
             font-family: Arial, sans-serif;
             overflow-x: hidden;
             max-width: 100%;}
 
-        body::before {
+        /* body::before {
             content: '';
             position: absolute;
             top: 0;
@@ -307,10 +317,10 @@
             height: 100%;
             background-size: 120px 120px, 120px 120px, 100% 100%;
             background-image:
-                linear-gradient(to right, rgba(255, 255, 255, 0.03) 2px, transparent 1px),   /*gridline*/    
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 2px, transparent 1px),  /*gridline*/
-                linear-gradient(to bottom, var(--color1), var(--page_background));                      /*gradient*/
-                z-index: -1;}
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 2px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 2px, transparent 1px),
+                linear-gradient(to bottom, var(--color1), var(--page_background));
+                z-index: -1;} */
 
         a:link {
             color: var(--page_background);
