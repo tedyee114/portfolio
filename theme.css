@@ -53,8 +53,8 @@
 .theme1 {                   /*darkmode*/
     --color1: #2147c5;
     --page_background: #000203;
-    --contrast1: #00caa6;
-    --contrast2: #d008d4;
+    --contrast1: #07c9b7;
+    --contrast2: #7f7cf9;
     --text1: #7f7f7f;
     --text2: #ffffff;
     --links: #2147c5;
@@ -259,8 +259,8 @@
 
 /*landing animation*/    
         @keyframes heading{
-            0% {top: -80vh;}
-            100% {top: 0vh;}
+            0% {top: -650vh;}
+            100% {top: -500vh;}
             }
 
  .name-container {
@@ -269,33 +269,24 @@
     gap: -2vw; /* Adjustable overlap - use negative for overlap, positive for spacing */
 }
 
-#landing h1, #landing h2 {
+#landing h2 {
     line-height: 1; /* Use unitless line-height for better scaling */
     position: relative;
     z-index: 9;
     animation: heading 2s forwards;
     color: white;
+    background-position-y: -500px;
+    font-size: 8vw;
+    font-family: "Inter";
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
     /* background-image: url(IMG_0591.jpg);
     background-size: 1000px;
     background-repeat: repeat-x;
     background-clip: text;
     -webkit-text-fill-color: transparent; */
-    font-size: 8vw;
-    font-family: "Inter";
-    font-weight: 700;
-    -webkit-font-smoothing: antialiased;
-    margin: 0; /* Remove fixed margins */
 }
-
-#landing h1 {
-    background-position-y: -500px;
-}
-
-#landing h2 {
-    background-position-y: -625px;
-    font-family: fallback, sans-serif;
-}
-
 
 
  /*main body themes---------------------------------------------------------------*/
@@ -307,6 +298,7 @@
             color: white;
             font-family: Arial, sans-serif;
             overflow-x: hidden;
+            padding-top: 10vh;
             }
 
         .me::before {
@@ -440,6 +432,82 @@
             font-size: 3vw;
             font-weight: 900 ;
             }
+
+        .iframe-container {position: relative; overflow: hidden; padding: 0px 0 100% 100%;}
+
+        .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        zoom:.5
+        }
+
+        .grid {
+            width: 100%;
+            display: grid;
+            gap: 1.5vw;
+            padding: 1vw;
+            padding-bottom: 10vh;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas:
+                "hero hero hero hero aside2 aside2"
+                "hero hero hero hero aside2 aside2"
+                "hero hero hero hero aside2 aside2"
+                "hero hero hero hero aside2 aside2"
+                "aside3 aside3 aside4 aside4 aside4 aside4";
+            }
+
+        @media screen and (max-width: 750px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas:
+                "hero   hero   hero"
+                "hero   hero   hero"
+                "aside2 aside2 aside2"
+                "aside3 aside3 aside3"
+                "aside4 aside4 aside4"
+                "aside5 aside5 aside5";
+            }
+            }
+
+
+        .item {
+            border-radius: 10px;
+            padding: 3vw;
+            }
+            
+            .grid .item:nth-child(1) {
+                grid-area: hero;
+                background-image: radial-gradient(#07c9b7 70%,#51eadb);
+            }
+            .grid .item:nth-child(2) {
+                grid-area: aside2;
+                background-image: radial-gradient(#7f7cf9 70%, #9b9ae8);
+            }
+            .grid .item:nth-child(3) {
+                grid-area: aside3;
+                background-image: radial-gradient(#fd823f 70%, #eca077);
+            }
+            .grid .item:nth-child(4) {
+                grid-area: aside4;
+                background-image: radial-gradient(#07c9b7);
+                clip-path: polygon(0 0, 0 100%,    100% 100%,    100% 15px,    calc(45% + 15px) 15px,    calc(45% + 10px) 10px,    calc(45% + 5px) 5px,    45% 0);
+            }
+             .grid .item:nth-child(5) {
+                grid-area: aside5;
+                background-image: radial-gradient(#fd823f 70%, #eca077);
+            }
+        .item b {
+            font-size: 2.5vw;
+        }
+        .item span {
+            font-size: 2vw;
+        }
 
 /*tilty card*/
         pre {                                      /*defines the card and rotation itself*/
