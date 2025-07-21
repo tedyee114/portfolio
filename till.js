@@ -62,14 +62,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Initialize scroll effect for header
-    function initializeScrollEffect() {
-        // Make sure jQuery is available before using it
+   function initializeScrollEffect() {
+        const threshold = window.innerHeight;
+        
         if (typeof $ !== 'undefined') {
-            $(window).off('scroll.headerEffect'); // Remove any existing scroll handlers
+            $(window).off('scroll.headerEffect');
             $(window).on('scroll.headerEffect', function() {
                 const headerContainer = document.querySelector('.header-container');
                 if (headerContainer) {
-                    if($(window).scrollTop() > 70) {
+                    if($(window).scrollTop() > threshold) {
                         headerContainer.classList.add("navbar_light");
                     } else {
                         headerContainer.classList.remove("navbar_light");
@@ -77,11 +78,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         } else {
-            // Fallback to vanilla JavaScript if jQuery isn't loaded yet
             window.addEventListener('scroll', function() {
                 const headerContainer = document.querySelector('.header-container');
                 if (headerContainer) {
-                    if(window.scrollY > 70) {
+                    if(window.scrollY > threshold) {
                         headerContainer.classList.add("navbar_light");
                     } else {
                         headerContainer.classList.remove("navbar_light");
@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-
     // Initialize theme
     document.documentElement.classList.add('theme1'); // Match the toggle button
 
