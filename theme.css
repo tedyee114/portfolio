@@ -50,6 +50,28 @@
     src: url(Urbanist-Bold.ttf);
 }
 
+.cursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #07c9b7;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    z-index: 99;
+    pointer-events: none;
+}
+
+#cursorinner {
+    width: 12px;
+    height: 12px;    
+    border-radius: 100%;
+    position: absolute;
+    background-color: #d900ff;
+    z-index: 99;
+    pointer-events: none;
+}
+
 .theme1 {                   /*darkmode*/
     --color1: #2147c5;
     --page_background: #000203;
@@ -444,6 +466,26 @@
         width: 100%;
         height: 100%;
         zoom:.5
+        }
+
+        .jobscerts {  
+            filter: grayscale();
+            transition: ease-in-out(1s);
+            padding-left: 8%; padding-right:8%;            
+            font-size: 3vw; 
+            text-align:center;
+        }
+        .jobs img {
+            aspect-ratio:1; 
+            justify-content:center;      
+            display: flex;
+            flex-direction:row;
+            height: 15vw;
+            padding: 5%;
+        }
+        .jobscerts:hover {
+            filter: none;
+            transition: ease-out(1s);
         }
 
         .grid {
