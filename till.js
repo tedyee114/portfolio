@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
-    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+    cursor.setAttribute("style", "top: "+(e.pageY - 16)+"px; left: "+(e.pageX - 16)+"px;")
 })
 
 // document.addEventListener('click', () => {
@@ -206,7 +206,7 @@ document.addEventListener('mousemove', e => {
 
 $(document).mousemove(function(e) {
   $("#cursorinner").css({
-    left: e.pageX,
-    top: e.pageY
+    left: e.pageX-5,
+    top: e.pageY-5
   });
 });

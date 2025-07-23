@@ -63,10 +63,11 @@
 }
 
 #cursorinner {
-    width: 12px;
-    height: 12px;    
+    width: 10px;
+    height: 10px;    
     border-radius: 100%;
     position: absolute;
+    
     background-color: #d900ff;
     z-index: 99;
     pointer-events: none;
@@ -282,7 +283,7 @@
 /*landing animation*/    
         @keyframes heading{
             0% {top: -650vh;}
-            100% {top: -500vh;}
+            100% {top: -475vh;}
             }
 
  .name-container {
@@ -292,6 +293,7 @@
 }
 
 #landing h2 {
+    left:25vw;
     line-height: 1; /* Use unitless line-height for better scaling */
     position: relative;
     z-index: 9;
