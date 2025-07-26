@@ -1,0 +1,275 @@
+:root {
+    --gray: #595959;
+    --bold: #000000;
+    --pink: #D54773;
+    --bg: white;
+    --width: 3px;
+    --h2size: 15pt
+}
+
+@font-face {
+    font-family: GothamBlack;
+    src: url(Gotham-Black.woff) format("woff");
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url(Gotham-Book.woff) format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'GothamBook';
+    color: var(--gray);
+    max-width: 8in;
+    
+    min-height: 11in;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-areas:
+        "sidebar main-top"
+        "sidebar main-middle"
+        "sidebar main-bottom";
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding-right: .5rem;
+    position: relative;
+}
+.sidebar::after {                       /*vertical streak*/
+    content: '';
+    position: absolute;
+    top: 16%;
+    right: 0;
+    width: 3px;
+    height: 60%;
+    background-image: linear-gradient(var(--pink),var(--bg));
+}
+.sidebar::before {                       /*vertical streak*/
+    content: '❖';
+    position: absolute;
+    top: 10%;
+    right: -16px;
+    font-size: 30pt;
+    color: var(--pink)
+}
+
+.main-content {
+    grid-area: main-top / main-bottom;
+    padding-left: 1.5rem;
+}
+
+/* Header Styles */
+.header {
+    margin-bottom: 2rem;
+    white-space: nowrap;
+}
+
+.name {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: black;
+    letter-spacing: -1px;
+    margin-bottom: -5%;
+    margin-top: -8%;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--pink);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+                            /* Contact Info */
+                            .contact-container {
+                                background-color: var(--gray);
+                                padding: var(--width);
+                                clip-path: polygon(0 0, 90% 0%, 100% 20%, 100% 80%, 90% 100%, 0 100%);
+                                width: 92%;
+                            }
+
+                            .contact-info {
+                                background-color: var(--bg);
+                                padding-left: .25rem;
+                                clip-path: polygon(0 0, 90% 0%, 100% 20%, 100% 80%, 90% 100%, 0 100%);
+                                font-size: 9pt;
+                                color: var(--gray);
+                                line-height: 1.5;
+                            }
+                            .contact-info a:link{
+                                color: var(--gray);
+                            }
+                            .contact-info a:visited{
+                                color: var(--gray);
+                            }
+
+
+.content-section {
+    margin-bottom: 2rem;
+}
+
+.content-section h2 {
+    color: var(--pink);
+    font-size: var(--h2size);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.content-category {
+    margin-bottom: .5rem;
+}
+
+.content-category h3 {
+    color: var(--bold);
+    font-size: 8pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 10%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+.content-list {
+    font-size: 8pt;
+}
+
+.content-list li {
+    list-style: none;
+    margin-bottom: 0.2rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.content-list li::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    color: var(--gray);
+}
+
+.content-text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.content-item {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.content-item.main {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+                                .section-title {
+                                    color: var(--pink);
+                                    font-size: var(--h2size);
+                                    font-weight: 600;
+                                    text-transform: uppercase;
+                                    letter-spacing: 1px;
+                                    text-align: right;
+                                }
+                                .job-container {
+                                    background-color: var(--gray);
+                                    padding: var(--width);
+                                    clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 10% 100%, 0 90%);
+                                    margin-bottom: 20px;
+                                    
+                                    
+                                }.job {
+                                    position: relative;
+                                    background-color: var(--bg);
+                                    color: var(--gray);
+                                    padding: .5rem;
+                                    font-size: 8pt;
+                                    clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 10% 100%, 0 90%);
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
+                                .job-title {
+                                    font-weight: 900;
+                                    color: var(--pink);
+                                    text-transform: uppercase;
+                                    letter-spacing: 0.5px;
+                                    flex-grow: 1;
+                                    width: 75%;
+                                }
+                                .job-logo{
+                                    max-height: 20px;
+                                    width: auto;
+                                    align-content: right;
+                                    flex-grow: 1;
+                                    width: 25%;
+                                }
+                                .company {
+                                    color: var(--pink);
+                                    margin-bottom: 0.5rem;
+                                    flex-grow: 1;
+                                    width: 50%;
+                                }
+                                .dates {
+                                    color: var(--pink);
+                                    margin-bottom: 0.5rem;
+                                    flex-grow: 1;
+                                    width: 50%;
+                                    text-align: right;
+                                }
+                                .job-description li {
+                                    list-style: none;
+                                    margin-bottom: 0.5rem;
+                                    position: relative;
+                                    padding-left: 1rem;
+                                    line-height: 1.1;
+                                }.job-description li::before {
+                                    content: "❖";
+                                    position: absolute;
+                                    left: 0;
+                                    color: var(--gray);
+                                    font-weight: bold;
+                                }
+
+/* Bottom Section Grid */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr .2fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.middle{
+    padding-right: 3.5rem;
+    margin-right: 1.5rem;
+    position: relative;
+}
+.middle::after {                       /*vertical streak*/
+    content: '';
+    position: absolute;
+    top: 45px;
+    right: 16px;
+    width: 3px;
+    height: 60%;
+    background-image: linear-gradient(var(--pink),var(--bg));
+}
+.middle::before {                       /*vertical streak*/
+    content: '❖';
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    font-size: 30pt;
+    color: var(--pink)
+}
