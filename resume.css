@@ -1,7 +1,7 @@
 :root {
     --gray: #595959;
     --bold: #000000;
-    --pink: #D54773;
+    --pink: #E32D91;
     --bg: white;
     --width: 3px;
     --h2size: 15pt
@@ -27,8 +27,7 @@ body {
     font-family: 'GothamBook';
     color: var(--gray);
     max-width: 8in;
-    
-    min-height: 11in;
+    max-height: 10.5in;
     margin: 0 auto;
     background: white;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -206,7 +205,6 @@ body {
                                     font-weight: 900;
                                     color: var(--pink);
                                     text-transform: uppercase;
-                                    letter-spacing: 0.5px;
                                     flex-grow: 1;
                                     width: 75%;
                                 }
