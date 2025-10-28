@@ -25,6 +25,19 @@
     --contrast2: #d008d4;
 }
 
+
+html {
+    scroll-behavior: auto !important;
+}
+
+body {
+    overflow-anchor: none;
+}
+
+.iframe-container {
+    position: relative;
+    isolation: isolate; /* Creates new stacking context */
+}
 @font-face {
     font-family: GothamBlack;
     src: url(Gotham-Black.woff) format("woff");
@@ -472,10 +485,11 @@
 
         .jobscerts {  
             filter: grayscale();
-            transition: ease-in-out(1s);
-            padding-left: 8%; padding-right:8%;            
+            padding-left: 8%; 
+            padding-right: 8%;            
             font-size: 3vw; 
-            text-align:center;
+            text-align: center;
+            overflow: hidden;
         }
         .jobs img {
             aspect-ratio:1; 
@@ -488,6 +502,30 @@
         .jobscerts:hover {
             filter: none;
             transition: ease-out(1s);
+        }
+
+        #jobs {
+            display: flex;
+            flex-direction: row;
+            height: 15vw;
+            font-size: 4vh;
+            color: var(--text2);
+            animation: marquee 20s linear infinite;
+            width: fit-content;
+        }
+
+        #jobs img {
+            padding: 5%;
+            flex-shrink: 0;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-30%);
+            }
         }
 
         .grid {

@@ -210,3 +210,23 @@ $(document).mousemove(function(e) {
     top: e.pageY-5
   });
 });
+
+
+
+// Prevent iframe from causing scroll jumps
+window.addEventListener('blur', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+}, true);
+
+// Lock scroll position when iframe tries to grab focus
+let scrollPosition = 0;
+window.addEventListener('scroll', function() {
+    scrollPosition = window.pageYOffset;
+});
+
+setInterval(function() {
+    if (Math.abs(window.pageYOffset - scrollPosition) > 100) {
+        window.scrollTo(0, scrollPosition);
+    }
+}, 50);
