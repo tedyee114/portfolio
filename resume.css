@@ -244,13 +244,13 @@ body {
                                 }
 
                                 .projects-section {
-                                    display: grid;
-                                    grid-template-columns: 1.65fr 1fr 1fr;
-                                    grid-template-rows: auto auto auto;
-                                    gap:15px;
-                                    margin-top: 1rem;
-                                    align-items: start;
-                                }
+    display: grid;
+    grid-template-columns: 1fr .75fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    margin-top: 1rem;
+    align-items: stretch;
+}
                                 .project-logo {
                                     width:auto;
                                     height:15px;
@@ -260,7 +260,11 @@ body {
 .bottom-grid {
     display: grid;
     grid-template-columns: 1fr .2fr 1fr;
-    margin-top: -1.5rem;
+    margin-top: -4rem;
+}
+
+.bottom-grid li {
+    margin-bottom: 1rem;
 }
 
 .middle{
