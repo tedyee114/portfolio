@@ -889,7 +889,7 @@ body {
 /* portfolio page---------------------------------------------------------------------------------------------------------------- */
 .ortfolio {
     margin: 8%;
-    scrollbar-color: var(--contrast2) wheat;
+    scrollbar-color: var(--bg2) var(--page_background);
 }
 h1.ortfolio {
     font-family: GothamBlack;
