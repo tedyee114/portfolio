@@ -529,13 +529,13 @@ body {
         }
 
         .grid {
-            width: 100%;
+            width: 80%;                 /*controls gap between  words and grid as well*/
             display: grid;
             gap: 1.5vw;
-            padding: 1vw;
             padding-bottom: 10vh;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: auto;
+            margin-left: 0vw;
+            grid-template-columns: repeat(10, .15fr);
+            /* grid-template-rows: auto; */
             grid-template-areas:
                 "hero hero hero hero aside2 aside2"
                 "hero hero hero hero aside2 aside2"
@@ -906,8 +906,8 @@ h2.ortfolio {
 
 h3.ortfolio {
     font-family: GothamBlack;
-    font-size: 1.5vh;
-    line-height: 0%;
+    font-size: 2.5vh;
+    line-height: 100%;
     color: var(--text2); 
 }
 
