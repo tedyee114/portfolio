@@ -295,18 +295,11 @@ body {
 
 /*landing animation*/    
         @keyframes heading{
-            0% {top: -650vh;}
-            100% {top: -475vh;}
+            0% {top: -60vh;}
+            100% {top: 0vh;}
             }
 
- .name-container {
-    display: flex;
-    flex-direction: column;
-    gap: -2vw; /* Adjustable overlap - use negative for overlap, positive for spacing */
-}
-
-#landing h2 {
-    left:25vw;
+#landing {
     line-height: 1; /* Use unitless line-height for better scaling */
     position: relative;
     z-index: 9;
@@ -318,6 +311,12 @@ body {
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     margin: 0;
+    padding-left:10%; 
+    width:fit-content; 
+    transform: translateY(+10vw);
+    display: flex;
+    flex-direction: column;
+    gap: -2vw; /* Adjustable overlap - use negative for overlap, positive for spacing */
     /* background-image: url(IMG_0591.jpg);
     background-size: 1000px;
     background-repeat: repeat-x;
@@ -338,26 +337,6 @@ body {
             padding-top: 10vh;
             }
 
-        .me::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 110vh;
-                /* background:
-                    linear-gradient(red, transparent),
-                    linear-gradient(to top left, lime, transparent),
-                    linear-gradient(to top right, blue, transparent),
-                    url(https://grainy-gradients.vercel.app/noise.svg);
-                    background-blend-mode: screen; */
-
-            background:
-                radial-gradient(circle, var(--bg1) 15%, var(--bg2) 75%, var(--bg3)),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.15'/%3E%3C/svg%3E"),
-                #000;
-            }
-
         /* body::before {
             content: '';
             position: absolute;
@@ -372,10 +351,34 @@ body {
                 linear-gradient(to bottom, var(--color1), var(--page_background));
                 z-index: -1;} */
 
-        .me {
-            margin-top:10vh;
+        .topper {
+            margin-top:-10vh;
             padding-left:7.5vw;
             padding-right:7.5vw;
+            background:
+                radial-gradient(circle, var(--bg1) 15%, var(--bg2) 75%, var(--bg3)),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.15'/%3E%3C/svg%3E"),
+                #000;
+            /* background:
+                    linear-gradient(red, transparent),
+                    linear-gradient(to top left, lime, transparent),
+                    linear-gradient(to top right, blue, transparent),
+                    url(https://grainy-gradients.vercel.app/noise.svg);
+                    background-blend-mode: screen; */
+            }
+
+        .about {
+            font-family:'Inter';
+            text-align:left;
+            color:var(--text2);
+            padding-left: 15%;
+            padding-right: 15%;
+            margin-top:5vw;
+            font-size: medium;
+        }
+
+        .about h1 {
+            font-size: large;
         }
 
         a:link {
@@ -483,13 +486,14 @@ body {
         zoom:.5
         }
 
-        .jobscerts {  
+        .asseenworkingwith {  
             filter: grayscale();
             padding-left: 8%; 
             padding-right: 8%;            
             font-size: 3vw; 
             text-align: center;
             overflow: hidden;
+            padding-bottom: 1vw;
         }
         .jobs img {
             aspect-ratio:1; 
@@ -499,7 +503,7 @@ body {
             height: 15vw;
             padding: 5%;
         }
-        .jobscerts:hover {
+        .asseenworkingwith:hover {
             filter: none;
             transition: ease-out(1s);
         }
