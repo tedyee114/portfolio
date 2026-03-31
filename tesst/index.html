@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Stories Carousel with Sidebar Highlight and Dots</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .news-section {
+            flex: 0 0 75%;  /* Main content takes 75% width */
+            padding-right: 20px; /* Padding to create space between the news section and sidebar */
+        }
+
+        .news-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .news-carousel-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .news-carousel {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .news-item {
+            min-width: 100%; /* Ensures one item shows at a time */
+            box-sizing: border-box;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .news-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .news-item p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .sidebar {
+            flex: 0 0 25%; /* Sidebar takes 25% width */
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: auto;
+            max-height: 600px; /* Set a maximum height for the sidebar */
+            overflow-y: auto;  /* Enables vertical scrolling */
+            position: relative; /* To position the line relative to this container */
+        }
+
+        .sidebar h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+            position: relative; /* Ensure the line can be placed correctly */
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #007BFF;
+        }
+
+        /* Vertical line to highlight the active sidebar item */
+        .highlight-line {
+            position: absolute;
+            left: 0;
+            width: 4px;
+            background-color: #007BFF;
+            height: 0;  /* Initially 0, it will adjust dynamically */
+            transition: height 0.3s ease-in-out;
+        }
+
+        /* Dot navigation */
+        .dots-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #007BFF; /* Highlight active dot */
+        }
+
+        /* Optional: Custom scrollbar */
+        .news-carousel-wrapper::-webkit-scrollbar {
+            display: none; /* Hide horizontal scrollbar */
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 10px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="news-section">
+            <h2>Latest News</h2>
+            <div class="news-carousel-wrapper">
+                <div class="news-carousel">
+                    <div class="news-item">
+                        <img src="https://drive.usercontent.google.com/download?id=1ocG85_DHvj80OPVBrCe5QOo-Y2fbCfa9&amp;export=view&amp;authuser=0">
+                        <span class="RACING">RACING</span>
+
+                        <span class="DATE">March 10-15, 2025 </p>
+                        <p href="https://www.uscsa.org/national-championships.html">Nationals Schedule</p>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/600x400" alt="News 2">
+                        <p>Feb 28, 2025 - Huntington News - https://huntnewsnu.com/84414/sports/cross-country-skiers-find-community-in-huski-nordic-club/</p>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/600x400" alt="News 3">
+                        <p>2024 - USCSA Feature - https://docs.google.com/document/d/1GWXRqDSuVRbgoawjw9_BoenHKtapS-gYx2g7_YF2a6g/edit?tab=t.0</p>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/600x400" alt="News 4">
+                        <p>2024 - USCSA Nordic Teams Guide - https://nensa.net/wp-content/uploads/2025/02/USCSA-NORDIC-TEAMS-GUIDE-2024.pdf</p>
+                    </div>
+                    <!-- Add more news items as needed -->
+                </div>
+            </div>
+
+            <!-- Dot navigation below the carousel -->
+            <div class="dots-container">
+                <span class="dot" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <!-- Add more dots as needed based on the number of news items -->
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li data-index="0"><a href="#">Link 1</a></li>
+                <li data-index="1"><a href="#">Link 2</a></li>
+                <li data-index="2"><a href="#">Link 3</a></li>
+                <li data-index="3"><a href="#">Link 4</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+            <div class="highlight-line"></div> <!-- Vertical line to highlight the active sidebar item -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.news-carousel');
+            const totalItems = document.querySelectorAll('.news-item').length;
+            const sidebarItems = document.querySelectorAll('.sidebar ul li');
+            const highlightLine = document.querySelector('.highlight-line');
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 0;
+
+            // Function to update the carousel and the sidebar highlight
+            function updateCarousel() {
+                // Move carousel to the active item
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                // Adjust the vertical line's height based on the current active sidebar item
+                const activeItem = sidebarItems[currentIndex];
+                const itemHeight = activeItem.offsetHeight;
+                const itemTop = activeItem.offsetTop;
+                highlightLine.style.height = itemHeight + 'px';
+                highlightLine.style.top = itemTop + 'px';
+
+                // Update active dot
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[currentIndex].classList.add('active');
+            }
+
+            // Function to go to the next item
+            function goToNext() {
+                currentIndex = (currentIndex + 1) % totalItems; // Loop back to first item if at the end
+                updateCarousel();
+            }
+
+            // Function to go to the previous item
+            function goToPrevious() {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Loop to last item if at the start
+                updateCarousel();
+            }
+
+            // Function to go to a specific index when a dot is clicked
+            function goToDot(index) {
+                currentIndex = index;
+                updateCarousel();
+            }
+
+            // Set interval to automatically scroll
+            setInterval(goToNext, 5000); // Change stories every 5 seconds
+
+            // Update on keydown (left and right arrow keys)
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowRight') {
+                    goToNext();
+                } else if (e.key === 'ArrowLeft') {
+                    goToPrevious();
+                }
+            });
+
+            // Add click event to each dot
+            dots.forEach(dot => {
+                dot.addEventListener('click', function () {
+                    const index = parseInt(dot.getAttribute('data-index'));
+                    goToDot(index);
+                });
+            });
+
+            // Initialize carousel position, highlight line, and active dot
+            updateCarousel();
+        });
+    </script>
+
+</body>
+</html>

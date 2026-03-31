@@ -93,7 +93,7 @@ body {
     --contrast2: #7f7cf9;
     --text1: #7f7f7f;
     --text2: #ffffff;
-    --links: #2147c5;
+    --links: #7f7cf9; #2147c5;
     --bg1: #000000;
     --bg2: #421c88;
     --bg3: #b700ff;
@@ -357,8 +357,7 @@ body {
             padding-right:7.5vw;
             background:
                 radial-gradient(circle, var(--bg1) 15%, var(--bg2) 75%, var(--bg3)),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.15'/%3E%3C/svg%3E"),
-                #000;
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.15'/%3E%3C/svg%3E"), #000;
             /* background:
                     linear-gradient(red, transparent),
                     linear-gradient(to top left, lime, transparent),
@@ -377,12 +376,23 @@ body {
             font-size: medium;
         }
 
-        .about h1 {
-            font-size: large;
+        .blurry {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(5px);
+            border: .25px gray solid ;
+            border-radius: 1rem;
         }
-
+        .blurry:link {
+            color:white;
+        }
+        .blurry:visited {
+            color:white;
+        }
         a:link {
-            color: var(--page_background);
+            color: var(--links);
             background-color: transparent;
             text-decoration: none;
             }
