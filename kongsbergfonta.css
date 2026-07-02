@@ -1,0 +1,73 @@
+
+
+@font-face {
+  font-display: swap;
+  font-family: Soehne;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/dist/soehne-buch.kog.a50b6fd6ed58929c04a5.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Soehne;
+  font-style: italic;
+  font-weight: 400;
+  src: url(/dist/soehne-buch-kursiv.kog.441d0da6b94bf79ec9c9.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Soehne;
+  font-style: normal;
+  font-weight: 600;
+  src: url(/dist/soehne-halbfett.kog.dc93faa55850e5f97349.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: GTPressuraMono;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/dist/GTPressuraMono-Regular.kog.9994e23dc2332cc663e0.woff2) format("woff2"), url(/dist/GTPressuraMono-Regular.kog.e8712f28123b2c74d819.woff) format("woff")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: GTPressuraMono;
+  font-style: normal;
+  font-weight: 300;
+  src: url(/dist/GTPressuraMono-Light.kog.b2033dd9e325255446b9.woff2) format("woff2"), url(/dist/GTPressuraMono-Light.kog.d9562ef3b549875f90e3.woff) format("woff")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: GTPressuraMono;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/dist/GTPressuraMono-Bold.kog.d9d6bc361ae6670b3d2b.woff2) format("woff2"), url(/dist/GTPressuraMono-Bold.kog.c28003e385a10ef6d2a9.woff) format("woff")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: GTPressura;
+  font-style: normal;
+  font-weight: 300;
+  src: url(/dist/GTPressura-Light.kog.b3cdb33654909824eae3.woff2) format("woff2"), url(/dist/GTPressura-Light.kog.bbae3f9a4c49a48a879a.woff) format("woff")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: GTPressura;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/dist/GTPressura-Regular.kog.1df70c2700807ed7ad6a.woff2) format("woff2"), url(/dist/GTPressura-Regular.kog.395d6ed7fcbe469f6bc4.woff) format("woff")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: GTPressura;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/dist/GTPressura-Bold.kog.549db277d3b96310f680.woff2) format("woff2"), url(/dist/GTPressura-Bold.kog.556f50afb9d4f56d4d7b.woff) format("woff")
+}

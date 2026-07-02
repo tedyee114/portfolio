@@ -177,9 +177,7 @@
                 </div>
                 
                 <div class="project-panel additional-panel">
-                    <h3>FINAL PRODUCT</h3>
-                    
-                    
+                    <h3>FINAL PRODUCT</h3>         
                         <img src="https://github.com/tedyee114/static/blob/main/portfolio/violin9.jpg?raw=true" style="width: 40%">
                         <img src="https://github.com/tedyee114/static/blob/main/portfolio/violin10.jpg?raw=true" style="width: 40%">
                         <img src="https://github.com/tedyee114/static/blob/main/portfolio/violin11.jpg?raw=true" style="width: 40%">
@@ -375,6 +373,59 @@
                     <img src="https://github.com/tedyee114/static/blob/main/portfolio/cfd3temp.gif?raw=true" width="100%" height="50%"><br>
                     <img src="https://github.com/tedyee114/static/blob/main/portfolio/cfd4velocity.gif?raw=true" width="100%" height="50%"><br>
                 </div>
+            </div>
+        </section>
+
+        <!-- Project 07: Myowearable -->
+        <section class="project-container">
+            <h1 class="ortfolio project-number">07.</h1>
+            <div class="project-scroll-container">
+                <div class="project-panel">
+                    <div class="project-main-panel">
+                        <div class="project-image"><img src="https://github.com/tedyee114/static/blob/main/portfolio/myowearable3.png?raw=true" style="width: 100%; border-radius: 8px;"></div>
+                        <div class="project-info">
+                            <h2 class="ortfolio">MYOWEARABLE BIOSENSOR</h2>
+                            <h3 class="ortfolio">CLASS PROJECT | 4 MONTHS</h3>
+                            <hr>
+                            <h4 class="ortfolio">In my first semester at Northeastern, 4 other students and I built a sleeve for sensing muscle fatigue that was analyzed on a desktop program and warned of potentially harmful activity remotely.
+                                <p></p><p>&nbsp;</p><span style="color: var(--text2);">"Wearable bluetooth sleeve to provide fatigue analysis in injury-prevention."</span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-panel additional-panel">
+                    <h3>CHALLENGE</h3>
+                    <p>For my Cornerstone of Engineering class, my interdisciplinary team of 5 designed and prototyped a wearable exercise sleeve. The sleeve used analyzed electromyography measurements during exercise to alert injured patients before muscle overstraining. 
+                        I headed electronics design, general construction layout and decryption of the Bluetooth signal via SolidWorks, Arduino, MATLAB.
+                        Our team presented at the American Society for Engineering Education (ASEE) conference, and was published in the proceedings, <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://peer.asee.org/the-myowearable-sleeve-a-surface-electromyography-injury-prevention-device.pdf&ved=2ahUKEwjqgYzbwrGVAxUDC3kGHSd5FjAQFnoECBUQAQ&usg=AOvVaw3xjBdOWNjrlQfmemlWeaEQ">here</a> (also below)</p>
+                    <img src="https://github.com/tedyee114/static/blob/main/portfolio/myowearable1.JPG?raw=true" width="100%" height="500vh"></iframe>
+                </div>
+
+                <div class="project-panel additional-panel">
+                    <h3>ASSEMLBY</h3>
+                    <p>The device ran off of an Arduino board, a custom perfboard circuit, a bluetooth module, and various batteries contained within a 3d printed housing.
+                        Taking data from a surface eletromyography (sEMG) sensor embedded in a sleeve, the sleeve transmitted to a paired computer, activating a buzzer warning when needed.</p>
+                    <p>The battery posed the biggest problem in the design. We originally planned to use a 3.3V lithium ion rechargeable battery, but it didn't provide enough power and we had issues charging it.
+                        We moved on to a 9V battery, but the capacity was not enough, so we moved to 4 AA batteries, although size and weight had increased significantly.</p>
+                    <img src="https://github.com/tedyee114/static/blob/main/portfolio/myowearable2.jpg?raw=true" style="width: 40%">
+                    <img src="https://github.com/tedyee114/static/blob/main/portfolio/myowearable4.jpg?raw=true" style="width: 40%">
+                    <img src="https://github.com/tedyee114/static/blob/main/portfolio/myowearable5.jpg?raw=true" style="width: 40%">
+                    <img src="https://github.com/tedyee114/static/blob/main/portfolio/myowearable6.png?raw=true" style="width: 40%">
+                </div>
+
+                <div class="project-panel additional-panel">
+                    <h3>DESKTOP PROGRAM</h3>
+                    <p>The data was sent via a cheap two-way bluetooth module we purchased, so cheap in fact that the data did not include a data translator.
+                        We received a garbled mixture of hex codes, raw data, and appended symbols. 
+                        By comparing the bluetooth readout to data from a direct cable, I headed the process to 'decrypt' the mess into correctly matching live streams.
+                        One of my team members wrote a desktop program which displayed the decrypted data as well as fourier analysis to find out when the patient was straining at a rapidly decreasing rate.
+                        Via the bluetooth module and buzzer as well as a screen notification, the system alerted user to stop straining before re-injuring themselves.</p>
+                    <img src="https://github.com/tedyee114/static/blob/main/portfolio/myowearable7.png?raw=true" style="width: 40%">
+                    <img src="https://github.com/tedyee114/static/blob/main/portfolio/myowearable8.png?raw=true" style="width: 40%">
+                </div>
+
+
             </div>
         </section>
 
