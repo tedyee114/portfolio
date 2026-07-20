@@ -1,0 +1,336 @@
+:root {                                      /*default theme colors*/
+    /* --links: #0a8338;  /*green*/
+    /* --color4: #161963;  /*blue gray*/
+    /* --color5: #000000;  black */
+    /* --gray: #7f7f7f; */ 
+    /* --st1: #0E90ED;
+    --st2: #EDAD0D;
+    --st3: #F6EFCB;
+    --st4: #DC521F;
+    --st5: #122076; */
+        /* --st1: #22a6b9;
+        --st2: #b8ae00;
+        --st3: #0c921f;
+        --st4: #e99437;
+        --st5: #601108; */
+    --text1: #707070;
+    --light1: #ffffff;
+    --dark2: #000000;
+    --light2: #EFEFEF;
+    --contrast1: #DE32DE;
+    --contrast2: #D54773;
+    --color1: #0095ff;
+    --page_background: #000203;
+    --contrast1: #00caa6;
+    --contrast2: #d008d4;
+}
+
+
+html {
+    scroll-behavior: auto !important;
+}
+
+body {
+    overflow-anchor: none;
+}
+
+.iframe-container {
+    position: relative;
+    isolation: isolate; /* Creates new stacking context */
+}
+@font-face {
+    font-family: GothamBlack;
+    src: url(Gotham-Black.woff) format("woff");
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url(Gotham-Book.woff) format("woff");
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(InterVariable.ttf);
+}
+
+@font-face {
+    font-family: Urbanist;
+    src: url(Urbanist-VariableFont_wght.woff);
+}
+
+@font-face {
+    font-family: UrbanistBold;
+    src: url(Urbanist-Bold.ttf);
+}
+
+    .hero-section h1 {
+      color: #ff5733;
+      text-align: center;
+    }
+/* portfolio page---------------------------------------------------------------------------------------------------------------- */
+.ortfolio {
+    margin: 8%;
+    scrollbar-color: var(--bg2) var(--page_background);
+}
+.ortfolio h1 {
+    font-family: GothamBlack;
+    font-size: 10vh;    
+    line-height: 0%;
+    color: var(--color1);
+    margin-bottom: 10px;
+}
+
+h2.ortfolio {
+    font-family: GothamBlack;
+    font-size: 4vh;    
+    color: var(--text1); 
+}
+
+
+
+h3.ortfolio {
+    font-family: GothamBlack;
+    font-size: 3vh;
+    color: var(--text1);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+}
+
+.additional-panel p {
+    line-height: 1;
+    color: var(--text2);
+}
+
+hr  {
+  width:10%;
+  height: 2px;
+  text-align:left;
+  margin-left:0;
+  color: var(--contrast2);
+  background-color: var(--contrast2);
+}
+
+h4.ortfolio {
+    font-family: GothamBook;
+    font-size: 2vh;
+    color: var(--text1); 
+    line-height: 95%;
+}
+
+
+
+.changing-title h1 {
+    background: linear-gradient(to right,var(--contrast1), var(--color1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+.changing-title {
+    font-size: 8vw;
+    height: 1.2em;
+    position: relative;
+    width: 100%;
+    overflow-y: hidden;
+    margin-left: 1em;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.letter {
+    position: relative;
+    top: 1.2em;
+}
+
+.letter.in {
+    animation-name: letter-in;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.letter.out {
+    top: 0em;
+    animation-name: letter-out;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter-in {
+    0% {
+        top: 1.2em;
+    }
+    100% {
+        top: 0em;
+    }
+}
+
+@keyframes letter-out {
+    0% {
+        top: 0em;
+    }
+    100% {
+        top: -1.2em;
+    }
+}
+
+        .project-scroll-container {
+            background-color: rgba(51, 51, 51, 0.1);
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            border-radius: 12px;
+            margin: 10px 0;
+            padding: 10px;
+            max-height: 75%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .project-panel {
+            font-family: GothamBook;
+            display: inline-block;
+            width: 90vw;
+            max-width: 800px;
+            white-space: normal;
+            vertical-align: top;
+            margin-right: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .project-panel:last-child {
+            margin-right: 0;
+        }
+
+        /* Main content panel (first panel) */
+        .project-main-panel {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            max-height: 50vh;
+        }
+
+        .project-image {
+            flex: 0 0 45%;
+        }
+
+        .project-info {
+            flex: 1;
+            min-width: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* Additional panels styling */
+        .additional-panel {
+            max-height: 50vh;
+        }
+
+
+
+        /* Project container styling */
+        .project-container {
+            margin: 60px 0;
+        }
+
+        .project-number {
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .project-main-panel {
+                flex-direction: column;
+                gap: 20px;
+                max-height:40vh;
+
+            }
+            
+            .project-image {
+                flex: none;
+                width: 100%;
+            }
+            
+            .project-panel {
+                width: 85vw;
+                margin-right: 20px;
+                max-height:40vh;
+            }
+            
+            .project-scroll-container {
+                padding: 15px;
+                max-height:40vh;
+            }
+        }
+
+.violin-images-container {
+    width: 100%;
+    height: 450px;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: rgba(0,0,0,0.1);
+    border-radius: 12px;
+    
+}
+
+.violin-images-container .violin-image {
+    width: clamp(150px, 22.5vw, 210px);
+    height: clamp(225px, 37.5vw, 300px);
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+    position: absolute;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+.violin-images-container .violin-image1 {
+    transform: translate(clamp(-70px, -10vw, -50px), clamp(-50px, -6vw, -30px)) rotate(-8deg);
+    z-index: 3;
+}
+
+.violin-images-container .violin-image2 {
+    transform: translate(0, clamp(5px, 1vw, 15px)) rotate(3deg);
+    z-index: 2;
+}
+
+.violin-images-container .violin-image3 {
+    transform: translate(clamp(50px, 10vw, 70px), clamp(30px, 7vw, 50px)) rotate(-5deg);
+    z-index: 1;
+}
+
+.violin-images-container .violin-image:hover {
+    transform: translate(var(--hover-x), var(--hover-y)) rotate(var(--hover-rotate)) scale(1.1);
+    z-index: 10;
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+}
+
+.violin-images-container .violin-image1:hover {
+    --hover-x: clamp(-70px, -10vw, -50px);
+    --hover-y: clamp(-50px, -6vw, -30px);
+    --hover-rotate: 0deg;
+}
+
+.violin-images-container .violin-image2:hover {
+    --hover-x: 0;
+    --hover-y: clamp(5px, 1vw, 15px);
+    --hover-rotate: 0deg;
+}
+
+.violin-images-container .violin-image3:hover {
+    --hover-x: clamp(50px, 10vw, 70px);
+    --hover-y: clamp(30px, 7vw, 50px);
+    --hover-rotate: 0deg;
+}
