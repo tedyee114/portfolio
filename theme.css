@@ -923,7 +923,7 @@ body {
 
 
 /* portfolio page---------------------------------------------------------------------------------------------------------------- */
-.changing-title h1 {
+.changing-title b {
     background: linear-gradient(to right,var(--contrast1), var(--color1));
     background-clip: text;
     -webkit-background-clip: text;
