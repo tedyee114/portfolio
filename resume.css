@@ -89,7 +89,7 @@ h2 {
     top: 16%;
     right: 0;
     width: 3px;
-    height: 60%;
+    height: 75%;
     background-image: linear-gradient(var(--accentcolor),var(--bg));
 }
 .left::before {                       /*vertical streak*/
@@ -210,15 +210,10 @@ li::before {
                                     list-style: none;
                                     margin-bottom: 0.5rem;
                                     position: relative;
-                                    padding-left: 1rem;
+                                    padding-left: 15px;
                                     line-height: 1;
-                                }
-                                .job-description li::before {
-                                    content: "❖";
-                                    position: absolute;
-                                    left: 0;
-                                    color: var(--gray);
-                                    font-weight: bold;
+                                    left: -5px;
+                                    text-indent: -12px;          /*negative inden of first line only so the rest will not sit below the manual bullet*/
                                 }
                                 .projects-section {
                                     display: grid;
