@@ -230,3 +230,17 @@ setInterval(function() {
         window.scrollTo(0, scrollPosition);
     }
 }, 50);
+
+
+
+// peeling back to see html function
+const pageFlip = new St.PageFlip(
+      document.getElementById("example"),
+        {
+          width: 400,
+          height: 600,
+          autoSize: true,
+        }
+);
+
+pageFlip.loadFromHTML(document.querySelectorAll(".page"));

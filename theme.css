@@ -23,6 +23,11 @@
     --page_background: #000203;
     --contrast1: #00caa6;
     --contrast2: #d008d4;
+    --contrast1a: lch(from var(--contrast1) calc(l - 50) c h);
+    --contrast1b: lch(from var(--contrast1) calc(l - 100) c h);
+    --contrast2a: lch(from var(--contrast2) calc(l - 1) c h);
+    --contrast2b: lch(from var(--contrast2) calc(l - 5) c h);
+    --contrast2c: lch(from var(--contrast2) calc(l - 20) c h);
 }
 
 
@@ -384,6 +389,7 @@ body {
             -webkit-backdrop-filter: blur(5px);
             border: .25px gray solid ;
             border-radius: 1rem;
+            padding: 2%;
         }
         .blurry:link {
             color:white;
@@ -391,6 +397,57 @@ body {
         .blurry:visited {
             color:white;
         }
+        
+
+        .peelbox {
+            background-image: url(https://github.com/tedyee114/static/blob/main/portfolio/underthehood.png?raw=true);
+            background-size: 100% 100%;
+            margin-left: 25%;
+            margin-right: 25%;
+            border-radius: 1em 1em 1em 1em;
+        }
+        .peel {
+            margin:0% !important;
+            padding: 5%;
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 1em 1em 1em 1em;
+            background: linear-gradient(110deg, var(--contrast2c) 50%, var(--contrast2b) 55%, var(--contrast2a) 60%, var(--contrast2) 40%);
+            background-size: 300% 300%;
+            background-position: 100% 100%;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            transition: clip-path 0.1s ease-in-out;
+            transition: background-position 0.1 ease-in-out;
+            position: relative;
+            overflow: hidden;
+            }
+        .peel:hover {
+            border-radius: 1em 1em 1em 1em;
+            clip-path: polygon(80% 0%, 100% 0%,100% 100%, 0% 100%);
+            background-position: 50% 50%;
+            }    
+        .sliding-shape {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 80%, 80% 0%, 0% 100%);
+            background: linear-gradient(330deg, var(--contrast1) 20%, var(--contrast1a) 50%, var(--contrast1b) 100%);
+            transition: transform 0.1s ease-in-out;
+            }
+        .peel:hover .sliding-shape {
+            transform: translateX(100%);
+            }        
+        .peel:link {
+            color:white;
+            }
+        .peel:visited {
+            color:white;
+            }
+       
+            /*-------------------------------------------------------------------------*/
+        
         a:link {
             color: var(--links);
             background-color: transparent;
@@ -544,17 +601,19 @@ body {
 
         .grid {
             /* width: 80%;                 controls gap between  words and grid as well */
+            margin-left: 10%;
+            margin-top: 3%;
+            width: 140%;
             display: grid;
             gap: 1.5vw;
-            margin: 10%;
+            line-height: 180%;
             grid-template-columns: repeat(10, .15fr);
-            /* grid-template-rows: auto; */
             grid-template-areas:
-                "hero hero hero hero aside2 aside2"
-                "hero hero hero hero aside2 aside2"
-                "hero hero hero hero aside2 aside2"
-                "hero hero hero hero aside2 aside2"
-                "aside3 aside3 aside4 aside4 aside4 aside4";
+                "hero hero aside2 aside2 aside3 aside3"
+                "hero hero aside2 aside2 aside3 aside3"
+                "hero hero aside2 aside2 aside3 aside3"
+                "hero hero aside2 aside2 aside3 aside3"
+                "aside4 aside4 aside5 aside5 aside5 aside5";
             }
 
         @media screen and (max-width: 750px) {
@@ -632,6 +691,11 @@ body {
             }
             }
 
+        .bob {
+            display: flexbox;
+            margin: 5%;
+            align-items: stretch;
+        }
 
         .item {
             border-radius: 10px;
@@ -681,6 +745,12 @@ body {
         .item:hover{
             transform: scale(.95);
             transition: transform 0.4s ease-in-out;
+        }
+        .item:link {
+            color: white
+        }
+        .item:visited {
+            color: white;
         }
 
         .item::after,
@@ -753,14 +823,14 @@ body {
             inset: 0.75rem;
             border-radius: inherit;
             background: black;
-            z-index: -1;
+            z-index: 75;
             transform: translateZ(-50px);                   
             filter: blur(15px);
             opacity: 0.5;
             }
             
         pre::after {                                      /*back card setup*/
-            z-index: -2;                                    /*size difference between front and back card*/
+            z-index: 74;                                    /*size difference between front and back card*/
             inset: -1rem;                                   /*how much bigger to make it*/
             background: linear-gradient(-45deg,  #0E90ED, #122076); /*card texture*/
             transform: translateZ(-50px);                     /*how far back*/
@@ -920,6 +990,10 @@ body {
   object-fit: cover;
   display: block;
 }
+.map:hover{
+    filter: brightness(300%);
+    transition: 0.5s ease-in-out;
+}
 
 
 /* portfolio page---------------------------------------------------------------------------------------------------------------- */
@@ -1034,6 +1108,11 @@ hr {   /*the gray and purple horizontal lines*/
     font-size: clamp(.35rem, 4vw + 1rem, .9rem);
     color: var(--text2); 
     line-height: 95%;
+}
+.ortfolio h5 img{
+    max-width: 20vw !important;
+    max-height: 10vh !important;
+    border-radius: 1vw !important;
 }
 
 .ortfolio p {
