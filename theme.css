@@ -1265,6 +1265,33 @@ hr {   /*the gray and purple horizontal lines*/
                                                     .span-two-rows {
                                                         grid-row: span 2;
                                                     }
+
+        .skill {
+            border-radius: 100%;
+            /* background-color: blue; */
+            background:
+                    radial-gradient(circle, yellow 15%, white 100%);
+                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.15'/%3E%3C/svg%3E"),
+                    #000;
+            width:50pt;
+            height:50pt;
+            align-items: center;
+            text-align: center;
+            margin:1%;
+            padding-left: auto;
+            padding-right: auto;
+            /* text-overflow:; */
+            color:rgb(114, 98, 2);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.95);
+
+        }
+        .skill:hover {
+            /* background: rgb(11, 0, 21); */
+            transform: rotatey(180deg);
+            transition: ease-in-out 0.5s;
+            box-shadow: 0 8px 25px rgba(28, 4, 183, 0.95);
+
+        }
         
         /* Responsive adjustments */
         /* @media (max-width: 768px) {
